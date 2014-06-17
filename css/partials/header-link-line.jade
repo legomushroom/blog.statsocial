@@ -1,0 +1,4 @@
+.header-link-line(class="#{el.class || ''}", id="#{el.id || ''}")
+  - for item in el.items
+    - el = { text: item, class: '', id: ''} 
+    include header-link

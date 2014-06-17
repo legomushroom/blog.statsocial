@@ -1,0 +1,7 @@
+.input-icon(class="#{el.class || ''}", id="#{el.id || ''}")
+  - var icon = el.icon
+  - el = el.input
+  include input
+  label(for="#{el.id || ''}")
+    - var el = icon
+    include icon

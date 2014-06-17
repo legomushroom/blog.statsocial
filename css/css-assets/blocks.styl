@@ -1,23 +1,6 @@
 // BLOCKS
 @import '../assets/imports.styl'
 
-/* bc450f49128e9768ab944e51920e0250 */
-.header-input-icon
-  display inline-block
-  .input-icon
-    .input
-      opacity 0
-      width 0
-      border-width 0
-      padding 0
-      &:focus
-        width 100%
-        padding 0 4*gs 0 gs
-        border-width .2*gs
-        color c-blue1
-        opacity 1
-        transition opacity .2s linear
-
 /* 0a0478d84d885b39b0df7c5939a6037c */
 .input-icon
   position relative
@@ -32,6 +15,20 @@
     easy-click()
     &:hover
       cursor pointer
+  /* bc450f49128e9768ab944e51920e0250 */
+  &--header
+    .input
+      opacity 0
+      width 0
+      border-width 0
+      padding 0
+      &:focus
+        width 100%
+        padding 0 4*gs 0 gs
+        border-width .2*gs
+        color c-blue1
+        opacity 1
+        transition opacity .2s linear
 
 /* 08683ec747ff35de14ad2765f8a9078e */
 .header-link-line
@@ -99,9 +96,8 @@
       &:hover
         cursor pointer
         fill c-blue1-hover
-    .header-input-icon
-      display none
-      // intent for @mobile
+    .input-icon--header
+      display none // intent for @mobile
 
   // left side with logo
   &__left
@@ -151,13 +147,13 @@
         .icon
           right 1.5*gs
           top 1.8*gs
-        .header-input-icon
-          width 19*gs
-          // hl deeppink
-          display inline-block
+        .input-icon--header
+          display block
+          width auto
           right 5*gs
           position absolute
           top .9*gs
+          left 8*gs
           vertical-align top
           .icon
             top gs
