@@ -1,0 +1,54 @@
+// ELEMENTS
+@import '../assets/imports.styl'
+
+/* 018b2f03df7c065c694e5892b9287021 */
+.input
+	outline none
+	border 2px solid c-grey7
+	min-height 4*gs // consider textrarea
+	border-radius br
+	display block
+	width 100%
+	padding-left gs
+	font-size 16px
+	color c-grey5
+	&:focus, &:hover
+		border-color c-grey5
+		color c-grey4
+
+		
+
+/* 9d86756becc3c306959936f4c7e3a19f */
+.header-link
+	color c-blue1
+	font-size 16px
+	line-height 22px
+
+/* e55a1d273d2927877a38268403c3d6d3 */
+.icon-text
+	color white
+	.icon
+		float left
+		fill currentColor
+	&__text
+		margin-left 5*gs
+		// text-transform uppercase
+		// outage()
+
+/* 67e12e92af48d19f9837ee74a939186d */
+a, .link
+	text-decoration none
+	position relative
+	display inline-block
+	color c-blue3
+	cursor default
+	&:hover
+		cursor pointer
+		&:after
+			content ''
+			width 100%
+			height 0
+			position absolute
+			bottom -2px
+			left 0
+			border-bottom 1px solid

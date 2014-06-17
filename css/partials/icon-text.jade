@@ -1,0 +1,5 @@
+.icon-text(class="#{el.class || ''}", id="#{el.id || ''}")
+  - var text = el.text
+  - var el = el.icon
+  include icon
+  .icon-text__text #{text}

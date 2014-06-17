@@ -1,0 +1,127 @@
+// BLOCKS
+@import '../assets/imports.styl'
+
+/* 08683ec747ff35de14ad2765f8a9078e */
+.header-link-line
+  .header-link
+    & + .header-link
+      margin-left 3*gs
+
+/* 1c23fe75816818e2ccedba3fd66d8310 */
+.rounded-btn
+  color white
+  font-size 16px
+  display inline-block
+  padding .5*gs 1.5*gs .7*gs
+  border-radius 2*gs
+
+  /* e2f1e61773da4f83d2d33fd6e38f3dec */
+  &--blue2
+    background c-blue2
+    &{root()}--hoverable
+      cursor pointer
+      &:hover
+        background c-blue2-hover
+
+  /* 45c74b08d69d3ab7893bf7a96d097290 */
+  &--blue3
+    background c-blue3
+    &{root()}--hoverable
+      cursor pointer
+      &:hover
+        background c-blue3-hover
+    
+
+/* cbb3694893dda7ad17fa70e114baabde */
+.header
+  height 8*gs
+  position relative
+  width 100%
+  border-bottom-left-radius br
+  border-bottom-right-radius br
+  box-shadow .4*gs .4*gs 0 0 rgba(c-grey3, .1)
+
+  // right header side
+  &__right
+    position absolute
+    height 100%
+    background rgba(white, .98)
+    padding-left headerLeftSize
+    width 100%
+    z-index 0
+    &__request-demo
+      position absolute
+      left headerLeftSize + 2.5*gs
+      top 2.6*gs
+    &__actions
+      float right
+      margin-right 10*gs
+      margin-top  2.9*gs
+    .icon
+      position absolute
+      right 2*gs
+      top 2.8*gs
+      fill c-blue1
+      rect 2.5*gs
+      easy-click()
+      &:hover
+        cursor pointer
+        fill c-blue1-hover
+
+  // left side with logo
+  &__left
+    width headerLeftSize
+    background c-blue2
+    height 100%
+    text-align center
+    position absolute
+    border-bottom-left-radius inherit
+    nw 0
+    z-index 1
+    &:hover
+      background c-blue2-hover
+      cursor pointer
+    .icon-text
+      padding-top 1px
+      display inline-block
+      margin-top gs - 2px
+      .icon
+        rect 6*gs
+      &__text
+        outage()
+        margin-left 7*gs
+        margin-top 2.2*gs
+        font-size 24px
+
+  &{root()}--at-tablet
+    {root()}
+      &__right
+        .icon
+          right 3*gs
+
+  /* c23cdad713ba9c41c6ed2c9bf8e5bac7 */
+  &{root()}--at-mobile
+    height 6*gs
+    hl #f1f1f1
+    {root()}
+      &__left
+        width 7*gs
+        .icon-text
+          margin-top .3*gs
+          .icon
+            rect 4.8*gs
+          &__text
+            display none
+      &__right
+        .icon
+          right 1.5*gs
+          top 1.8*gs
+        &__request-demo, &__actions
+          display none
+        
+          
+
+
+
+
+      

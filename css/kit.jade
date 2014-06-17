@@ -1,0 +1,165 @@
+doctype
+html
+  head
+    meta(charset='UTF-8')
+    title mateomatic
+    link(rel="stylesheet", type="text/css", href="main.css")
+    link(rel="stylesheet", type="text/css", href="assets/kit.css")
+    //- link(rel="stylesheet", href="css-assets/font/stylesheet.css", type="text/css", charset="utf-8")
+  body
+    include icons.svg
+    .main-kl
+      .section-kl
+        .header-ke Colors
+        .cf.m-t-x3-g
+          .color-sample-ke.c-grey1-bg-g
+          .color-sample-ke.c-grey2-bg-g
+          .color-sample-ke.c-grey3-bg-g
+          .color-sample-ke.c-grey4-bg-g
+          .color-sample-ke.c-grey5-bg-g
+          .color-sample-ke.c-grey6-bg-g
+          .color-sample-ke.c-grey7-bg-g
+          .color-sample-ke.c-grey8-bg-g
+          .color-sample-ke.c-grey9-bg-g
+          .color-sample-ke.c-grey10-bg-g
+
+        .cf
+          .color-sample-ke.c-blue1-bg-g
+          .color-sample-ke.c-blue2-bg-g
+          .color-sample-ke.c-blue3-bg-g
+
+        .cf
+          .color-sample-ke.c-facebook-bg-g
+          .color-sample-ke.c-linkedin-bg-g
+          .color-sample-ke.c-twitter-bg-g
+        .cf
+          .color-sample-ke.c-google-bg-g
+
+      - var data = {}
+
+      .section-kl
+        .header-ke Icons
+        .k-sample
+          .hash-e#b749f3862138d6f5dc48e711cf78d96f b749f3862138d6f5dc48e711cf78d96f
+          - var el = { path: 'logo-icon' }
+          include partials/icon
+
+        .k-sample
+          .hash-e#b749f3862138d6f5dc48e711cf78d96f b749f3862138d6f5dc48e711cf78d96f
+          - var el = { path: 'logo-text-icon' }
+          include partials/icon
+
+        .k-sample
+          .hash-e#87402ed31b2c5fde31ba52b67ea2889b 87402ed31b2c5fde31ba52b67ea2889b
+          - var el = { path: 'menu-icon' }
+          include partials/icon
+
+        .k-sample
+          .hash-e#87402ed31b2c5fde31ba52b67ea2889b 87402ed31b2c5fde31ba52b67ea2889b
+          - var el = { path: 'search-icon' }
+          include partials/icon
+
+        .cf
+
+      .section-kl
+        .header-ke Elements
+        .k-sample
+          .hash-e#67e12e92af48d19f9837ee74a939186d 67e12e92af48d19f9837ee74a939186d
+          a(href="#") Link
+
+          .hash-e#e55a1d273d2927877a38268403c3d6d3 e55a1d273d2927877a38268403c3d6d3
+          .k-d-bg.k-sample
+            - el = { text: 'statsocial' }
+            - el.icon = { path: 'logo-icon'}
+            include partials/icon-text
+
+          .cf
+
+          .hash-e#9d86756becc3c306959936f4c7e3a19f 9d86756becc3c306959936f4c7e3a19f
+          a.header-link Log In
+
+          .hash-e#1c23fe75816818e2ccedba3fd66d8310 1c23fe75816818e2ccedba3fd66d8310
+          .k-d-bg.k-sample
+            .rounded-btn Request Demo
+
+          .k-sample
+            .hash-e#e2f1e61773da4f83d2d33fd6e38f3dec e2f1e61773da4f83d2d33fd6e38f3dec
+            .rounded-btn.rounded-btn--blue2.rounded-btn--hoverable Request Demo
+          
+          .k-sample
+            .hash-e#45c74b08d69d3ab7893bf7a96d097290 45c74b08d69d3ab7893bf7a96d097290
+            .rounded-btn.rounded-btn--blue3.rounded-btn--hoverable Request Demo
+
+          .cf
+          .hash-e#018b2f03df7c065c694e5892b9287021 018b2f03df7c065c694e5892b9287021
+          input.input
+
+
+        
+        .cf
+
+      .section-kl
+        .header-ke Blocks
+        .hash-e#08683ec747ff35de14ad2765f8a9078e 08683ec747ff35de14ad2765f8a9078e
+        .header-link-line
+          a.header-link Log In
+          a.header-link Sign Up
+
+        .hash-e#cbb3694893dda7ad17fa70e114baabde cbb3694893dda7ad17fa70e114baabde
+        .header
+          .header__left
+            - el = { text: 'statsocial' }
+            - el.icon = { path: 'logo-icon'}
+            include partials/icon-text
+
+          .header__right
+            a.header__right__request-demo.rounded-btn.rounded-btn--blue2.rounded-btn--hoverable Request Demo
+
+            .header-link-line.header__right__actions
+              a.header-link Log In
+              a.header-link Sign Up
+
+            - var el = { class: 'header__right__menu-icon', path: 'menu-icon' }
+            include partials/icon
+
+        .hash-e#c23cdad713ba9c41c6ed2c9bf8e5bac7 c23cdad713ba9c41c6ed2c9bf8e5bac7
+        div(style="width: 320px")
+          .header.header--at-mobile
+            .header__left
+              - el = { text: 'statsocial' }
+              - el.icon = { path: 'logo-icon'}
+              include partials/icon-text
+
+            .header__right
+              a.header__right__request-demo.rounded-btn.rounded-btn--blue2.rounded-btn--hoverable Request Demo
+
+              .header-link-line.header__right__actions
+                a.header-link Log In
+                a.header-link Sign Up
+
+              - var el = { class: 'header__right__menu-icon', path: 'menu-icon' }
+              include partials/icon
+
+
+
+      .section-kl
+        .header-ke Grid
+        .hash-e#c9f545437c019c6b67579d6dadc07ecf c9f545437c019c6b67579d6dadc07ecf
+        - var gridSize = 20
+        - for (var i=1; i<(gridSize/2)+1; i++ )
+          .grid.grid--gutter-x2.m-t-x2-g
+            .grid-bit(class="grid-bit--#{i}-#{gridSize}"):    .k-content
+            .grid-bit(class="grid-bit--#{gridSize-i}-#{gridSize}"): .k-content
+
+        .hash-e#b9a0ff7b6444fe8b3932c06919534ab5 b9a0ff7b6444fe8b3932c06919534ab5
+        - for (var i=1; i<(gridSize/2)+1; i++ )
+          .grid.grid--sliced.grid--gutter-x4.m-t-x2-g
+            .grid-bit(class="grid-bit--#{i}-#{gridSize}"):    .k-content
+            .grid-bit(class="grid-bit--#{gridSize-i}-#{gridSize}"): .k-content
+
+
+
+
+
+
+
