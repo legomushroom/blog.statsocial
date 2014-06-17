@@ -1401,7 +1401,7 @@ clearfix:after {
 }
 .input {
   outline: none;
-  border: 2px solid #b9b9b9;
+  border: 1px solid #416c7d;
   min-height: 40px;
   border-radius: 3px;
   display: block;
@@ -1412,6 +1412,7 @@ clearfix:after {
 }
 .input:focus,
 .input:hover {
+  border: 2px solid #416c7d;
   border-color: #416c7d;
 }
 .header-link {
