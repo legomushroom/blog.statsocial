@@ -45,6 +45,8 @@ center(size)
   margin-top:  -(size/2)
   nw 50%
 
+  
+
 t(position)
   top position
 
@@ -87,6 +89,22 @@ rect(size)
 min-rect(size)
   min-width size
   min-height size
+
+triangle(size=gs, color=c-grey5, position='top')
+  border 4px solid transparent
+  rect 0
+
+  if position == 'top'
+    border-top-color color
+
+  if position == 'left'
+    border-left-color color
+
+  if position == 'right'
+    border-right-color color
+
+  if position == 'right'
+    border-right-color color
 
 hl(color=deeppink, size=1px)
   outline size solid color

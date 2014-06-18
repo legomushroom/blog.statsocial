@@ -2,32 +2,111 @@
 @import '../assets/imports.styl'
 
 sidebarPanelWidth = 4*gs
+sidebarBtnsRestColor = c-grey7
+sidebarBtnsHoverColor = c-grey6
+sidebarScrollTopHeight = 11*gs
 
-/* 9c53be8ee1b8adc743428f4eef68f072 */
-.sidebar-scoll-top
+/* 883c00286c7cedf015ccc175d0a02dec */
+.sidebar-panel
   width sidebarPanelWidth
+  min-height 60*gs // just for dev purposes
   position relative
-  &:before, &:after
-    content ''
-    rect 0
-    border (gs/2) solid transparent
-    border-bottom-color c-grey4 
-    
+  border-right 1px solid sidebarBtnsRestColor
+  
+  /* 88600f049550246039629c60accbcd80 */
+  &.is-scroll-top
+    .sidebar-scoll-top
+      display block
+    .sidebar-expand
+      bottom sidebarScrollTopHeight
+
+  &__top-btns
+    position absolute
+    // top sidebarPanelWidth
+    top 0
+    .sidebar-btn
+      box-shadow 0 1px 0 currentColor
+      &:hover
+        box-shadow 0 1px 0 currentColor,
+          inset 0 1px 0 currentColor,
+          inset -1px 0 0 currentColor
+        &:first-of-type
+          box-shadow 0 1px 0 currentColor,
+            inset -1px 0 0 currentColor
+          
+
+  .sidebar-expand
+    position absolute
+    top 2*sidebarPanelWidth
+    bottom 0
+    height auto
+    z-index 1
+    &:hover
+      box-shadow 0 1px 0 currentColor,
+          inset 0 1px 0 currentColor,
+          inset -1px 0 0 currentColor
+      
+
+  .sidebar-scoll-top
+    position absolute
+    bottom 0
+    display none
+    box-shadow inset 0 1px 0 currentColor
+    &:hover
+      box-shadow inset 0 1px 0 currentColor,
+          inset -1px 0 0 currentColor
 
 /* 0e0013fd36e58408b7246ec8a8edfb66 */
 .sidebar-btn
   rect sidebarPanelWidth
   position relative
   size = 2.5*gs
+  color sidebarBtnsRestColor
   &:hover
+    color sidebarBtnsHoverColor
     cursor pointer
     background c-grey10
-    .icon
-      fill c-grey4
   .icon
     rect size
+    fill currentColor
     center size
+      
+/* 9c53be8ee1b8adc743428f4eef68f072 */
+.sidebar-scoll-top
+  @extends .sidebar-btn
+  width sidebarPanelWidth
+  position relative
+  height sidebarScrollTopHeight
+  &:before, &:after
+    content ''
+    position absolute
+    size = (gs/2)
+    rect 0
+    border size solid transparent
+    border-bottom-color currentColor
+    center(2*size)
+  &:before
+    margin-top - 1.5*gs
+  &:after
+    margin-top -.5*gs
 
+/* 8d97f4a419a59976b2f18e6311d0d56c */
+.sidebar-expand
+  @extends .sidebar-btn
+  width sidebarPanelWidth
+  // min-height 20*gs // just for dev purposes
+  position relative
+  &:before
+    content ''
+    rect 0
+    position absolute
+    size = (gs/2)
+    rect 0
+    border size solid transparent
+    border-left-color currentColor
+    center(2*size)
+    margin-left  -(size/2)
+  
 /* 0ef5d460a3af92c75b2b1acabdb438fe */
 .sidebar
   width headerLeftSize
