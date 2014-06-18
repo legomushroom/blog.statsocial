@@ -153,10 +153,8 @@ html
                 - el.icon = { path: 'home-icon' }
                 include partials/sidebar-btn
 
-               
-
               - el = { class: 'sidebar-panel__search' }
-              - el.input = { class: '', id: 'input-883c00286c7cedf015ccc175d0a02dec'}
+              - el.input = { class: '', id: 'input-'+(o.inputId || '883c00286c7cedf015ccc175d0a02dec')}
               - el.icon =  { path: 'search-icon' }
               include partials/input-icon
 
@@ -168,7 +166,7 @@ html
 
         .k-sample(style="display:none;")
           .hash-e#88600f049550246039629c60accbcd80 88600f049550246039629c60accbcd80
-          +sidebar-panel({class:'is-scroll-top'})
+          +sidebar-panel({class:'is-scroll-top', inputId: '88600f049550246039629c60accbcd80'})
 
         .k-sample
           .hash-e#0ef5d460a3af92c75b2b1acabdb438fe 0ef5d460a3af92c75b2b1acabdb438fe
@@ -177,7 +175,7 @@ html
               .sidebar-header.sidebar__about-header What is StatSocial?
               .sidebar-about StatSocial delivers enterprise-class Twitter analytics that help marketers understand their social consumers. By identifying where Twitter users exist elsewhere on the Web, StatSocial offers an unparalleled level of demographic and psychographic insights from consumer data aggregated not just from Twitter, but from over sixty social sites and every major blog platform.
               - el = { class: 'sidebar__search' }
-              - el.input = { class: '', id: 'input-0a0478d84d885b39b0df7c5939a6037c'}
+              - el.input = { class: '', id: 'input-a626e67bfe00a71c44968bae92cb6a6c'}
               - el.icon =  { path: 'search-icon' }
               include partials/input-icon
 
@@ -210,23 +208,226 @@ html
           .sidebar-n-panel
             .sidebar-n-panel__sidebar-l
               +sidebar()
-            +sidebar-panel({class:'is-scroll-top'})
+            +sidebar-panel({class:'is-scroll-top', inputId: '2dd245c639f53c95bb8dda4ae880acc1'})
 
         .k-sample(style="height: 700px; margin-bottom: 60px;")
           .hash-e#18dc84f92e17a6cffd9a07ebe1b86fff 18dc84f92e17a6cffd9a07ebe1b86fff
           .sidebar-n-panel.is-at-tablet
             .sidebar-n-panel__sidebar-l
               +sidebar()
-            +sidebar-panel({class:'is-scroll-top'})
+            +sidebar-panel({class:'is-scroll-top', inputId: '18dc84f92e17a6cffd9a07ebe1b86fff'})
 
         .k-sample(style="height: 700px; margin-bottom: 60px;")
           .hash-e#61ca1fbc891c10f80910e08063426d4c 61ca1fbc891c10f80910e08063426d4c
           .sidebar-n-panel.is-at-tablet.is-expanded
             .sidebar-n-panel__sidebar-l
               +sidebar()
-            +sidebar-panel({class:'is-scroll-top'})
+            +sidebar-panel({class:'is-scroll-top', inputId: '61ca1fbc891c10f80910e08063426d4c'})
 
         .cf
+
+        .hash-e#5d02ddbe8c0a2b36f876b2e73e401714 5d02ddbe8c0a2b36f876b2e73e401714
+        - el = { prefix: 'in', text: 'Celebrity accounts', class: '', id: ''} 
+        include partials/credits-item
+
+        .hash-e#5d4df2ebe88a96c8866f3354f0610d8a 5d4df2ebe88a96c8866f3354f0610d8a
+        mixin post-credits(o)        
+          .post-credits
+            .credits-item in 
+              a Celebrity accounts
+            .credits-item by 
+              a Audrey Hungerman
+            .credits-item
+              a Jan 9, 2014
+        +post-credits()
+
+        .hash-e#483cacc355c9becf9fbb76a795edc719 483cacc355c9becf9fbb76a795edc719
+        .post
+          h2 This post has very looong title and rantings you will love
+          +post-credits()
+          img(src="http://is.gd/3TQPzd" alt="")
+          p.
+            Lauer also stated that after co-host, Savannah Guthrie,
+            hosted a Facebook chat on the TODAY Show page, he was inspired
+            to connect with fans the same way. He even hosted a Facebook chat 
+            of his own (having Guthrie do his typing).
+          p.
+            This post looks like short sketch. It has no image and 
+            very loong meanless title. This post looks like short sketch. 
+            It has no image and very loong meanless title. This post looks 
+            like short sketch. It has no image and very loong meanless title.
+          p
+            <blockquote class="twitter-tweet" lang="en-gb"><p>Meet the rarest, most beautiful big cats in the world <a href="http://t.co/Y8w71CTVzm">http://t.co/Y8w71CTVzm</a>&#10;&#10;. <a href="http://t.co/qEVEatPxbJ">pic.twitter.com/qEVEatPxbJ</a></p>&mdash; Emergency Kittens (@EmrgencyKittens) <a href="https://twitter.com/EmrgencyKittens/statuses/479295076892278784">June 18, 2014</a></blockquote>
+
+          p
+            | This post looks like short sketch. It has no image and 
+            | very loong meanless title. This post looks like short sketch. 
+            | It has no image and very loong meanless title. This post looks 
+            | like short sketch. It has no image and very loong meanless title.
+
+          p
+            | This post looks like short sketch. It has no image and 
+            | very loong meanless title. This post looks like short sketch. 
+            | It has no image and very loong meanless title. This post looks 
+            | like short sketch. It has no image and very loong meanless title.
+
+          p
+            | This post looks like short sketch. It has no image and 
+            | very loong meanless title. This post looks like short sketch. 
+            | It has no image and very loong meanless title. This post looks 
+            | like short sketch. It has no image and very loong meanless title.
+            | This post looks like short sketch. It has no image and 
+            | very loong meanless title. This post looks like short sketch. 
+            | It has no image and very loong meanless title. This post looks 
+            | like short sketch. It has no image and very loong meanless title.
+
+          img(src="http://is.gd/EcYgTr").is-right
+
+          p
+            | This post looks like short sketch. It has no image and 
+            | very loong meanless title. This post looks like short sketch. 
+            | It has no image and very loong meanless title. This post looks 
+            | like short sketch. It has no image and very loong meanless title.
+
+          p
+            | This post looks like short sketch. It has no image and 
+            | very loong meanless title. This post looks like short sketch. 
+            | It has no image and very loong meanless title. This post looks 
+            | like short sketch. It has no image and very loong meanless title.
+
+          p
+            | This post looks like short sketch. It has no image and 
+            | very loong meanless title. This post looks like short sketch. 
+            | It has no image and very loong meanless title. This post looks 
+            | like short sketch. It has no image and very loong meanless title.
+            | This post looks like short sketch. It has no image and 
+            | very loong meanless title. This post looks like short sketch. 
+            | It has no image and very loong meanless title. This post looks 
+            | like short sketch. It has no image and very loong meanless title.
+
+          p
+            | This post looks like short sketch. It has no image and 
+            | very loong meanless title. This post looks like short sketch. 
+            | It has no image and very loong meanless title. This post looks 
+            | like short sketch. It has no image and very loong meanless title.
+
+          img(src="http://is.gd/GoPccO").is-left
+
+          p
+            | This post looks like short sketch. It has no image and 
+            | very loong meanless title. This post looks like short sketch. 
+            | It has no image and very loong meanless title. This post looks 
+            | like short sketch. It has no image and very loong meanless title.
+            | This post looks like short sketch. It has no image and 
+            | very loong meanless title. This post looks like short sketch. 
+            | It has no image and very loong meanless title. This post looks 
+            | like short sketch. It has no image and very loong meanless title.
+            | This post looks like short sketch. It has no image and 
+            | very loong meanless title. This post looks like short sketch. 
+            | It has no image and very loong meanless title. This post looks 
+            | like short sketch. It has no image and very loong meanless title.
+
+          p
+            | This post looks like short sketch. It has no image and 
+            | very loong meanless title. This post looks like short sketch. 
+            | It has no image and very loong meanless title. This post looks 
+            | like short sketch. It has no image and very loong meanless title.
+          
+          p.text-align-g
+            img(src="http://is.gd/dotvZM")
+
+          p
+            | This post looks like short sketch. It has no image and 
+            | very loong meanless title. This post looks like short sketch. 
+            | It has no image and very loong meanless title. This post looks 
+            | like short sketch. It has no image and very loong meanless title.
+            | This post looks like short sketch. It has no image and 
+            | very loong meanless title. This post looks like short sketch. 
+            | It has no image and very loong meanless title. This post looks 
+            | like short sketch. It has no image and very loong meanless title.
+
+          p
+            | This post looks like short sketch. It has no image and 
+            | very loong meanless title. This post looks like short sketch. 
+            | It has no image and very loong meanless title. This post looks 
+            | like short sketch. It has no image and very loong meanless title.
+
+          p
+            | This post looks like short sketch. It has no image and 
+            | very loong meanless title. This post looks like short sketch. 
+            | It has no image and very loong meanless title. This post looks 
+            | like short sketch. It has no image and very loong meanless title.
+            | This post looks like short sketch. It has no image and 
+            | very loong meanless title. This post looks like short sketch. 
+            | It has no image and very loong meanless title. This post looks 
+            | like short sketch. It has no image and very loong meanless title.
+            | This post looks like short sketch. It has no image and 
+            | very loong meanless title. This post looks like short sketch. 
+            | It has no image and very loong meanless title. This post looks 
+            | like short sketch. It has no image and very loong meanless title.
+
+          h5 Other LinkedIn updates include:
+          ul
+            li.
+              “Cover photo” that LinkedIn is calling a background. 
+              LinkedIn will provide you with some options for a picture
+            li.
+              Keyword suggestions to place in your profile to help you 
+              stand out in the search
+            li.
+              Open Profile setting that allows anyone with a LInkedIn 
+              profile to view your profile and contact you for free
+            li.
+              Advanced tracking to see users that have viewed you profile 
+              and see how you stack up against other users
+            li.
+              Premium Spotlight plan that includes all new features
+          p
+            | This post looks like short sketch. It has no image and 
+            | very loong meanless title. This post looks like short sketch. 
+            | It has no image and very loong meanless title. This post looks 
+            | like short sketch. It has no image and very loong meanless title.
+            | This post looks like short sketch. It has no image and 
+            | very loong meanless title. This post looks like short sketch. 
+            | It has no image and very loong meanless title. This post looks 
+            | like short sketch. It has no image and very loong meanless title.
+            | This post looks like short sketch. It has no image and 
+            | very loong meanless title. This post looks like short sketch. 
+            | It has no image and very loong meanless title. This post looks 
+            | like short sketch. It has no image and very loong meanless title.
+
+          blockquote.
+            This is a quote. looks like short sketch. It has no image and 
+            very loong meanless title. This post looks like short sketch. 
+            It has no image and very loong meanless title. This post looks 
+            like short sketch. It has no image and very loong meanless title.
+
+          p
+            | This post looks like short sketch. It has no image and 
+            | very loong meanless title. This post looks like short sketch. 
+            | It has no image and very loong meanless title. This post looks 
+            | like short sketch. It has no image and very loong meanless title.
+            | This post looks like short sketch. It has no image and 
+            | very loong meanless title. This post looks like short sketch. 
+            | It has no image and very loong meanless title. This post looks 
+            | like short sketch. It has no image and very loong meanless title.
+
+          h4 The Best
+          p(style="text-align:center"): strong 1. Ellen being Ellen
+          
+          .center-tweet
+            <blockquote class="twitter-tweet" lang="en-gb"><p>New IO Byte with <a href="https://twitter.com/alexanderdanilo">@alexanderdanilo</a>: Silky smooth Web Animations <a href="http://t.co/47wojj9XKU">http://t.co/47wojj9XKU</a> <a href="https://twitter.com/search?q=%23io14&amp;src=hash">#io14</a> <a href="https://twitter.com/search?q=%23iobytes&amp;src=hash">#iobytes</a></p>&mdash; Google Developers (@googledevs) <a href="https://twitter.com/googledevs/statuses/479322940882710529">June 18, 2014</a></blockquote>
+
+          p
+            | This post looks like short sketch. It has no image and 
+            | very loong meanless title. This post looks like short sketch. 
+            | It has no image and very loong meanless title. This post looks 
+            | like short sketch. It has no image and very loong meanless title.
+            | This post looks like short sketch. It has no image and 
+            | very loong meanless title. This post looks like short sketch. 
+            | It has no image and very loong meanless title. This post looks 
+            | like short sketch. It has no image and very loong meanless title.
+
 
         .hash-e#0a0478d84d885b39b0df7c5939a6037c 0a0478d84d885b39b0df7c5939a6037c
         - el = { class: '', id: ''}
@@ -287,7 +488,8 @@ html
             .grid-bit(class="grid-bit--#{gridSize-i}-#{gridSize}"): .k-content
 
 
-
+      <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+      
 
 
 

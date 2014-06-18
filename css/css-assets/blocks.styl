@@ -406,9 +406,141 @@ sidebarScrollTopHeight = 11*gs
       box-shadow inset 0 1px 0 currentColor,
           -1px 0 0 currentColor,
           inset -1px 0 0 currentColor        
-          
 
+/* 5d4df2ebe88a96c8866f3354f0610d8a */
+.post-credits
+  display inline-block
+  .credits-item  
+    display inline-block
+    position relative
+    padding = 2.6*gs
+    & + {end()}
+      padding-left padding
+      size = .6*gs
+      &:after
+        content ''
+        position absolute
+        top .8*gs
+        left (padding/2) - (size/2) - 1
+        rect size
+        background c-grey8
+        background rgba(c-blue1, .25)
+        border-radius 50%
 
+/* 5d02ddbe8c0a2b36f876b2e73e401714 */
+.credits-item
+  color c-blue1
+  font-size 1.4*gs
+  // font-weight 100
 
+/* 483cacc355c9becf9fbb76a795edc719 */
+vertGutter = 2*gs
+.post
+  color c-blue1
+  max-width 80*gs
+  h2
+    text-transform uppercase
+    font-size 3.2*gs
+    line-height 4.3*gs
+    font-weight 600
+    text-align center
+    padding 0 12*gs
+  h4
+    text-transform uppercase
+    text-align center
+    font-weight 600
+    font-size 2.2*gs
+    line-height 3*gs
+    margin-top 2.5*gs
+    & + p
+      margin-top 1*gs
+  h5
+    font-size 2*gs
+    font-weight 600
+    margin-top 1.5*vertGutter
+    & + ul
+      margin-top vertGutter
+  strong
+    font-weight 600
+  img
+    max-width 100%
+    // margin vertGutter 0
+    margin-top .6*gs
+    & + p
+      margin-top vertGutter
+    &.is-left
+      float left
+      margin 1.5*vertGutter 1.5*vertGutter 0 0
+    &.is-right
+      float right
+      margin 1.5*vertGutter 0 0 1.5*vertGutter
+
+  p, blockquote, li
+    font-size 1.8*gs
+    line-height 2.8*gs
+    & + p, & + blockquote
+      margin-top vertGutter
+    & + .center-tweet
+      margin-top .5*vertGutter
+  .twitter-tweet
+    float left
+    max-width 40*gs II
+    margin .5*gs 1.5*vertGutter 0 0 II
+  .center-tweet
+    text-align center
+    & + p
+      margin-top vertGutter
+    .twitter-tweet
+      float none
+      display inline-block II
+
+  padding = 5*gs
+  blockquote
+    font-style italic
+    font-weight 100
+    padding-left padding
+    position relative
+    // font-size 2*gs
+    // line-height 2.8*gs
+    padding-right 4*gs
+    margin-left .5*gs
+    size = (.4*gs)
+    &:before
+      content ''
+      position absolute
+      height 100%
+      width size
+      background c-blue3
+      top 0
+      left: (padding/2)
+      margin-left -(size/2)
+  ul
+    margin-left 2.5*gs
+    padding-right 4*gs
+    & + p
+      margin-top vertGutter
+  li
+    padding-left 2*gs
+    position relative
+    &:before
+      content ''
+      position absolute
+      left 0
+      top .9*gs
+      rect .8*gs
+      background c-blue1
+      border-radius 50%
+    & + li
+      margin-top (gs/2)
+  
+  .post-credits
+    margin .6*vertGutter 0
+    width 100%
+    text-align center
+    & + p
+      margin-top 2*gs    
+
+      
+      
 
       
