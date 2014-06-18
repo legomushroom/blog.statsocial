@@ -2,7 +2,7 @@ doctype
 html
   head
     meta(charset='UTF-8')
-    title mateomatic
+    title StatSocial Blog
     link(rel="stylesheet", type="text/css", href="main.css")
     link(rel="stylesheet", type="text/css", href="assets/kit.css")
     //- link(rel="stylesheet", href="css-assets/font/stylesheet.css", type="text/css", charset="utf-8")
@@ -67,6 +67,16 @@ html
           .hash-e#67e12e92af48d19f9837ee74a939186d 67e12e92af48d19f9837ee74a939186d
           a(href="#") Link
 
+          .hash-e#ec9afeed491f9ee1f433b3ef35b6dd58 ec9afeed491f9ee1f433b3ef35b6dd58
+          .sidebar-header What is StatSocial?
+
+          .hash-e#c389dcb7895129bf6e660063a6290571 c389dcb7895129bf6e660063a6290571
+          .sidebar-about StatSocial delivers enterprise-class Twitter analytics that help marketers understand their social consumers. By identifying where Twitter users exist elsewhere on the Web, StatSocial offers an unparalleled level of demographic and psychographic insights from consumer data aggregated not just from Twitter, but from over sixty social sites and every major blog platform.
+
+          .hash-e#7d7ed33281e44c7092ef2f908536f698 7d7ed33281e44c7092ef2f908536f698
+          - el = { text: 'Matt Laure Joins Facebook', class: '', id: ''} 
+          include partials/sidebar-list-item
+
           .hash-e#e55a1d273d2927877a38268403c3d6d3 e55a1d273d2927877a38268403c3d6d3
           .k-d-bg.k-sample
             - el = { text: 'statsocial' }
@@ -108,6 +118,52 @@ html
         .hash-e#08683ec747ff35de14ad2765f8a9078e 08683ec747ff35de14ad2765f8a9078e        
         - el = { items: ['Log In', 'Sign Up'], class: '', id: ''} 
         include partials/header-link-line
+
+        .hash-e#fc5824bd35eff85f11d426e8dbfd9ddf fc5824bd35eff85f11d426e8dbfd9ddf
+        - el = { items: [{text: 'Matt Laure Joins Facebook'},{text: 'Obama takes Tumblr'},{text: 'The Best & Worst of Twitter: Week of 6/1/2014'}], class: '', id: ''} 
+        include partials/sidebar-list
+        
+        .k-sample
+          .hash-e#0e0013fd36e58408b7246ec8a8edfb66z 0e0013fd36e58408b7246ec8a8edfb66
+          - el = { class: '', id: ''}
+          - el.icon = { path: 'search-icon' }
+          include partials/sidebar-btn
+
+        .k-sample
+          .hash-e#0e0013fd36e58408b7246ec8a8edfb66z 0e0013fd36e58408b7246ec8a8edfb66z
+          - el = { class: '', id: ''}
+          - el.icon = { path: 'home-icon' }
+          include partials/sidebar-btn
+
+        .k-sample
+          .hash-e#9c53be8ee1b8adc743428f4eef68f072 9c53be8ee1b8adc743428f4eef68f072
+          .sidebar-scoll-top
+
+        .cf
+
+        .hash-e#0ef5d460a3af92c75b2b1acabdb438fe 0ef5d460a3af92c75b2b1acabdb438fe
+        .sidebar
+          .sidebar-header.sidebar__about-header What is StatSocial?
+          .sidebar-about StatSocial delivers enterprise-class Twitter analytics that help marketers understand their social consumers. By identifying where Twitter users exist elsewhere on the Web, StatSocial offers an unparalleled level of demographic and psychographic insights from consumer data aggregated not just from Twitter, but from over sixty social sites and every major blog platform.
+          - el = { class: 'sidebar__search' }
+          - el.input = { class: '', id: 'input-0a0478d84d885b39b0df7c5939a6037c'}
+          - el.icon =  { path: 'search-icon' }
+          include partials/input-icon
+
+          .sidebar-header.m-t-x3-g Recent Posts
+          - el = { items: [{text: 'Matt Laure Joins Facebook'},{text: 'Obama takes Tumblr'},{text: 'The Best & Worst of Twitter: Week of 6/1/2014'}], class: '', id: ''} 
+          include partials/sidebar-list
+
+          .sidebar-header.m-t-x2-g Archives
+          - el = { items: [{text: 'June 2014'},{text: 'May 2014'},{text: 'April 2014'}], class: '', id: ''} 
+          include partials/sidebar-list
+
+          .sidebar-header.m-t-x2-g Recent Posts
+          - el = { items: [{text: 'Matt Laure Joins Facebook'},{text: 'Obama takes Tumblr'},{text: 'The Best & Worst of Twitter: Week of 6/1/2014'}], class: '', id: ''} 
+          include partials/sidebar-list
+
+
+
 
         .hash-e#0a0478d84d885b39b0df7c5939a6037c 0a0478d84d885b39b0df7c5939a6037c
         - el = { class: '', id: ''}

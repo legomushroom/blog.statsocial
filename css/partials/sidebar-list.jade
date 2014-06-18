@@ -1,0 +1,5 @@
+ul.sidebar-list(class="#{el.class || ''}", id="#{el.id || ''}")
+  - var items = el.items
+  - for (i in items)
+    - el = items[i]
+    include sidebar-list-item

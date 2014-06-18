@@ -152,6 +152,9 @@ body {
   color: #fff;
   text-shadow: none;
 }
+.text-align-center-g {
+  text-align: center;
+}
 .bold-g,
 .b-g {
   font-weight: bold;
@@ -1203,7 +1206,61 @@ clearfix:after {
   background-color: #f1f1f1;
 }
 .c-grey10-bg-g {
-  background-color: #fff;
+  background-color: #f9f9f9;
+}
+.sidebar-scoll-top {
+  width: 40px;
+  position: relative;
+}
+.sidebar-scoll-top:before,
+.sidebar-scoll-top:after {
+  content: '';
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-bottom-color: #656565;
+}
+.sidebar-btn {
+  width: 40px;
+  height: 40px;
+  position: relative;
+}
+.sidebar-btn:hover {
+  cursor: pointer;
+  background: #f9f9f9;
+}
+.sidebar-btn:hover .icon {
+  fill: #656565;
+}
+.sidebar-btn .icon {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  margin-left: -12.5px;
+  margin-top: -12.5px;
+  top: 50%;
+  left: 50%;
+}
+.sidebar {
+  width: 320px;
+  padding: 0 40px;
+}
+.sidebar .sidebar-header {
+  margin: 10px 0;
+}
+.sidebar .sidebar-header.sidebar__about-header {
+  text-align: center;
+  margin-bottom: 20px;
+  padding-right: 15px;
+}
+.sidebar .sidebar-header + .sidebar-list {
+  margin-left: 3px;
+}
+.sidebar .sidebar-list + .sidebar-header {
+  margin-top: 25px;
+}
+.sidebar__search {
+  margin: 20px 0 20px;
 }
 .input-icon {
   position: relative;
@@ -1398,6 +1455,39 @@ clearfix:after {
 .header.header--at-mobile .header__right__actions {
   display: none;
 }
+.sidebar-list-item {
+  font-size: 16px;
+  line-height: 26px;
+  color: #416c7d;
+  list-style: none;
+  position: relative;
+  padding-left: 20px;
+  font-weight: 400;
+}
+.sidebar-list-item > a {
+  color: inherit;
+}
+.sidebar-list-item:before {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 10px;
+  width: 6px;
+  height: 6px;
+  background: #416c7d;
+  border-radius: 50%;
+}
+.sidebar-header {
+  color: #416c7d;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 26px;
+}
+.sidebar-about {
+  color: #416c7d;
+  font-size: 14px;
+  line-height: 24px;
+}
 .input {
   outline: none;
   border: 1px solid #416c7d;
@@ -1437,6 +1527,7 @@ a,
   display: inline-block;
   color: #5adcff;
   cursor: default;
+  line-height: 22px;
 }
 a:hover,
 .link:hover {
@@ -1448,7 +1539,7 @@ a:hover:after,
   width: 100%;
   height: 0;
   position: absolute;
-  bottom: -2px;
+  top: 95%;
   left: 0;
   border-bottom: 1px solid;
 }

@@ -1,6 +1,64 @@
 // BLOCKS
 @import '../assets/imports.styl'
 
+sidebarPanelWidth = 4*gs
+
+/* 9c53be8ee1b8adc743428f4eef68f072 */
+.sidebar-scoll-top
+  width sidebarPanelWidth
+  position relative
+  &:before, &:after
+    content ''
+    rect 0
+    border (gs/2) solid transparent
+    border-bottom-color c-grey4 
+    
+
+/* 0e0013fd36e58408b7246ec8a8edfb66 */
+.sidebar-btn
+  rect sidebarPanelWidth
+  position relative
+  size = 2.5*gs
+  &:hover
+    cursor pointer
+    background c-grey10
+    .icon
+      fill c-grey4
+  .icon
+    rect size
+    center size
+
+/* 0ef5d460a3af92c75b2b1acabdb438fe */
+.sidebar
+  width headerLeftSize
+  padding 0 4*gs
+
+  .sidebar-header
+    margin gs 0
+
+    &{root()}__about-header
+      text-align center
+      margin-bottom 2*gs
+      padding-right 1.5*gs
+
+    & + .sidebar-list
+      margin-left .3*gs
+
+  .sidebar-list
+    & + .sidebar-header
+      margin-top 2.5*gs
+  
+  &__search
+    margin 2*gs 0 2*gs
+
+
+
+/* fc5824bd35eff85f11d426e8dbfd9ddf */
+// .sidebar-list
+//   .sidebar-list-item
+//     & + {end()}
+//       margin-top 0
+
 /* 0a0478d84d885b39b0df7c5939a6037c */
 .input-icon
   position relative
