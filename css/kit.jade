@@ -145,63 +145,88 @@ html
 
         .k-sample
           .hash-e#883c00286c7cedf015ccc175d0a02dec 883c00286c7cedf015ccc175d0a02dec
-          .sidebar-panel
-            
-            .sidebar-panel__top-btns
-              - el = { class: '', id: ''}
-              - el.icon = { path: 'home-icon' }
-              include partials/sidebar-btn
+          mixin sidebar-panel(o)
+            .sidebar-panel(class="#{o.class}")
+              
+              .sidebar-panel__top-btns
+                - el = { class: '', id: ''}
+                - el.icon = { path: 'home-icon' }
+                include partials/sidebar-btn
 
-              - el = { class: '', id: ''}
-              - el.icon = { path: 'search-icon' }
-              include partials/sidebar-btn
+               
 
-            .sidebar-expand
+              - el = { class: 'sidebar-panel__search' }
+              - el.input = { class: '', id: 'input-883c00286c7cedf015ccc175d0a02dec'}
+              - el.icon =  { path: 'search-icon' }
+              include partials/input-icon
 
-            .sidebar-scoll-top
+              .sidebar-expand
+
+              .sidebar-scoll-top
+
+          +sidebar-panel({})
+
+        .k-sample(style="display:none;")
+          .hash-e#88600f049550246039629c60accbcd80 88600f049550246039629c60accbcd80
+          +sidebar-panel({class:'is-scroll-top'})
 
         .k-sample
-          .hash-e#88600f049550246039629c60accbcd80 88600f049550246039629c60accbcd80
-          .sidebar-panel.is-scroll-top
-            
-            .sidebar-panel__top-btns
-              - el = { class: '', id: ''}
-              - el.icon = { path: 'home-icon' }
-              include partials/sidebar-btn
+          .hash-e#0ef5d460a3af92c75b2b1acabdb438fe 0ef5d460a3af92c75b2b1acabdb438fe
+          mixin sidebar(o)
+            .sidebar
+              .sidebar-header.sidebar__about-header What is StatSocial?
+              .sidebar-about StatSocial delivers enterprise-class Twitter analytics that help marketers understand their social consumers. By identifying where Twitter users exist elsewhere on the Web, StatSocial offers an unparalleled level of demographic and psychographic insights from consumer data aggregated not just from Twitter, but from over sixty social sites and every major blog platform.
+              - el = { class: 'sidebar__search' }
+              - el.input = { class: '', id: 'input-0a0478d84d885b39b0df7c5939a6037c'}
+              - el.icon =  { path: 'search-icon' }
+              include partials/input-icon
 
-              - el = { class: '', id: ''}
-              - el.icon = { path: 'search-icon' }
-              include partials/sidebar-btn
+              .sidebar-header.m-t-x3-g Recent Posts
+              - el = { items: [{text: 'Matt Laure Joins Facebook'},{text: 'Obama takes Tumblr'},{text: 'The Best & Worst of Twitter: Week of 6/1/2014'}], class: '', id: ''} 
+              include partials/sidebar-list
 
-            .sidebar-expand
+              .sidebar-header.m-t-x2-g Archives
+              - el = { items: [{text: 'June 2014'},{text: 'May 2014'},{text: 'April 2014'}], class: '', id: ''} 
+              include partials/sidebar-list
 
-            .sidebar-scoll-top
+              .sidebar-header.m-t-x2-g Recent Posts
+              - el = { items: [{text: 'Matt Laure Joins Facebook'},{text: 'Obama takes Tumblr'},{text: 'The Best & Worst of Twitter: Week of 6/1/2014'}], class: '', id: ''} 
+              include partials/sidebar-list
+
+              .sidebar-header.m-t-x2-g Recent Posts
+              - el = { items: [{text: 'Matt Laure Joins Facebook'},{text: 'Obama takes Tumblr'},{text: 'The Best & Worst of Twitter: Week of 6/1/2014'}], class: '', id: ''} 
+              include partials/sidebar-list
+
+              .sidebar-header.m-t-x2-g Recent Posts
+              - el = { items: [{text: 'Matt Laure Joins Facebook'},{text: 'Obama takes Tumblr'},{text: 'The Best & Worst of Twitter: Week of 6/1/2014'}], class: '', id: ''} 
+              include partials/sidebar-list
+
+          +sidebar()
 
         .cf
+        
+        .k-sample(style="margin-bottom: 60px;")
+          .hash-e#2dd245c639f53c95bb8dda4ae880acc1 2dd245c639f53c95bb8dda4ae880acc1
+          .sidebar-n-panel
+            .sidebar-n-panel__sidebar-l
+              +sidebar()
+            +sidebar-panel({class:'is-scroll-top'})
 
-        .hash-e#0ef5d460a3af92c75b2b1acabdb438fe 0ef5d460a3af92c75b2b1acabdb438fe
-        .sidebar
-          .sidebar-header.sidebar__about-header What is StatSocial?
-          .sidebar-about StatSocial delivers enterprise-class Twitter analytics that help marketers understand their social consumers. By identifying where Twitter users exist elsewhere on the Web, StatSocial offers an unparalleled level of demographic and psychographic insights from consumer data aggregated not just from Twitter, but from over sixty social sites and every major blog platform.
-          - el = { class: 'sidebar__search' }
-          - el.input = { class: '', id: 'input-0a0478d84d885b39b0df7c5939a6037c'}
-          - el.icon =  { path: 'search-icon' }
-          include partials/input-icon
+        .k-sample(style="height: 700px; margin-bottom: 60px;")
+          .hash-e#18dc84f92e17a6cffd9a07ebe1b86fff 18dc84f92e17a6cffd9a07ebe1b86fff
+          .sidebar-n-panel.is-at-tablet
+            .sidebar-n-panel__sidebar-l
+              +sidebar()
+            +sidebar-panel({class:'is-scroll-top'})
 
-          .sidebar-header.m-t-x3-g Recent Posts
-          - el = { items: [{text: 'Matt Laure Joins Facebook'},{text: 'Obama takes Tumblr'},{text: 'The Best & Worst of Twitter: Week of 6/1/2014'}], class: '', id: ''} 
-          include partials/sidebar-list
+        .k-sample(style="height: 700px; margin-bottom: 60px;")
+          .hash-e#61ca1fbc891c10f80910e08063426d4c 61ca1fbc891c10f80910e08063426d4c
+          .sidebar-n-panel.is-at-tablet.is-expanded
+            .sidebar-n-panel__sidebar-l
+              +sidebar()
+            +sidebar-panel({class:'is-scroll-top'})
 
-          .sidebar-header.m-t-x2-g Archives
-          - el = { items: [{text: 'June 2014'},{text: 'May 2014'},{text: 'April 2014'}], class: '', id: ''} 
-          include partials/sidebar-list
-
-          .sidebar-header.m-t-x2-g Recent Posts
-          - el = { items: [{text: 'Matt Laure Joins Facebook'},{text: 'Obama takes Tumblr'},{text: 'The Best & Worst of Twitter: Week of 6/1/2014'}], class: '', id: ''} 
-          include partials/sidebar-list
-
-
-
+        .cf
 
         .hash-e#0a0478d84d885b39b0df7c5939a6037c 0a0478d84d885b39b0df7c5939a6037c
         - el = { class: '', id: ''}
