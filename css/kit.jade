@@ -174,26 +174,34 @@ html
         .hash-e#08683ec747ff35de14ad2765f8a9078e 08683ec747ff35de14ad2765f8a9078e        
         - el = { items: ['Log In', 'Sign Up'], class: '', id: ''} 
         include partials/header-link-line
+        
+        .k-sample
+          .hash-e#a86d1c01d59d3bd7500000bc1e9e2c95 a86d1c01d59d3bd7500000bc1e9e2c95
+          mixin share(o)
+            - var o = o || {};
+            .share.cf(class="#{o.class || ''}")
+              - el = { class: 'share-icon--twitter', id: ''}
+              - el.icon = { path: 'twitter-icon' }
+              include partials/share-icon
 
-        .hash-e#a86d1c01d59d3bd7500000bc1e9e2c95 a86d1c01d59d3bd7500000bc1e9e2c95
-        mixin share()
-          .share.cf
-            - el = { class: 'share-icon--twitter', id: ''}
-            - el.icon = { path: 'twitter-icon' }
-            include partials/share-icon
+              - el = { class: 'share-icon--facebook', id: ''}
+              - el.icon = { path: 'facebook-icon' }
+              include partials/share-icon
 
-            - el = { class: 'share-icon--facebook', id: ''}
-            - el.icon = { path: 'facebook-icon' }
-            include partials/share-icon
+              - el = { class: 'share-icon--linkedin', id: ''}
+              - el.icon = { path: 'linkedin-icon' }
+              include partials/share-icon
 
-            - el = { class: 'share-icon--linkedin', id: ''}
-            - el.icon = { path: 'linkedin-icon' }
-            include partials/share-icon
+              - el = { class: 'share-icon--google', id: ''}
+              - el.icon = { path: 'google-icon' }
+              include partials/share-icon
+          +share()
 
-            - el = { class: 'share-icon--google', id: ''}
-            - el.icon = { path: 'google-icon' }
-            include partials/share-icon
-        +share()
+        .k-sample
+          .hash-e#7f6955dcb9404eb89ec15ff536abf13f 7f6955dcb9404eb89ec15ff536abf13f
+          +share({class: 'is-at-mobile'})
+
+        .cf
 
         .hash-e#fc5824bd35eff85f11d426e8dbfd9ddf fc5824bd35eff85f11d426e8dbfd9ddf
         - el = { items: [{text: 'Matt Laure Joins Facebook'},{text: 'Obama takes Tumblr'},{text: 'The Best & Worst of Twitter: Week of 6/1/2014'}], class: '', id: ''} 
@@ -353,7 +361,7 @@ html
               include partials/post-splitter
               +post-credits({class: o.creditsClass})
 
-            +share()
+            +share({class: o.class})
             a.next-post ← Customize Your Twitter Feed By Muting Users
             a.next-post The Best & Worst of Twitter: Week of 5/18/2014 →
             .post-bottom-credits__line

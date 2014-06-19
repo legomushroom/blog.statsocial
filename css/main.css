@@ -1836,7 +1836,7 @@ clearfix:after {
 }
 .post-splitter.is-at-bottom.is-at-mobile .post-splitter__logo {
   color: #5adcff;
-  left: 40px;
+  left: 45px;
 }
 .post-splitter.is-at-bottom.is-at-mobile .post-splitter__logo:hover {
   color: #fff;
@@ -1922,6 +1922,16 @@ clearfix:after {
 }
 .share {
   display: inline-block;
+/* 7f6955dcb9404eb89ec15ff536abf13f */
+}
+.share.is-at-mobile .share-icon {
+  border-color: currentColor;
+}
+.share.is-at-mobile .share-icon + .share-icon {
+  margin-left: 20px;
+}
+.share.is-at-mobile .share-icon:hover {
+  opacity: 0.85;
 }
 .share .share-icon {
   float: left;
@@ -1946,19 +1956,27 @@ clearfix:after {
 }
 .post-bottom-credits.is-at-mobile .post-bottom-credits__top .post-credits {
   float: left;
-  margin-left: 30px;
+  margin-left: 25px;
   margin-top: 8px;
   font-weight: 100;
+}
+.post-bottom-credits.is-at-mobile .post-bottom-credits__line {
+  width: 200%;
+  max-width: 200%;
+  left: -50%;
+  position: relative;
 }
 .post-bottom-credits.is-at-mobile .post-splitter {
   float: left;
 }
 .post-bottom-credits.is-at-mobile .share {
   display: inline-block;
+  margin-top: 35px;
 }
 .post-bottom-credits.is-at-mobile .next-post {
-  max-width: 80%;
-  min-width: 80%;
+  max-width: 84%;
+  min-width: 84%;
+  margin-top: 35px;
 }
 .post-bottom-credits .post-credits {
   margin-top: 20px;

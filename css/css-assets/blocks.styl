@@ -563,7 +563,7 @@ vertGutter = 2*gs
       width 10*gs
       {root()}__logo
         color c-blue3
-        left 4*gs
+        left 4.5*gs
         &:hover
           color white
       &:after
@@ -635,10 +635,18 @@ vertGutter = 2*gs
 /* a86d1c01d59d3bd7500000bc1e9e2c95 */
 .share
   display inline-block
+  /* 7f6955dcb9404eb89ec15ff536abf13f */
+  &.is-at-mobile
+    .share-icon
+      border-color currentColor
+      & + {end()}
+        margin-left 2*gs
+      &:hover
+        opacity .85
   .share-icon
     float left
     & + {end()}
-      margin-left 1*gs
+      margin-left gs
 
 /* 34f28b60c8011d2c96bdf82d3ebfd797 */
 columnWidth = 43*gs
@@ -649,21 +657,29 @@ columnWidth = 43*gs
   /* e394a8cc55f307c0e9dc59b924d2d079 */
   &.is-at-mobile
     max-width 32*gs
-    {root()}__top
-      display table
-      fly()
-      .post-credits
-        float left
-        margin-left 3*gs
-        margin-top .8*gs
-        font-weight 100
+    {root()}
+      &__top
+        display table
+        fly()
+        .post-credits
+          float left
+          margin-left 2.5*gs
+          margin-top .8*gs
+          font-weight 100
+      &__line
+        width 200%
+        max-width 200%
+        left -50%
+        position relative
     .post-splitter
       float left
     .share
       display inline-block
+      margin-top 3.5*gs
     .next-post
-      max-width 80%
-      min-width 80%
+      max-width 84%
+      min-width 84%
+      margin-top 3.5*gs
 
   .post-credits
     margin-top 2*gs
