@@ -451,13 +451,13 @@ vertGutter = 2*gs
     font-weight 600
     font-size 2.2*gs
     line-height 3*gs
-    margin-top 2.5*gs
+    margin-top 3*gs
     & + p
       margin-top 1*gs
   h5
     font-size 2*gs
     font-weight 600
-    margin-top 1.5*vertGutter
+    margin-top 1.7*vertGutter
     & + ul
       margin-top vertGutter
   strong
@@ -478,7 +478,7 @@ vertGutter = 2*gs
   p, blockquote, li
     font-size 1.8*gs
     line-height 2.8*gs
-    & + p, & + blockquote
+    & + p
       margin-top vertGutter
     & + .center-tweet
       margin-top .5*vertGutter
@@ -488,8 +488,7 @@ vertGutter = 2*gs
     margin .5*gs 1.5*vertGutter 0 0 II
   .center-tweet
     text-align center
-    & + p
-      margin-top vertGutter
+    margin-bottom 1.5*vertGutter
     .twitter-tweet
       float none
       display inline-block II
@@ -500,10 +499,10 @@ vertGutter = 2*gs
     font-weight 100
     padding-left padding
     position relative
-    // font-size 2*gs
-    // line-height 2.8*gs
     padding-right 4*gs
     margin-left .5*gs
+    margin-top 2.5*gs
+    margin-bottom 2.5*gs
     size = (.4*gs)
     &:before
       content ''
@@ -516,9 +515,10 @@ vertGutter = 2*gs
       margin-left -(size/2)
   ul
     margin-left 2.5*gs
+    margin-top 1.5*vertGutter
     padding-right 4*gs
     & + p
-      margin-top vertGutter
+      margin-top 1.5*vertGutter
   li
     padding-left 2*gs
     position relative
@@ -540,7 +540,79 @@ vertGutter = 2*gs
     & + p
       margin-top 2*gs    
 
-      
+/* 307c65e9540bc6fccc9e6fd2279d5029 */
+.post-splitter
+  position relative
+  color c-grey9
+  &:after
+    content ''
+    height .2*gs
+    width 100%
+    color inherit
+    background currentColor
+    position absolute
+    top 50%
+    left 0
+  size = 9*gs
+  &__logo
+    position relative
+    z-index 1
+    left 50%
+    margin-left -(size/2)
+    rect size
+    border-radius 50%
+    background white
+    display block
+    color inherit
+    overflow hidden
+    &:after
+      display none
+    &:hover
+      cursor pointer
+      background c-blue3
+      transition background .5s linear
+      .icon
+        fill white
+      // {up(1)}__glare
+      //   left 100%
+      //   opacity 1
+      //   transition left .4s ease-in, opacity .35s ease-in
+    &__glare
+      opacity 0
+      rect 200%
+      left -150%
+      top -50%
+      position absolute
+      &:before, &:after
+        content ''
+        height 3*gs
+        width 200%
+        position absolute
+        background rgba(white, .75)
+        transform rotate(55deg)
+        transform-origin left center
+      &:after
+        height (1*gs)
+        margin-top -2.5*gs
+  size = 6*gs
+  .icon
+    rect size
+    color inherit
+    fill currentColor
+    content 0
+    cursor pointer
+    center(size)
       
 
-      
+/* a86d1c01d59d3bd7500000bc1e9e2c95 */
+.share
+  display inline-block
+  .share-icon
+    float left
+    & + {end()}
+      margin-left 2*gs
+
+
+
+
+

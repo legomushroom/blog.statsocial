@@ -84,3 +84,58 @@ a, .link
       top 95%
       left 0
       border-bottom 1px solid
+
+/* 333473649f1a25a7bf3d21b835adaa06 */
+.share-icon
+  rect 5*gs
+  border-radius 50%
+  position relative
+  display block
+  overflow hidden
+  cursor pointer
+  border 2px solid currentColor
+  size = 2.4*gs
+  &:hover
+    opacity .8
+  .icon
+    fill currentColor
+    rect size
+    center(size)
+
+  /* 333473649f1a25a7bf3d21b835adaa06 */
+  &--twitter
+    color c-twitter
+    .icon
+      transform translate(.1*gs, .1*gs)
+
+  /* 3c5c6e87f864179fba9ba330a3d2d01d */
+  &--facebook
+    color c-facebook
+
+  /* 012b156610f7a08ac477c0b51092f409 */
+  &--linkedin
+    color c-linkedin
+
+  /* ce133e0571031a40d6608ea8a2f0ef43 */
+  &--google
+    color c-google
+    .icon
+      rect 4*gs
+      margin-top  - gs
+      margin-left -1.8*gs
+
+/* ddc4137247ad4d4bc5668efb0f33fac4 */
+.next-post
+  border 1px solid c-grey9
+  padding .4*gs 10%
+  border-radius br
+  color c-blue1
+  font-size 1.6*gs
+  line-height 2.2*gs
+  &:after
+    display none
+  &:hover
+    border-color currentColor
+
+
+

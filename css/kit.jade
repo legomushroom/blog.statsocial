@@ -55,8 +55,28 @@ html
           include partials/icon
 
         .k-sample
-          .hash-e#87402ed31b2c5fde31ba52b67ea2889b 87402ed31b2c5fde31ba52b67ea2889b
+          .hash-e#e502a02855e64daa899c07361dd2273c e502a02855e64daa899c07361dd2273c
           - var el = { path: 'search-icon' }
+          include partials/icon
+
+        .k-sample
+          .hash-e#746e6ba9c0df5d97461c470e28d32d52 746e6ba9c0df5d97461c470e28d32d52
+          - var el = { path: 'twitter-icon' }
+          include partials/icon
+
+        .k-sample
+          .hash-e#c37260ea5c7fabcc9f95683438c22637 c37260ea5c7fabcc9f95683438c22637
+          - var el = { path: 'facebook-icon' }
+          include partials/icon
+
+        .k-sample
+          .hash-e#b6d79b50e33f243184987be55ba89750 b6d79b50e33f243184987be55ba89750
+          - var el = { path: 'linkedin-icon' }
+          include partials/icon
+
+        .k-sample
+          .hash-e#d45cd032517911de45b16c722c2c6087 d45cd032517911de45b16c722c2c6087
+          - var el = { path: 'google-icon' }
           include partials/icon
 
         .cf
@@ -67,57 +87,107 @@ html
           .hash-e#67e12e92af48d19f9837ee74a939186d 67e12e92af48d19f9837ee74a939186d
           a(href="#") Link
 
-          .hash-e#ec9afeed491f9ee1f433b3ef35b6dd58 ec9afeed491f9ee1f433b3ef35b6dd58
-          .sidebar-header What is StatSocial?
+        .k-sample
+          .hash-e#ddc4137247ad4d4bc5668efb0f33fac4 ddc4137247ad4d4bc5668efb0f33fac4
+          a(href="#").next-post ← older posts
 
-          .hash-e#c389dcb7895129bf6e660063a6290571 c389dcb7895129bf6e660063a6290571
-          .sidebar-about StatSocial delivers enterprise-class Twitter analytics that help marketers understand their social consumers. By identifying where Twitter users exist elsewhere on the Web, StatSocial offers an unparalleled level of demographic and psychographic insights from consumer data aggregated not just from Twitter, but from over sixty social sites and every major blog platform.
-
-          .hash-e#7d7ed33281e44c7092ef2f908536f698 7d7ed33281e44c7092ef2f908536f698
-          - el = { text: 'Matt Laure Joins Facebook', class: '', id: ''} 
-          include partials/sidebar-list-item
-
-          .hash-e#e55a1d273d2927877a38268403c3d6d3 e55a1d273d2927877a38268403c3d6d3
-          .k-d-bg.k-sample
-            - el = { text: 'statsocial' }
-            - el.icon = { path: 'logo-icon'}
-            include partials/icon-text
-
-          .cf
-
-          .hash-e#9d86756becc3c306959936f4c7e3a19f 9d86756becc3c306959936f4c7e3a19f
-          - el = { text: 'Log In', class: '', id: ''} 
-          include partials/header-link
-
-          .hash-e#1c23fe75816818e2ccedba3fd66d8310 1c23fe75816818e2ccedba3fd66d8310
-          .k-d-bg.k-sample
-            - el = { text: 'Request Demo', class: '', id: ''} 
-            include partials/rounded-btn
-
-          .k-sample
-            .hash-e#e2f1e61773da4f83d2d33fd6e38f3dec e2f1e61773da4f83d2d33fd6e38f3dec
-            - var className = 'rounded-btn--blue2 rounded-btn--hoverable'
-            - el = { text: 'Request Demo', class: className, id: ''} 
-            include partials/rounded-btn
-          
-          .k-sample
-            .hash-e#45c74b08d69d3ab7893bf7a96d097290 45c74b08d69d3ab7893bf7a96d097290
-            - var className = 'rounded-btn--blue3 rounded-btn--hoverable'
-            - el = { text: 'Request Demo', class: className, id: ''} 
-            include partials/rounded-btn
-
-          .cf
-          .hash-e#018b2f03df7c065c694e5892b9287021 018b2f03df7c065c694e5892b9287021
-          - el = { class: '', id: ''} 
-          include partials/input
-        
         .cf
+
+        .k-sample
+          .hash-e#333473649f1a25a7bf3d21b835adaa06 333473649f1a25a7bf3d21b835adaa06
+          .share-icon.share-icon--twitter
+            - var el = { path: 'twitter-icon' }
+            include partials/icon
+
+        .k-sample
+          .hash-e#3c5c6e87f864179fba9ba330a3d2d01d 3c5c6e87f864179fba9ba330a3d2d01d
+          .share-icon.share-icon--facebook
+            - var el = { path: 'facebook-icon' }
+            include partials/icon
+
+        .k-sample
+          .hash-e#012b156610f7a08ac477c0b51092f409 012b156610f7a08ac477c0b51092f409
+          .share-icon.share-icon--linkedin
+            - var el = { path: 'linkedin-icon' }
+            include partials/icon
+        
+        .k-sample
+          .hash-e#ce133e0571031a40d6608ea8a2f0ef43 ce133e0571031a40d6608ea8a2f0ef43
+          .share-icon.share-icon--google
+            - var el = { path: 'google-icon' }
+            include partials/icon
+
+        .cf
+
+        .hash-e#ec9afeed491f9ee1f433b3ef35b6dd58 ec9afeed491f9ee1f433b3ef35b6dd58
+        .sidebar-header What is StatSocial?
+
+        .hash-e#c389dcb7895129bf6e660063a6290571 c389dcb7895129bf6e660063a6290571
+        .sidebar-about StatSocial delivers enterprise-class Twitter analytics that help marketers understand their social consumers. By identifying where Twitter users exist elsewhere on the Web, StatSocial offers an unparalleled level of demographic and psychographic insights from consumer data aggregated not just from Twitter, but from over sixty social sites and every major blog platform.
+
+        .hash-e#7d7ed33281e44c7092ef2f908536f698 7d7ed33281e44c7092ef2f908536f698
+        - el = { text: 'Matt Laure Joins Facebook', class: '', id: ''} 
+        include partials/sidebar-list-item
+
+        .hash-e#e55a1d273d2927877a38268403c3d6d3 e55a1d273d2927877a38268403c3d6d3
+        .k-d-bg.k-sample
+          - el = { text: 'statsocial' }
+          - el.icon = { path: 'logo-icon'}
+          include partials/icon-text
+
+        .cf
+
+        .hash-e#9d86756becc3c306959936f4c7e3a19f 9d86756becc3c306959936f4c7e3a19f
+        - el = { text: 'Log In', class: '', id: ''} 
+        include partials/header-link
+
+        .hash-e#1c23fe75816818e2ccedba3fd66d8310 1c23fe75816818e2ccedba3fd66d8310
+        .k-d-bg.k-sample
+          - el = { text: 'Request Demo', class: '', id: ''} 
+          include partials/rounded-btn
+
+        .k-sample
+          .hash-e#e2f1e61773da4f83d2d33fd6e38f3dec e2f1e61773da4f83d2d33fd6e38f3dec
+          - var className = 'rounded-btn--blue2 rounded-btn--hoverable'
+          - el = { text: 'Request Demo', class: className, id: ''} 
+          include partials/rounded-btn
+        
+        .k-sample
+          .hash-e#45c74b08d69d3ab7893bf7a96d097290 45c74b08d69d3ab7893bf7a96d097290
+          - var className = 'rounded-btn--blue3 rounded-btn--hoverable'
+          - el = { text: 'Request Demo', class: className, id: ''} 
+          include partials/rounded-btn
+
+        .cf
+        .hash-e#018b2f03df7c065c694e5892b9287021 018b2f03df7c065c694e5892b9287021
+        - el = { class: '', id: ''} 
+        include partials/input
+      
+      .cf
   
       .section-kl
         .header-ke Blocks
         .hash-e#08683ec747ff35de14ad2765f8a9078e 08683ec747ff35de14ad2765f8a9078e        
         - el = { items: ['Log In', 'Sign Up'], class: '', id: ''} 
         include partials/header-link-line
+
+        .hash-e#a86d1c01d59d3bd7500000bc1e9e2c95 a86d1c01d59d3bd7500000bc1e9e2c95        
+        .share.cf
+          .share-icon.share-icon--twitter
+            - var el = { path: 'twitter-icon' }
+            include partials/icon
+
+          .share-icon.share-icon--facebook
+            - var el = { path: 'facebook-icon' }
+            include partials/icon
+
+          .share-icon.share-icon--linkedin
+            - var el = { path: 'linkedin-icon' }
+            include partials/icon
+
+          .share-icon.share-icon--google
+            - var el = { path: 'google-icon' }
+            include partials/icon
 
         .hash-e#fc5824bd35eff85f11d426e8dbfd9ddf fc5824bd35eff85f11d426e8dbfd9ddf
         - el = { items: [{text: 'Matt Laure Joins Facebook'},{text: 'Obama takes Tumblr'},{text: 'The Best & Worst of Twitter: Week of 6/1/2014'}], class: '', id: ''} 
@@ -226,20 +296,33 @@ html
 
         .cf
 
-        .hash-e#5d02ddbe8c0a2b36f876b2e73e401714 5d02ddbe8c0a2b36f876b2e73e401714
-        - el = { prefix: 'in', text: 'Celebrity accounts', class: '', id: ''} 
-        include partials/credits-item
+        .k-sample
+          .hash-e#5d02ddbe8c0a2b36f876b2e73e401714 5d02ddbe8c0a2b36f876b2e73e401714
+          - el = { prefix: 'in', text: 'Celebrity accounts', class: '', id: ''} 
+          include partials/credits-item
 
-        .hash-e#5d4df2ebe88a96c8866f3354f0610d8a 5d4df2ebe88a96c8866f3354f0610d8a
-        mixin post-credits(o)        
-          .post-credits
-            .credits-item in 
-              a Celebrity accounts
-            .credits-item by 
-              a Audrey Hungerman
-            .credits-item
-              a Jan 9, 2014
-        +post-credits()
+        .k-sample
+          .hash-e#5d4df2ebe88a96c8866f3354f0610d8a 5d4df2ebe88a96c8866f3354f0610d8a
+          mixin post-credits(o)        
+            .post-credits
+              .credits-item in 
+                a Celebrity accounts
+              .credits-item by 
+                a Audrey Hungerman
+              .credits-item
+                a Jan 9, 2014
+          +post-credits()
+
+        .cf
+
+        .hash-e#307c65e9540bc6fccc9e6fd2279d5029 307c65e9540bc6fccc9e6fd2279d5029
+        .post-splitter
+          a.post-splitter__logo
+            - var el = { path: 'logo-icon' }
+            include partials/icon
+            .post-splitter__logo__glare
+
+
 
         .hash-e#483cacc355c9becf9fbb76a795edc719 483cacc355c9becf9fbb76a795edc719
         .post

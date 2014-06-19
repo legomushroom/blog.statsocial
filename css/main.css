@@ -1699,7 +1699,7 @@ clearfix:after {
   font-weight: 600;
   font-size: 22px;
   line-height: 30px;
-  margin-top: 25px;
+  margin-top: 30px;
 }
 .post h4 + p {
   margin-top: 10px;
@@ -1707,7 +1707,7 @@ clearfix:after {
 .post h5 {
   font-size: 20px;
   font-weight: 600;
-  margin-top: 30px;
+  margin-top: 34px;
 }
 .post h5 + ul {
   margin-top: 20px;
@@ -1738,10 +1738,7 @@ clearfix:after {
 }
 .post p + p,
 .post blockquote + p,
-.post li + p,
-.post p + blockquote,
-.post blockquote + blockquote,
-.post li + blockquote {
+.post li + p {
   margin-top: 20px;
 }
 .post p + .center-tweet,
@@ -1756,9 +1753,7 @@ clearfix:after {
 }
 .post .center-tweet {
   text-align: center;
-}
-.post .center-tweet + p {
-  margin-top: 20px;
+  margin-bottom: 30px;
 }
 .post .center-tweet .twitter-tweet {
   float: none;
@@ -1771,6 +1766,8 @@ clearfix:after {
   position: relative;
   padding-right: 40px;
   margin-left: 5px;
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
 .post blockquote:before {
   content: '';
@@ -1784,10 +1781,11 @@ clearfix:after {
 }
 .post ul {
   margin-left: 25px;
+  margin-top: 30px;
   padding-right: 40px;
 }
 .post ul + p {
-  margin-top: 20px;
+  margin-top: 30px;
 }
 .post li {
   padding-left: 20px;
@@ -1813,6 +1811,93 @@ clearfix:after {
 }
 .post .post-credits + p {
   margin-top: 20px;
+}
+.post-splitter {
+  position: relative;
+  color: #f1f1f1;
+}
+.post-splitter:after {
+  content: '';
+  height: 2px;
+  width: 100%;
+  color: inherit;
+  background: currentColor;
+  position: absolute;
+  top: 50%;
+  left: 0;
+}
+.post-splitter__logo {
+  position: relative;
+  z-index: 1;
+  left: 50%;
+  margin-left: -45px;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: #fff;
+  display: block;
+  color: inherit;
+  overflow: hidden;
+}
+.post-splitter__logo:after {
+  display: none;
+}
+.post-splitter__logo:hover {
+  cursor: pointer;
+  background: #5adcff;
+  -webkit-transition: background 0.5s linear;
+  transition: background 0.5s linear;
+}
+.post-splitter__logo:hover .icon {
+  fill: #fff;
+}
+.post-splitter__logo__glare {
+  opacity: 0;
+  width: 200%;
+  height: 200%;
+  left: -150%;
+  top: -50%;
+  position: absolute;
+}
+.post-splitter__logo__glare:before,
+.post-splitter__logo__glare:after {
+  content: '';
+  height: 30px;
+  width: 200%;
+  position: absolute;
+  background: rgba(255,255,255,0.75);
+  -webkit-transform: rotate(55deg);
+  -ms-transform: rotate(55deg);
+  transform: rotate(55deg);
+  -webkit-transform-origin: left center;
+  -ms-transform-origin: left center;
+  transform-origin: left center;
+}
+.post-splitter__logo__glare:after {
+  height: 10px;
+  margin-top: -25px;
+}
+.post-splitter .icon {
+  width: 60px;
+  height: 60px;
+  color: inherit;
+  fill: currentColor;
+  content: 0;
+  cursor: pointer;
+  position: absolute;
+  margin-left: -30px;
+  margin-top: -30px;
+  top: 50%;
+  left: 50%;
+}
+.share {
+  display: inline-block;
+}
+.share .share-icon {
+  float: left;
+}
+.share .share-icon + .share-icon {
+  margin-left: 20px;
 }
 .sidebar-list-item {
   font-size: 16px;
@@ -1901,6 +1986,70 @@ a:hover:after,
   top: 95%;
   left: 0;
   border-bottom: 1px solid;
+}
+.share-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid currentColor;
+/* 333473649f1a25a7bf3d21b835adaa06 */
+/* 3c5c6e87f864179fba9ba330a3d2d01d */
+/* 012b156610f7a08ac477c0b51092f409 */
+/* ce133e0571031a40d6608ea8a2f0ef43 */
+}
+.share-icon:hover {
+  opacity: 0.8;
+}
+.share-icon .icon {
+  fill: currentColor;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  margin-left: -12px;
+  margin-top: -12px;
+  top: 50%;
+  left: 50%;
+}
+.share-icon--twitter {
+  color: #00acff;
+}
+.share-icon--twitter .icon {
+  -webkit-transform: translate(1px, 1px);
+  -ms-transform: translate(1px, 1px);
+  transform: translate(1px, 1px);
+}
+.share-icon--facebook {
+  color: #3b5998;
+}
+.share-icon--linkedin {
+  color: #007ab8;
+}
+.share-icon--google {
+  color: #df4a32;
+}
+.share-icon--google .icon {
+  width: 40px;
+  height: 40px;
+  margin-top: -10px;
+  margin-left: -18px;
+}
+.next-post {
+  border: 1px solid #f1f1f1;
+  padding: 4px 10%;
+  border-radius: 3px;
+  color: #416c7d;
+  font-size: 16px;
+  line-height: 22px;
+}
+.next-post:after {
+  display: none;
+}
+.next-post:hover {
+  border-color: currentColor;
 }
 .grid {
   zoom: 1;
