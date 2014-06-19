@@ -561,11 +561,11 @@ vertGutter = 2*gs
   &.is-at-bottom
     &.is-at-mobile
       width 10*gs
-      // hl dp
-      .icon
-        fill c-blue3
       {root()}__logo
+        color c-blue3
         left 4*gs
+        &:hover
+          color white
       &:after
         width .2*gs
         height 100%
@@ -600,8 +600,7 @@ vertGutter = 2*gs
       cursor pointer
       background c-blue3
       transition background .5s linear
-      .icon
-        fill white
+      color white
       // {up(1)}__glare
       //   left 100%
       //   opacity 1
@@ -646,24 +645,25 @@ columnWidth = 43*gs
 .post-bottom-credits
   text-align center
   max-width 60*gs
+  fly()
   /* e394a8cc55f307c0e9dc59b924d2d079 */
   &.is-at-mobile
     max-width 32*gs
-    hl()
     {root()}__top
       display table
       fly()
       .post-credits
         float left
-        margin-left 4*gs
+        margin-left 3*gs
         margin-top .8*gs
+        font-weight 100
     .post-splitter
       float left
     .share
       display inline-block
     .next-post
-      max-width 100%
-      min-width 100%
+      max-width 80%
+      min-width 80%
 
   .post-credits
     margin-top 2*gs
