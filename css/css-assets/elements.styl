@@ -93,10 +93,13 @@ a, .link
   display block
   overflow hidden
   cursor pointer
-  border 2px solid currentColor
+  border 2px solid transparent
   size = 2.4*gs
   &:hover
-    opacity .8
+    // opacity .8
+    border-color currentColor
+    transition border-color .3s linear
+
   .icon
     fill currentColor
     rect size
@@ -120,14 +123,14 @@ a, .link
   &--google
     color c-google
     .icon
-      rect 4*gs
-      margin-top  - gs
-      margin-left -1.8*gs
+      // rect 4*gs
+      margin-top  -1*gs
+      margin-left -1*gs
 
 /* ddc4137247ad4d4bc5668efb0f33fac4 */
 .next-post
   border 1px solid c-grey9
-  padding .4*gs 10%
+  padding .2*gs 10% .4*gs
   border-radius br
   color c-blue1
   font-size 1.6*gs
@@ -136,6 +139,19 @@ a, .link
     display none
   &:hover
     border-color currentColor
+  &:active
+    border-color c-grey8
+
+  /* 04fb5a24890d2727c7d068012f03d5be */
+  &--read-more
+    background c-grey10
+    border-color c-grey10
+    &:hover
+      background c-grey9
+      border-color c-grey9
+    &:active
+      background c-grey10
+      border-color c-grey10
 
 
 

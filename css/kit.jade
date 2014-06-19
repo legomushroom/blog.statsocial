@@ -91,31 +91,35 @@ html
           .hash-e#ddc4137247ad4d4bc5668efb0f33fac4 ddc4137247ad4d4bc5668efb0f33fac4
           a(href="#").next-post ← older posts
 
+        .k-sample
+          .hash-e#04fb5a24890d2727c7d068012f03d5be 04fb5a24890d2727c7d068012f03d5be
+          a(href="#").next-post.next-post--read-more read more →
+
         .cf
 
         .k-sample
           .hash-e#333473649f1a25a7bf3d21b835adaa06 333473649f1a25a7bf3d21b835adaa06
-          .share-icon.share-icon--twitter
-            - var el = { path: 'twitter-icon' }
-            include partials/icon
+          - el = { class: 'share-icon--twitter', id: ''}
+          - el.icon = { path: 'twitter-icon' }
+          include partials/share-icon
 
         .k-sample
           .hash-e#3c5c6e87f864179fba9ba330a3d2d01d 3c5c6e87f864179fba9ba330a3d2d01d
-          .share-icon.share-icon--facebook
-            - var el = { path: 'facebook-icon' }
-            include partials/icon
+          - el = { class: 'share-icon--facebook', id: ''}
+          - el.icon = { path: 'facebook-icon' }
+          include partials/share-icon
 
         .k-sample
           .hash-e#012b156610f7a08ac477c0b51092f409 012b156610f7a08ac477c0b51092f409
-          .share-icon.share-icon--linkedin
-            - var el = { path: 'linkedin-icon' }
-            include partials/icon
+          - el = { class: 'share-icon--linkedin', id: ''}
+          - el.icon = { path: 'linkedin-icon' }
+          include partials/share-icon
         
         .k-sample
           .hash-e#ce133e0571031a40d6608ea8a2f0ef43 ce133e0571031a40d6608ea8a2f0ef43
-          .share-icon.share-icon--google
-            - var el = { path: 'google-icon' }
-            include partials/icon
+          - el = { class: 'share-icon--google', id: ''}
+          - el.icon = { path: 'google-icon' }
+          include partials/share-icon
 
         .cf
 
@@ -171,23 +175,25 @@ html
         - el = { items: ['Log In', 'Sign Up'], class: '', id: ''} 
         include partials/header-link-line
 
-        .hash-e#a86d1c01d59d3bd7500000bc1e9e2c95 a86d1c01d59d3bd7500000bc1e9e2c95        
-        .share.cf
-          .share-icon.share-icon--twitter
-            - var el = { path: 'twitter-icon' }
-            include partials/icon
+        .hash-e#a86d1c01d59d3bd7500000bc1e9e2c95 a86d1c01d59d3bd7500000bc1e9e2c95
+        mixin share()
+          .share.cf
+            - el = { class: 'share-icon--twitter', id: ''}
+            - el.icon = { path: 'twitter-icon' }
+            include partials/share-icon
 
-          .share-icon.share-icon--facebook
-            - var el = { path: 'facebook-icon' }
-            include partials/icon
+            - el = { class: 'share-icon--facebook', id: ''}
+            - el.icon = { path: 'facebook-icon' }
+            include partials/share-icon
 
-          .share-icon.share-icon--linkedin
-            - var el = { path: 'linkedin-icon' }
-            include partials/icon
+            - el = { class: 'share-icon--linkedin', id: ''}
+            - el.icon = { path: 'linkedin-icon' }
+            include partials/share-icon
 
-          .share-icon.share-icon--google
-            - var el = { path: 'google-icon' }
-            include partials/icon
+            - el = { class: 'share-icon--google', id: ''}
+            - el.icon = { path: 'google-icon' }
+            include partials/share-icon
+        +share()
 
         .hash-e#fc5824bd35eff85f11d426e8dbfd9ddf fc5824bd35eff85f11d426e8dbfd9ddf
         - el = { items: [{text: 'Matt Laure Joins Facebook'},{text: 'Obama takes Tumblr'},{text: 'The Best & Worst of Twitter: Week of 6/1/2014'}], class: '', id: ''} 
@@ -303,26 +309,67 @@ html
 
         .k-sample
           .hash-e#5d4df2ebe88a96c8866f3354f0610d8a 5d4df2ebe88a96c8866f3354f0610d8a
-          mixin post-credits(o)        
-            .post-credits
-              .credits-item in 
+          mixin post-credits(o)
+            - var o = o || {}      
+            .post-credits(class="#{o.class || ''}")
+              .credits-item
+                span.post-credits__prefix in 
                 a Celebrity accounts
-              .credits-item by 
+              .credits-item
+                span.post-credits__prefix by 
                 a Audrey Hungerman
               .credits-item
                 a Jan 9, 2014
           +post-credits()
 
+        .k-sample
+          .hash-e#466efe1e238c2d46c929fa0b1bf5bad8 466efe1e238c2d46c929fa0b1bf5bad8
+          +post-credits({class: 'is-at-bottom'})
+
+        .k-sample
+          .hash-e#9169ec8ffdffab60ca80fbbc4a2a72b6 9169ec8ffdffab60ca80fbbc4a2a72b6
+          +post-credits({class: 'is-at-mobile is-at-bottom'})
+
+        .cf
+        
+        .k-sample(style="width: 400px")
+          .hash-e#307c65e9540bc6fccc9e6fd2279d5029 307c65e9540bc6fccc9e6fd2279d5029
+          - el = { class: '', id: ''} 
+          include partials/post-splitter
+
+        .k-sample(style="width: 400px")
+          .hash-e#232c9e620aa69d70a8e0d7870bcf3bde 232c9e620aa69d70a8e0d7870bcf3bde
+          - el = { class: 'is-at-mobile is-at-bottom', id: ''} 
+          include partials/post-splitter
+
         .cf
 
-        .hash-e#307c65e9540bc6fccc9e6fd2279d5029 307c65e9540bc6fccc9e6fd2279d5029
-        .post-splitter
-          a.post-splitter__logo
-            - var el = { path: 'logo-icon' }
-            include partials/icon
-            .post-splitter__logo__glare
+        .hash-e#34f28b60c8011d2c96bdf82d3ebfd797 34f28b60c8011d2c96bdf82d3ebfd797
+        .post-bottom-credits
+          - el = { class: '', id: ''} 
+          include partials/post-splitter
+          +post-credits()
+          +share()
+          a.next-post ← Customize Your Twitter Feed By Muting Users
+          a.next-post The Best & Worst of Twitter: Week of 5/18/2014 →
+          .post-bottom-credits__line
 
+        .hash-e#e394a8cc55f307c0e9dc59b924d2d079 e394a8cc55f307c0e9dc59b924d2d079
+        .post-bottom-credits.is-at-mobile
+          - el = { class: '', id: ''} 
+          include partials/post-splitter
+          +post-credits()
+          +share()
+          a.next-post ← Customize Your Twitter Feed By Muting Users
+          a.next-post The Best & Worst of Twitter: Week of 5/18/2014 →
+          .post-bottom-credits__line
 
+        .hash-e#461123fd16a3c74fad9e12bd2e1d9052 461123fd16a3c74fad9e12bd2e1d9052
+        .posts-nav.grid.grid--gutter-x2
+          a.next-post.grid-bit.grid-bit--1-2 ← older posts
+          a.next-post.grid-bit.grid-bit--1-2 recent posts →
+
+        .cf
 
         .hash-e#483cacc355c9becf9fbb76a795edc719 483cacc355c9becf9fbb76a795edc719
         .post

@@ -410,7 +410,18 @@ sidebarScrollTopHeight = 11*gs
 /* 5d4df2ebe88a96c8866f3354f0610d8a */
 .post-credits
   display inline-block
-  .credits-item  
+
+  /* 466efe1e238c2d46c929fa0b1bf5bad8 */
+  &.is-at-mobile
+    &.is-at-bottom
+      .credits-item
+        display block
+        & + {end()}
+          padding-left 0
+          margin-top (gs/2)
+          &:after
+            display none
+  .credits-item
     display inline-block
     position relative
     padding = 2.6*gs
@@ -544,6 +555,14 @@ vertGutter = 2*gs
 .post-splitter
   position relative
   color c-grey9
+  /* 232c9e620aa69d70a8e0d7870bcf3bde */
+  &.is-at-bottom
+    &.is-at-mobile
+      .icon
+        fill c-blue3
+      {root()}__logo
+        left 4*gs
+
   &:after
     content ''
     height .2*gs
@@ -610,9 +629,43 @@ vertGutter = 2*gs
   .share-icon
     float left
     & + {end()}
-      margin-left 2*gs
+      margin-left 1*gs
 
+/* 34f28b60c8011d2c96bdf82d3ebfd797 */
+columnWidth = 43*gs
+.post-bottom-credits
+  text-align center
+  width 60*gs
+  .post-credits
+    margin-top 2*gs
+  .share
+    margin-top 2*gs
+  .post-splitter
+    width columnWidth
+    margin 0 auto
+  .next-post
+    padding-left  gs
+    padding-right gs
+    min-width columnWidth
+    margin-top 2*gs
+    & + {end()}
+      margin-top 2*gs
+  &__line
+    border-top .2*gs solid c-grey9
+    max-width columnWidth
+    margin 0 auto
+    margin-top 4*gs
 
+/* 461123fd16a3c74fad9e12bd2e1d9052 */
+.posts-nav
+  display inline-block
+  padding 2*gs 0
+  border-top    .5*gs solid c-grey10
+  border-bottom .5*gs solid c-grey10
+  .next-post
+    display block
+    & + {end()}
+      margin-left 1.5*gs
 
 
 
