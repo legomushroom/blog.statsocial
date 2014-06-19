@@ -345,24 +345,22 @@ html
         .cf
 
         .hash-e#34f28b60c8011d2c96bdf82d3ebfd797 34f28b60c8011d2c96bdf82d3ebfd797
-        .post-bottom-credits
-          - el = { class: '', id: ''} 
-          include partials/post-splitter
-          +post-credits()
-          +share()
-          a.next-post ← Customize Your Twitter Feed By Muting Users
-          a.next-post The Best & Worst of Twitter: Week of 5/18/2014 →
-          .post-bottom-credits__line
+        mixin post-bottom-credits(o)
+          - var o = o || {}
+          .post-bottom-credits(class="#{o.class || ''}")
+            .post-bottom-credits__top.cf
+              - el = { class: o.creditsClass, id: ''} 
+              include partials/post-splitter
+              +post-credits({class: o.creditsClass})
+
+            +share()
+            a.next-post ← Customize Your Twitter Feed By Muting Users
+            a.next-post The Best & Worst of Twitter: Week of 5/18/2014 →
+            .post-bottom-credits__line
+        +post-bottom-credits()
 
         .hash-e#e394a8cc55f307c0e9dc59b924d2d079 e394a8cc55f307c0e9dc59b924d2d079
-        .post-bottom-credits.is-at-mobile
-          - el = { class: '', id: ''} 
-          include partials/post-splitter
-          +post-credits()
-          +share()
-          a.next-post ← Customize Your Twitter Feed By Muting Users
-          a.next-post The Best & Worst of Twitter: Week of 5/18/2014 →
-          .post-bottom-credits__line
+        +post-bottom-credits({class: 'is-at-mobile', creditsClass: 'is-at-bottom is-at-mobile'})
 
         .hash-e#461123fd16a3c74fad9e12bd2e1d9052 461123fd16a3c74fad9e12bd2e1d9052
         .posts-nav.grid.grid--gutter-x2

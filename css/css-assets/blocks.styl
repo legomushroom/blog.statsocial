@@ -414,6 +414,7 @@ sidebarScrollTopHeight = 11*gs
   /* 466efe1e238c2d46c929fa0b1bf5bad8 */
   &.is-at-mobile
     &.is-at-bottom
+      text-align left
       .credits-item
         display block
         & + {end()}
@@ -421,6 +422,7 @@ sidebarScrollTopHeight = 11*gs
           margin-top (gs/2)
           &:after
             display none
+
   .credits-item
     display inline-block
     position relative
@@ -558,10 +560,18 @@ vertGutter = 2*gs
   /* 232c9e620aa69d70a8e0d7870bcf3bde */
   &.is-at-bottom
     &.is-at-mobile
+      width 10*gs
+      // hl dp
       .icon
         fill c-blue3
       {root()}__logo
         left 4*gs
+      &:after
+        width .2*gs
+        height 100%
+        top 0
+        left 100%
+        background rgba(c-blue3,.2)
 
   &:after
     content ''
@@ -635,7 +645,26 @@ vertGutter = 2*gs
 columnWidth = 43*gs
 .post-bottom-credits
   text-align center
-  width 60*gs
+  max-width 60*gs
+  /* e394a8cc55f307c0e9dc59b924d2d079 */
+  &.is-at-mobile
+    max-width 32*gs
+    hl()
+    {root()}__top
+      display table
+      fly()
+      .post-credits
+        float left
+        margin-left 4*gs
+        margin-top .8*gs
+    .post-splitter
+      float left
+    .share
+      display inline-block
+    .next-post
+      max-width 100%
+      min-width 100%
+
   .post-credits
     margin-top 2*gs
   .share
