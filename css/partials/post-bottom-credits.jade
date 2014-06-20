@@ -1,8 +1,9 @@
 .post-bottom-credits(class="#{el.class || ''}", id="#{el.id || ''}")
   .post-bottom-credits__top.cf
-    - el = { class: el.creditsClass, id: ''} 
+    - var creditsClass = el.creditsClass
+    - el = { class: creditsClass, id: ''} 
     include post-splitter
-    - el = { class: el.creditsClass, id: ''}
+    - el = { class: creditsClass, id: ''}
     include post-credits
 
   - el = { class: el.class, id: ''} 

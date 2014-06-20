@@ -4,7 +4,8 @@ html
     meta(charset='UTF-8')
     title StatSocial Blog
     link(rel="stylesheet", type="text/css", href="../main.css")
-    //- link(rel="stylesheet", href="css-assets/font/stylesheet.css", type="text/css", charset="utf-8")
+    link(href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600,700,800', rel='stylesheet', type='text/css')
+    meta(name="viewport", content="width=device-width, maximum-scale=1, user-scalable=no")
   body.base-p.base-p--post
     include ../icons.svg
 
@@ -13,12 +14,12 @@ html
 
     .base-p__core#js-core
       .base-p__core__sidebar
-        - el = { class: 'is-expanded1', id: 'js-sidebar'} 
+        - el = { class: '', id: 'js-sidebar'} 
         include ../partials/sidebar-n-panel
       .base-p__core__main
         .base-p__core__main__line
           include ../partials/post
-    .base-p__footer
+    //- .base-p__footer
 
     .scroll-top#js-scroll-top
 

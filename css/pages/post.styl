@@ -4,6 +4,7 @@
 footerHeight = 30*gs
 
 .base-p
+  width 100%
   &__core
     margin-top headerHeight + 5*gs
     max-width 140*gs
@@ -24,7 +25,6 @@ footerHeight = 30*gs
         position fixed
         height 100%
         top 0
-        // bottom 0
         .sidebar-panel
           height 100%
           padding-top headerHeight
@@ -32,7 +32,6 @@ footerHeight = 30*gs
           margin-top headerHeight
           padding-top 5*gs
           padding-bottom headerHeight + 8*gs
-
     &__main
       margin-left headerLeftSize
       text-align center
@@ -41,6 +40,12 @@ footerHeight = 30*gs
       @media screen and (max-width:1100px)
         margin-left 4*gs + 4*gs
         padding-right 4*gs
+      @media screen and (max-width:568px)
+        margin-left 4*gs
+      @media screen and (max-width:320px)
+        margin-left 0
+        padding-right 0
+
       &__line
         display inline-block
   &__footer
