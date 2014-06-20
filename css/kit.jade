@@ -229,61 +229,18 @@ html
 
         .k-sample
           .hash-e#883c00286c7cedf015ccc175d0a02dec 883c00286c7cedf015ccc175d0a02dec
-          mixin sidebar-panel(o)
-            .sidebar-panel(class="#{o.class}")
-              
-              .sidebar-panel__top-btns
-                - el = { class: '', id: ''}
-                - el.icon = { path: 'home-icon' }
-                include partials/sidebar-btn
-
-              - el = { class: 'sidebar-panel__search' }
-              - el.input = { class: '', id: 'input-'+(o.inputId || '883c00286c7cedf015ccc175d0a02dec')}
-              - el.icon =  { path: 'search-icon' }
-              include partials/input-icon
-
-              .sidebar-expand
-
-              .sidebar-scoll-top
-
-          +sidebar-panel({})
+          - el = { class: '', id: ''}
+          include partials/sidebar-panel
 
         .k-sample(style="display:none;")
           .hash-e#88600f049550246039629c60accbcd80 88600f049550246039629c60accbcd80
-          +sidebar-panel({class:'is-scroll-top', inputId: '88600f049550246039629c60accbcd80'})
+          - el = { class:'is-scroll-top', inputId: '88600f049550246039629c60accbcd80' }
+          include partials/sidebar-panel
 
         .k-sample
           .hash-e#0ef5d460a3af92c75b2b1acabdb438fe 0ef5d460a3af92c75b2b1acabdb438fe
-          mixin sidebar(o)
-            .sidebar
-              .sidebar-header.sidebar__about-header What is StatSocial?
-              .sidebar-about StatSocial delivers enterprise-class Twitter analytics that help marketers understand their social consumers. By identifying where Twitter users exist elsewhere on the Web, StatSocial offers an unparalleled level of demographic and psychographic insights from consumer data aggregated not just from Twitter, but from over sixty social sites and every major blog platform.
-              - el = { class: 'sidebar__search' }
-              - el.input = { class: '', id: 'input-a626e67bfe00a71c44968bae92cb6a6c'}
-              - el.icon =  { path: 'search-icon' }
-              include partials/input-icon
-
-              .sidebar-header.m-t-x3-g Recent Posts
-              - el = { items: [{text: 'Matt Laure Joins Facebook'},{text: 'Obama takes Tumblr'},{text: 'The Best & Worst of Twitter: Week of 6/1/2014'}], class: '', id: ''} 
-              include partials/sidebar-list
-
-              .sidebar-header.m-t-x2-g Archives
-              - el = { items: [{text: 'June 2014'},{text: 'May 2014'},{text: 'April 2014'}], class: '', id: ''} 
-              include partials/sidebar-list
-
-              .sidebar-header.m-t-x2-g Recent Posts
-              - el = { items: [{text: 'Matt Laure Joins Facebook'},{text: 'Obama takes Tumblr'},{text: 'The Best & Worst of Twitter: Week of 6/1/2014'}], class: '', id: ''} 
-              include partials/sidebar-list
-
-              .sidebar-header.m-t-x2-g Recent Posts
-              - el = { items: [{text: 'Matt Laure Joins Facebook'},{text: 'Obama takes Tumblr'},{text: 'The Best & Worst of Twitter: Week of 6/1/2014'}], class: '', id: ''} 
-              include partials/sidebar-list
-
-              .sidebar-header.m-t-x2-g Recent Posts
-              - el = { items: [{text: 'Matt Laure Joins Facebook'},{text: 'Obama takes Tumblr'},{text: 'The Best & Worst of Twitter: Week of 6/1/2014'}], class: '', id: ''} 
-              include partials/sidebar-list
-
-          +sidebar()
+          - el = { class: '', id: ''} 
+          include partials/sidebar
 
         .cf
         
@@ -291,22 +248,25 @@ html
           .hash-e#2dd245c639f53c95bb8dda4ae880acc1 2dd245c639f53c95bb8dda4ae880acc1
           .sidebar-n-panel
             .sidebar-n-panel__sidebar-l
-              +sidebar()
-            +sidebar-panel({class:'is-scroll-top', inputId: '2dd245c639f53c95bb8dda4ae880acc1'})
+              include partials/sidebar
+            - el = { class:'is-scroll-top', inputId: '2dd245c639f53c95bb8dda4ae880acc1' }
+            include partials/sidebar-panel
 
         .k-sample(style="height: 700px; margin-bottom: 60px;")
           .hash-e#18dc84f92e17a6cffd9a07ebe1b86fff 18dc84f92e17a6cffd9a07ebe1b86fff
           .sidebar-n-panel.is-at-tablet
             .sidebar-n-panel__sidebar-l
-              +sidebar()
-            +sidebar-panel({class:'is-scroll-top', inputId: '18dc84f92e17a6cffd9a07ebe1b86fff'})
+              include partials/sidebar
+            - el = { class:'is-scroll-top', inputId: '18dc84f92e17a6cffd9a07ebe1b86fff' }
+            include partials/sidebar-panel
 
         .k-sample(style="height: 700px; margin-bottom: 60px;")
           .hash-e#61ca1fbc891c10f80910e08063426d4c 61ca1fbc891c10f80910e08063426d4c
           .sidebar-n-panel.is-at-tablet.is-expanded
             .sidebar-n-panel__sidebar-l
-              +sidebar()
-            +sidebar-panel({class:'is-scroll-top', inputId: '61ca1fbc891c10f80910e08063426d4c'})
+              include partials/sidebar
+            - el = { class:'is-scroll-top', inputId: '61ca1fbc891c10f80910e08063426d4c' }
+            include partials/sidebar-panel
 
         .cf
 
@@ -317,26 +277,18 @@ html
 
         .k-sample
           .hash-e#5d4df2ebe88a96c8866f3354f0610d8a 5d4df2ebe88a96c8866f3354f0610d8a
-          mixin post-credits(o)
-            - var o = o || {}      
-            .post-credits(class="#{o.class || ''}")
-              .credits-item
-                span.post-credits__prefix in 
-                a Celebrity accounts
-              .credits-item
-                span.post-credits__prefix by 
-                a Audrey Hungerman
-              .credits-item
-                a Jan 9, 2014
-          +post-credits()
+          - el = { class: '', id: ''}
+          include partials/post-credits
 
         .k-sample
           .hash-e#466efe1e238c2d46c929fa0b1bf5bad8 466efe1e238c2d46c929fa0b1bf5bad8
-          +post-credits({class: 'is-at-bottom'})
+          - el = { class: 'is-at-bottom', id: ''}
+          include partials/post-credits
 
         .k-sample
           .hash-e#9169ec8ffdffab60ca80fbbc4a2a72b6 9169ec8ffdffab60ca80fbbc4a2a72b6
-          +post-credits({class: 'is-at-mobile is-at-bottom'})
+          - el = { class: 'is-at-bottom is-at-mobile', id: ''}
+          include partials/post-credits
 
         .cf
         
@@ -359,7 +311,8 @@ html
             .post-bottom-credits__top.cf
               - el = { class: o.creditsClass, id: ''} 
               include partials/post-splitter
-              +post-credits({class: o.creditsClass})
+              - el = { class: o.creditsClass, id: ''}
+              include partials/post-credits
 
             +share({class: o.class})
             a.next-post ← Customize Your Twitter Feed By Muting Users
@@ -392,192 +345,7 @@ html
         .cf
 
         .hash-e#483cacc355c9becf9fbb76a795edc719 483cacc355c9becf9fbb76a795edc719
-        .post
-          h2 This post has very looong title and rantings you will love
-          +post-credits()
-          img(src="http://is.gd/3TQPzd" alt="")
-          p.
-            Lauer also stated that after co-host, Savannah Guthrie,
-            hosted a Facebook chat on the TODAY Show page, he was inspired
-            to connect with fans the same way. He even hosted a Facebook chat 
-            of his own (having Guthrie do his typing).
-          p.
-            This post looks like short sketch. It has no image and 
-            very loong meanless title. This post looks like short sketch. 
-            It has no image and very loong meanless title. This post looks 
-            like short sketch. It has no image and very loong meanless title.
-          p
-            <blockquote class="twitter-tweet" lang="en-gb"><p>Meet the rarest, most beautiful big cats in the world <a href="http://t.co/Y8w71CTVzm">http://t.co/Y8w71CTVzm</a>&#10;&#10;. <a href="http://t.co/qEVEatPxbJ">pic.twitter.com/qEVEatPxbJ</a></p>&mdash; Emergency Kittens (@EmrgencyKittens) <a href="https://twitter.com/EmrgencyKittens/statuses/479295076892278784">June 18, 2014</a></blockquote>
-
-          p
-            | This post looks like short sketch. It has no image and 
-            | very loong meanless title. This post looks like short sketch. 
-            | It has no image and very loong meanless title. This post looks 
-            | like short sketch. It has no image and very loong meanless title.
-
-          p
-            | This post looks like short sketch. It has no image and 
-            | very loong meanless title. This post looks like short sketch. 
-            | It has no image and very loong meanless title. This post looks 
-            | like short sketch. It has no image and very loong meanless title.
-
-          p
-            | This post looks like short sketch. It has no image and 
-            | very loong meanless title. This post looks like short sketch. 
-            | It has no image and very loong meanless title. This post looks 
-            | like short sketch. It has no image and very loong meanless title.
-            | This post looks like short sketch. It has no image and 
-            | very loong meanless title. This post looks like short sketch. 
-            | It has no image and very loong meanless title. This post looks 
-            | like short sketch. It has no image and very loong meanless title.
-
-          img(src="http://is.gd/EcYgTr").is-right
-
-          p
-            | This post looks like short sketch. It has no image and 
-            | very loong meanless title. This post looks like short sketch. 
-            | It has no image and very loong meanless title. This post looks 
-            | like short sketch. It has no image and very loong meanless title.
-
-          p
-            | This post looks like short sketch. It has no image and 
-            | very loong meanless title. This post looks like short sketch. 
-            | It has no image and very loong meanless title. This post looks 
-            | like short sketch. It has no image and very loong meanless title.
-
-          p
-            | This post looks like short sketch. It has no image and 
-            | very loong meanless title. This post looks like short sketch. 
-            | It has no image and very loong meanless title. This post looks 
-            | like short sketch. It has no image and very loong meanless title.
-            | This post looks like short sketch. It has no image and 
-            | very loong meanless title. This post looks like short sketch. 
-            | It has no image and very loong meanless title. This post looks 
-            | like short sketch. It has no image and very loong meanless title.
-
-          p
-            | This post looks like short sketch. It has no image and 
-            | very loong meanless title. This post looks like short sketch. 
-            | It has no image and very loong meanless title. This post looks 
-            | like short sketch. It has no image and very loong meanless title.
-
-          img(src="http://is.gd/GoPccO").is-left
-
-          p
-            | This post looks like short sketch. It has no image and 
-            | very loong meanless title. This post looks like short sketch. 
-            | It has no image and very loong meanless title. This post looks 
-            | like short sketch. It has no image and very loong meanless title.
-            | This post looks like short sketch. It has no image and 
-            | very loong meanless title. This post looks like short sketch. 
-            | It has no image and very loong meanless title. This post looks 
-            | like short sketch. It has no image and very loong meanless title.
-            | This post looks like short sketch. It has no image and 
-            | very loong meanless title. This post looks like short sketch. 
-            | It has no image and very loong meanless title. This post looks 
-            | like short sketch. It has no image and very loong meanless title.
-
-          p
-            | This post looks like short sketch. It has no image and 
-            | very loong meanless title. This post looks like short sketch. 
-            | It has no image and very loong meanless title. This post looks 
-            | like short sketch. It has no image and very loong meanless title.
-          
-          p.text-align-g
-            img(src="http://is.gd/dotvZM")
-
-          p
-            | This post looks like short sketch. It has no image and 
-            | very loong meanless title. This post looks like short sketch. 
-            | It has no image and very loong meanless title. This post looks 
-            | like short sketch. It has no image and very loong meanless title.
-            | This post looks like short sketch. It has no image and 
-            | very loong meanless title. This post looks like short sketch. 
-            | It has no image and very loong meanless title. This post looks 
-            | like short sketch. It has no image and very loong meanless title.
-
-          p
-            | This post looks like short sketch. It has no image and 
-            | very loong meanless title. This post looks like short sketch. 
-            | It has no image and very loong meanless title. This post looks 
-            | like short sketch. It has no image and very loong meanless title.
-
-          p
-            | This post looks like short sketch. It has no image and 
-            | very loong meanless title. This post looks like short sketch. 
-            | It has no image and very loong meanless title. This post looks 
-            | like short sketch. It has no image and very loong meanless title.
-            | This post looks like short sketch. It has no image and 
-            | very loong meanless title. This post looks like short sketch. 
-            | It has no image and very loong meanless title. This post looks 
-            | like short sketch. It has no image and very loong meanless title.
-            | This post looks like short sketch. It has no image and 
-            | very loong meanless title. This post looks like short sketch. 
-            | It has no image and very loong meanless title. This post looks 
-            | like short sketch. It has no image and very loong meanless title.
-
-          h5 Other LinkedIn updates include:
-          ul
-            li.
-              “Cover photo” that LinkedIn is calling a background. 
-              LinkedIn will provide you with some options for a picture
-            li.
-              Keyword suggestions to place in your profile to help you 
-              stand out in the search
-            li.
-              Open Profile setting that allows anyone with a LInkedIn 
-              profile to view your profile and contact you for free
-            li.
-              Advanced tracking to see users that have viewed you profile 
-              and see how you stack up against other users
-            li.
-              Premium Spotlight plan that includes all new features
-          p
-            | This post looks like short sketch. It has no image and 
-            | very loong meanless title. This post looks like short sketch. 
-            | It has no image and very loong meanless title. This post looks 
-            | like short sketch. It has no image and very loong meanless title.
-            | This post looks like short sketch. It has no image and 
-            | very loong meanless title. This post looks like short sketch. 
-            | It has no image and very loong meanless title. This post looks 
-            | like short sketch. It has no image and very loong meanless title.
-            | This post looks like short sketch. It has no image and 
-            | very loong meanless title. This post looks like short sketch. 
-            | It has no image and very loong meanless title. This post looks 
-            | like short sketch. It has no image and very loong meanless title.
-
-          blockquote.
-            This is a quote. looks like short sketch. It has no image and 
-            very loong meanless title. This post looks like short sketch. 
-            It has no image and very loong meanless title. This post looks 
-            like short sketch. It has no image and very loong meanless title.
-
-          p
-            | This post looks like short sketch. It has no image and 
-            | very loong meanless title. This post looks like short sketch. 
-            | It has no image and very loong meanless title. This post looks 
-            | like short sketch. It has no image and very loong meanless title.
-            | This post looks like short sketch. It has no image and 
-            | very loong meanless title. This post looks like short sketch. 
-            | It has no image and very loong meanless title. This post looks 
-            | like short sketch. It has no image and very loong meanless title.
-
-          h4 The Best
-          p(style="text-align:center"): strong 1. Ellen being Ellen
-          
-          .center-tweet
-            <blockquote class="twitter-tweet" lang="en-gb"><p>New IO Byte with <a href="https://twitter.com/alexanderdanilo">@alexanderdanilo</a>: Silky smooth Web Animations <a href="http://t.co/47wojj9XKU">http://t.co/47wojj9XKU</a> <a href="https://twitter.com/search?q=%23io14&amp;src=hash">#io14</a> <a href="https://twitter.com/search?q=%23iobytes&amp;src=hash">#iobytes</a></p>&mdash; Google Developers (@googledevs) <a href="https://twitter.com/googledevs/statuses/479322940882710529">June 18, 2014</a></blockquote>
-
-          p
-            | This post looks like short sketch. It has no image and 
-            | very loong meanless title. This post looks like short sketch. 
-            | It has no image and very loong meanless title. This post looks 
-            | like short sketch. It has no image and very loong meanless title.
-            | This post looks like short sketch. It has no image and 
-            | very loong meanless title. This post looks like short sketch. 
-            | It has no image and very loong meanless title. This post looks 
-            | like short sketch. It has no image and very loong meanless title.
-
+        include partials/post
 
         .hash-e#0a0478d84d885b39b0df7c5939a6037c 0a0478d84d885b39b0df7c5939a6037c
         - el = { class: '', id: ''}
@@ -592,35 +360,14 @@ html
         include partials/input-icon
 
         .hash-e#cbb3694893dda7ad17fa70e114baabde cbb3694893dda7ad17fa70e114baabde
-        mixin header(o)
-          .header(class="#{o.className || ''}")
-            .header__left
-              - el = { text: 'statsocial' }
-              - el.icon = { path: 'logo-icon'}
-              include partials/icon-text
-
-            .header__right
-              - var className = 'header__right__request-demo rounded-btn--blue2 rounded-btn--hoverable'
-              - el = { text: 'Request Demo', class: className, id: ''} 
-              include partials/rounded-btn
-
-              - el = { items: ['Log In', 'Sign Up'], class: 'header__right__actions', id: ''} 
-              include partials/header-link-line
-
-              - el = { class: 'input-icon--header', id: ''}
-              - el.input = { id: 'input-'+o.inputId}
-              - el.icon =  { path: 'search-icon' }
-              include partials/input-icon
-
-              - var el = { class: 'header__right__menu-icon', path: 'menu-icon' }
-              include partials/icon
-        +header({})
+        - el = { class: '', id: ''} 
+        include partials/header
+       
 
         .hash-e#c23cdad713ba9c41c6ed2c9bf8e5bac7 c23cdad713ba9c41c6ed2c9bf8e5bac7
         div(style="width: 420px")
-          - var options = { className: 'header--at-mobile', inputId: 'c23cdad713ba9c41c6ed2c9bf8e5bac7' }
-          +header(options)
-
+          - el = { class: 'header--at-mobile', inputId: 'c23cdad713ba9c41c6ed2c9bf8e5bac7', id: ''} 
+          include partials/header
 
       .section-kl
         .header-ke Grid
@@ -638,7 +385,6 @@ html
             .grid-bit(class="grid-bit--#{gridSize-i}-#{gridSize}"): .k-content
 
 
-      <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
       
 
 

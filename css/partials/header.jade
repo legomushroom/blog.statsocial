@@ -1,0 +1,21 @@
+.header(class="#{el.class || ''}", id="#{el.id || ''}")
+  .header__left
+    - el = { text: 'statsocial' }
+    - el.icon = { path: 'logo-icon'}
+    include icon-text
+
+  .header__right
+    - var className = 'header__right__request-demo rounded-btn--blue2 rounded-btn--hoverable'
+    - el = { text: 'Request Demo', class: className, id: ''} 
+    include rounded-btn
+
+    - el = { items: ['Log In', 'Sign Up'], class: 'header__right__actions', id: ''} 
+    include header-link-line
+
+    - el = { class: 'input-icon--header', id: ''}
+    - el.input = { id: 'input-'+el.inputId}
+    - el.icon =  { path: 'search-icon' }
+    include input-icon
+
+    - var el = { class: 'header__right__menu-icon', path: 'menu-icon' }
+    include icon

@@ -1442,7 +1442,6 @@ clearfix:after {
   width: 100%;
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
-  box-shadow: 4px 4px 0 0 rgba(73,73,73,0.1);
 /* c23cdad713ba9c41c6ed2c9bf8e5bac7 */
 }
 .header__right {
@@ -1706,6 +1705,7 @@ clearfix:after {
 .post {
   color: #416c7d;
   max-width: 800px;
+  text-align: left;
 }
 .post h2 {
   text-transform: uppercase;
@@ -2490,3 +2490,33 @@ a:hover:after,
   font-weight: normal;
   font-style: normal;
 	}
+.base-p__core {
+  margin-top: 130px;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.base-p__core__sidebar {
+  float: left;
+}
+.base-p__core__main {
+  margin-left: 320px;
+  text-align: center;
+  padding-bottom: 120px;
+}
+.base-p__core__main__line {
+  display: inline-block;
+}
+.base-p--post .header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.base-p--post .header.is-fixed {
+  box-shadow: 4px 4px 0 0 rgba(73,73,73,0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}

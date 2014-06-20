@@ -1,0 +1,14 @@
+.sidebar-panel(class="#{el.class || ''}", id="#{el.id || ''}")
+  .sidebar-panel__top-btns
+    - el = { class: '', id: ''}
+    - el.icon = { path: 'home-icon' }
+    include sidebar-btn
+
+  - el = { class: 'sidebar-panel__search' }
+  - el.input = { class: '', id: 'input-'+(el.inputId || '883c00286c7cedf015ccc175d0a02dec')}
+  - el.icon =  { path: 'search-icon' }
+  include input-icon
+
+  .sidebar-expand
+
+  .sidebar-scoll-top

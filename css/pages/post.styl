@@ -1,0 +1,29 @@
+// EFFECTS
+@import '../assets/imports.styl'
+
+
+.base-p
+	&__core
+		margin-top headerHeight + 5*gs
+		max-width 140*gs
+		fly()
+		&__sidebar
+			float left
+		&__main
+			margin-left headerLeftSize
+			text-align center
+			padding-bottom 12*gs
+			&__line
+				display inline-block
+
+
+	&--post
+		.header
+			position absolute
+			nw 0
+			width 100%
+			&.is-fixed
+				shadow()
+				position fixed
+				nw 0
+				width 100%

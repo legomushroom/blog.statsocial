@@ -28,6 +28,7 @@ var paths = {
     kitCss:   devFolder + 'css/assets/kit.styl',
     index:    devFolder + 'index.jade',
     partials: devFolder + 'css/partials/**/*.jade',
+    samples:  devFolder + 'css/samples/**/*.jade',
     templates:devFolder + 'templates/**/*.*',
     tests:    distFolder + 'spec/**/*.coffee'
   },
@@ -36,6 +37,7 @@ var paths = {
     tests:    distFolder + 'spec/',
     css:      distFolder + 'css/',
     kit:      distFolder + 'css/',
+    samples:  distFolder + 'css/samples/',
     index:    distFolder
   }
 }
@@ -123,6 +125,14 @@ gulp.task('kit:jade', function(e){
           .pipe(livereload())
 });
 
+gulp.task('samples:jade', function(e){
+  return gulp.src(paths.src.samples)
+          .pipe(plumber())
+          .pipe(jade({pretty:true}))
+          .pipe(gulp.dest(paths.dist.samples))
+          .pipe(livereload())
+});
+
 gulp.task('index:jade', function(e){
   return gulp.src(paths.src.index)
           .pipe(plumber())
@@ -178,6 +188,10 @@ gulp.task('default', function(){
   gulp.watch(paths.src.partials, function(e){
     gulp.run('kit:jade');
     gulp.run('index:jade');
+  });
+
+  gulp.watch(paths.src.samples, function(e){
+    gulp.run('samples:jade');
   });
 
   gulp.watch(paths.src.templates, function(e){
