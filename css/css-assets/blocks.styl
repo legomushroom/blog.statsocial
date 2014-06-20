@@ -712,5 +712,48 @@ columnWidth = 43*gs
     & + {end()}
       margin-left 1.5*gs
 
+/* 30824a24708c4a88741a989711f46569 */
+.scroll-top
+  @extends .sidebar-scoll-top
+  border 1px solid c-grey8
+  border-radius br
+  rect 4*gs
+  shadow()
+  &:before
+    margin-top  -(gs) - .3*gs
+  &:after
+    margin-top  -(gs/3) - .1*gs
+  &:active
+    transform translate(.4*gs, .4*gs)
+    box-shadow none
+
+
+/* d3e01bfb115e62608a0e6368805c0fd1 */
+.mobile-footer
+  hl()
+  background c-blue3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

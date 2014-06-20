@@ -37,7 +37,7 @@
 /* 018b2f03df7c065c694e5892b9287021 */
 .input
   outline none
-  border 1px solid c-blue1
+  border 1px solid currentColor
   min-height 4*gs // consider textrarea
   border-radius br
   display block
@@ -45,9 +45,9 @@
   padding-left gs
   font-size 16px
   color c-blue1
+  placeholder-mixin({color: rgba(c-blue1, .3)})
   &:focus, &:hover
-    border 2px solid c-blue1
-    border-color c-blue1
+    box-shadow 0 0 0 1px currentColor
 
 /* 9d86756becc3c306959936f4c7e3a19f */
 .header-link
@@ -73,6 +73,7 @@ a, .link
   color c-blue3
   cursor default
   line-height 22px
+  
   // hl green
   &:hover
     cursor pointer
