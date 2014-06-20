@@ -10,6 +10,7 @@ sidebarScrollTopHeight = 11*gs
 /* 2dd245c639f53c95bb8dda4ae880acc1 */
 .sidebar-n-panel
   position relative
+  background rgba(white, .95)
   .sidebar-panel
     height 100%
     position absolute
@@ -17,7 +18,7 @@ sidebarScrollTopHeight = 11*gs
     display none
   &__sidebar-l
     overflow hidden
-    transition width .3s linear
+    transition width .2s ease-in
     .sidebar
       max-height 100%
       overflow-y auto
@@ -25,11 +26,12 @@ sidebarScrollTopHeight = 11*gs
 
     .sidebar-expand
       transition all .3s linear
-  
+
   /* 18dc84f92e17a6cffd9a07ebe1b86fff */
-  &.is-at-tablet
+  @media screen and (max-width:1100px)
     padding-right sidebarPanelWidth
     height 100%
+    position fixed
     {root()}__sidebar-l
       height 100%
       width 0
@@ -38,8 +40,9 @@ sidebarScrollTopHeight = 11*gs
 
   /* 18dc84f92e17a6cffd9a07ebe1b86fff */
   &.is-expanded
-    shadow()
-    transition box-shadow .3s linear
+    box-shadow .5*gs 0 0 rgba(c-grey3, .1)
+    // shadow()
+    // transition box-shadow .2s ease-in
 
     .sidebar-expand
       &:before
@@ -198,15 +201,15 @@ sidebarScrollTopHeight = 11*gs
   height 8*gs
   position relative
   width 100%
-  border-bottom-left-radius br
-  border-bottom-right-radius br
+  // border-bottom-left-radius br
+  // border-bottom-right-radius br
   // shadow()
 
   // right header side
   &__right
     position absolute
     height 100%
-    background rgba(white, .98)
+    background rgba(white, .96)
     padding-left headerLeftSize
     width 100%
     z-index 0
@@ -302,6 +305,10 @@ sidebarScrollTopHeight = 11*gs
   box-shadow -1px 0 0 sidebarBtnsRestColor
   position relative
   z-index 1
+
+  &__core
+    position relative
+    rect 100%
   
   /* 88600f049550246039629c60accbcd80 */
   &.is-scroll-top
@@ -380,22 +387,22 @@ sidebarScrollTopHeight = 11*gs
           
   .sidebar-expand
     position absolute
-    top 2*sidebarPanelWidth
+    top 2*sidebarPanelWidth + 1
     bottom 0
     height auto
     z-index 2
-    background white
+    // background white
     box-shadow inset 0 1px 0 currentColor,
           -1px 0 0 currentColor,
           -1px 1px 0 currentColor,
-          inset -1px 0 0 currentColor
+          // inset -1px 0 0 currentColor
     &:hover
       background c-grey10
       box-shadow inset 0 1px 0 currentColor,
           -1px 0 0 currentColor,
           -1px 1px 0 currentColor,
           inset -1px 0 0 currentColor
-      
+
 
   .sidebar-scoll-top
     position absolute
@@ -552,7 +559,11 @@ vertGutter = 2*gs
     width 100%
     text-align center
     & + p
-      margin-top 2*gs    
+      margin-top 2*gs
+  .post-bottom-credits
+    margin-top 4*gs
+  &__comments
+    margin-top 10*gs
 
 /* 307c65e9540bc6fccc9e6fd2279d5029 */
 .post-splitter
@@ -700,7 +711,8 @@ columnWidth = 43*gs
     border-top .2*gs solid c-grey9
     max-width columnWidth
     margin 0 auto
-    margin-top 4*gs
+    margin-top 3*gs
+    opacity 0
 
 /* 461123fd16a3c74fad9e12bd2e1d9052 */
 .posts-nav
@@ -719,7 +731,10 @@ columnWidth = 43*gs
   border 1px solid c-grey8
   border-radius br
   rect 4*gs
+  background rgba(white,.75)
   shadow()
+  &:hover
+    background rgba(c-grey9,.75)
   &:before
     margin-top  -(gs) - .3*gs
   &:after

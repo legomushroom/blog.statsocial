@@ -230,27 +230,18 @@ html
         
         .k-sample(style="margin-bottom: 60px;")
           .hash-e#2dd245c639f53c95bb8dda4ae880acc1 2dd245c639f53c95bb8dda4ae880acc1
-          .sidebar-n-panel
-            .sidebar-n-panel__sidebar-l
-              include partials/sidebar
-            - el = { class:'is-scroll-top', inputId: '2dd245c639f53c95bb8dda4ae880acc1' }
-            include partials/sidebar-panel
+          - el = { class: '', id: ''} 
+          include partials/sidebar-n-panel
 
         .k-sample(style="height: 700px; margin-bottom: 60px;")
           .hash-e#18dc84f92e17a6cffd9a07ebe1b86fff 18dc84f92e17a6cffd9a07ebe1b86fff
-          .sidebar-n-panel.is-at-tablet
-            .sidebar-n-panel__sidebar-l
-              include partials/sidebar
-            - el = { class:'is-scroll-top', inputId: '18dc84f92e17a6cffd9a07ebe1b86fff' }
-            include partials/sidebar-panel
+          - el = { class: 'is-at-tablet', id: '', inputId: '18dc84f92e17a6cffd9a07ebe1b86fff'} 
+          include partials/sidebar-n-panel
 
         .k-sample(style="height: 700px; margin-bottom: 60px;")
           .hash-e#61ca1fbc891c10f80910e08063426d4c 61ca1fbc891c10f80910e08063426d4c
-          .sidebar-n-panel.is-at-tablet.is-expanded
-            .sidebar-n-panel__sidebar-l
-              include partials/sidebar
-            - el = { class:'is-scroll-top', inputId: '61ca1fbc891c10f80910e08063426d4c' }
-            include partials/sidebar-panel
+          - el = { class: 'is-expanded', id: '', inputId: '61ca1fbc891c10f80910e08063426d4c'} 
+          include partials/sidebar-n-panel
 
         .cf
 

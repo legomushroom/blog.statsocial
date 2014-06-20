@@ -11,6 +11,7 @@ modalLayer   = 30
 headerLeftSize = 32*gs
 headerHeight = 8*gs
 
+
 outage()
   font-family 'outageregular'
 
@@ -26,6 +27,8 @@ easy-click()
 
 shadow()
   box-shadow .4*gs .4*gs 0 0 rgba(c-grey3, .1)
+down-shadow()
+  box-shadow 0 .4*gs 0 0 rgba(c-grey3, .1)
 
 retina(path, size= 100%, color= white)
   background color url(path+'.png') no-repeat center center
