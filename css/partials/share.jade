@@ -1,0 +1,16 @@
+.share.cf(class="#{el.class || ''}", id="#{el.id || ''}")
+  - el = { class: 'share-icon--twitter', id: ''}
+  - el.icon = { path: 'twitter-icon' }
+  include share-icon
+
+  - el = { class: 'share-icon--facebook', id: ''}
+  - el.icon = { path: 'facebook-icon' }
+  include share-icon
+
+  - el = { class: 'share-icon--linkedin', id: ''}
+  - el.icon = { path: 'linkedin-icon' }
+  include share-icon
+
+  - el = { class: 'share-icon--google', id: ''}
+  - el.icon = { path: 'google-icon' }
+  include share-icon

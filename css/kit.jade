@@ -177,29 +177,13 @@ html
         
         .k-sample
           .hash-e#a86d1c01d59d3bd7500000bc1e9e2c95 a86d1c01d59d3bd7500000bc1e9e2c95
-          mixin share(o)
-            - var o = o || {};
-            .share.cf(class="#{o.class || ''}")
-              - el = { class: 'share-icon--twitter', id: ''}
-              - el.icon = { path: 'twitter-icon' }
-              include partials/share-icon
-
-              - el = { class: 'share-icon--facebook', id: ''}
-              - el.icon = { path: 'facebook-icon' }
-              include partials/share-icon
-
-              - el = { class: 'share-icon--linkedin', id: ''}
-              - el.icon = { path: 'linkedin-icon' }
-              include partials/share-icon
-
-              - el = { class: 'share-icon--google', id: ''}
-              - el.icon = { path: 'google-icon' }
-              include partials/share-icon
-          +share()
+          - el = { class: '', id: ''} 
+          include partials/share
 
         .k-sample
           .hash-e#7f6955dcb9404eb89ec15ff536abf13f 7f6955dcb9404eb89ec15ff536abf13f
-          +share({class: 'is-at-mobile'})
+          - el = { class: 'is-at-mobile', id: ''} 
+          include partials/share
 
         .cf
 
@@ -305,23 +289,12 @@ html
         .cf
 
         .hash-e#34f28b60c8011d2c96bdf82d3ebfd797 34f28b60c8011d2c96bdf82d3ebfd797
-        mixin post-bottom-credits(o)
-          - var o = o || {}
-          .post-bottom-credits(class="#{o.class || ''}")
-            .post-bottom-credits__top.cf
-              - el = { class: o.creditsClass, id: ''} 
-              include partials/post-splitter
-              - el = { class: o.creditsClass, id: ''}
-              include partials/post-credits
-
-            +share({class: o.class})
-            a.next-post ← Customize Your Twitter Feed By Muting Users
-            a.next-post The Best & Worst of Twitter: Week of 5/18/2014 →
-            .post-bottom-credits__line
-        +post-bottom-credits()
+        - el = { class: '', id: ''}
+        include partials/post-bottom-credits
 
         .hash-e#e394a8cc55f307c0e9dc59b924d2d079 e394a8cc55f307c0e9dc59b924d2d079
-        +post-bottom-credits({class: 'is-at-mobile', creditsClass: 'is-at-bottom is-at-mobile'})
+        - el = { class: 'is-at-mobile', id: '', creditsClass: 'is-at-bottom is-at-mobile'}
+        include partials/post-bottom-credits
 
         .hash-e#461123fd16a3c74fad9e12bd2e1d9052 461123fd16a3c74fad9e12bd2e1d9052
         .posts-nav.grid.grid--gutter-x2

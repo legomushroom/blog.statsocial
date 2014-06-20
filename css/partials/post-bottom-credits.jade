@@ -1,0 +1,12 @@
+.post-bottom-credits(class="#{el.class || ''}", id="#{el.id || ''}")
+  .post-bottom-credits__top.cf
+    - el = { class: el.creditsClass, id: ''} 
+    include post-splitter
+    - el = { class: el.creditsClass, id: ''}
+    include post-credits
+
+  - el = { class: el.class, id: ''} 
+  include share
+  a.next-post ← Customize Your Twitter Feed By Muting Users
+  a.next-post The Best & Worst of Twitter: Week of 5/18/2014 →
+  .post-bottom-credits__line
