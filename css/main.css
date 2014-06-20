@@ -2042,9 +2042,49 @@ clearfix:after {
   transform: translate(4px, 4px);
   box-shadow: none;
 }
+.footer-share .icon {
+  fill: #fff;
+  float: left;
+  width: 32px;
+  height: 32px;
+}
+.footer-share .icon + .icon {
+  margin-left: 35px;
+}
 .mobile-footer {
-  outline: 1px solid #ff1493;
-  background: #5adcff;
+  background: #7bb9d0;
+  text-align: center;
+  padding: 25px 0;
+  display: none;
+/* the same */
+}
+.mobile-footer.is-at-mobile {
+  display: block;
+}
+.mobile-footer__link {
+  display: block;
+  font-weight: 400;
+  color: #fff;
+  font-size: 16px;
+}
+.mobile-footer__link:after {
+  display: none;
+}
+.mobile-footer__link + .mobile-footer__link {
+  margin-top: 5px;
+}
+.mobile-footer .footer-share {
+  display: table;
+  margin: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.mobile-footer__copy {
+  margin-top: 25px;
+  color: #fff;
+  font-size: 10px;
+  line-height: 15px;
+  padding: 0 40px;
 }
 .sidebar-list-item {
   font-size: 16px;

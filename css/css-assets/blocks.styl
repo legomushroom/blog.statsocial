@@ -727,11 +727,57 @@ columnWidth = 43*gs
     transform translate(.4*gs, .4*gs)
     box-shadow none
 
+/* 39f63d887d62ca9f3304c12915e480c0 */
+.footer-share
+  .icon
+    fill white
+    float left
+    rect 3.2*gs
+    & + {end()}
+      margin-left 3.5*gs
 
 /* d3e01bfb115e62608a0e6368805c0fd1 */
 .mobile-footer
-  hl()
-  background c-blue3
+  background c-blue2
+  text-align center
+  padding 2.5*gs 0
+  display none
+  /* the same */
+  &.is-at-mobile
+    display block
+  &__link
+    display block
+    font-weight 400
+    color white
+    font-size 1.6*gs
+    &:after
+      display none
+    & + {end()}
+      margin-top (gs/2)
+  .footer-share
+    display table
+    margin 3*gs
+    fly()
+
+  &__copy
+    margin-top 2.5*gs
+    color white
+    font-size gs
+    line-height 1.5*gs
+    padding 0 4*gs
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

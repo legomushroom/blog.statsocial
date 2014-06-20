@@ -1,0 +1,12 @@
+.mobile-footer(class="#{el.class || ''}", id="#{el.id || ''}")
+  a(href="#").mobile-footer__link statsocial.com
+  a(href="#").mobile-footer__link blog.statsocial.com
+  - el = { class: '', id: ''}
+  include footer-share
+  a(href="#").mobile-footer__link contacts
+  a(href="#").mobile-footer__link terms of service
+
+  .mobile-footer__copy.
+    ©Copyright 2014 StatSocial 
+    (owned by PeekAnalytics, Inc). Patent Pending. 
+    All Rights Reserved.
