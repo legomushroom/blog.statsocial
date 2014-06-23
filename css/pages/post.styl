@@ -2,21 +2,26 @@
 @import '../assets/imports.styl'
 
 footerHeight = 30*gs
+maxWidth = 140*gs
 
 .base-p
   width 100%
   &__core
-    margin-top headerHeight + 5*gs
-    max-width 140*gs
     background white
     margin-bottom footerHeight
     position relative
     z-index contentLayer
     box-shadow 0 gs 0 rgba(c-grey1, .1)
-    transition shadow .3s linear
-    fly()
     &.is-clean-shadow
       box-shadow none
+    &__wrapper
+      max-width maxWidth
+      background inherit
+      padding-top headerHeight + 5*gs
+      fly()
+      @media screen and (max-width:568px)
+        padding-top headerHeight
+
     &__sidebar
       float left
       position relative
@@ -42,32 +47,33 @@ footerHeight = 30*gs
         padding-right 4*gs
       @media screen and (max-width:568px)
         margin-left 4*gs
-      @media screen and (max-width:320px)
+      @media screen and (max-width:520px)
         margin-left 0
         padding-right 0
 
       &__line
         display inline-block
   &__footer
-    background c-blue2
-    min-height footerHeight
+    height footerHeight
     width 100%
     position fixed
     bottom 0
     left 0
     z-index baseLayer
-    // background c-blue3 url('http://placekitten.com/100/100') repeat left top
+    background c-blue2
+    &__core
+      max-width maxWidth
+      background c-blue3 url('http://placekitten.com/100/100') repeat left top
+      height inherit
+      fly()
 
   .header
-    position absolute
+    position fixed
     nw 0
     width 100%
     z-index headerLayer
     &.is-fixed
       down-shadow()
-      position fixed
-      nw 0
-      width 100%
 
   .scroll-top
     position fixed

@@ -1,3 +1,42 @@
+# class Main
+#   constructor:(@o={})->
+#     @vars()
+#     @listen()
+
+#   vars:->
+#     @$w             = $(window)
+#     @isStopLoop     = false
+#     @prevScrollTop  = 0
+#     @loop           = @loop.bind @
+
+#   listen:->
+#     @$w.on 'scroll', =>
+#       console.wran 'scroll'
+#       @scrollTop = @$w.scrollTop()
+#       @stopLoop()
+
+#     @$w.on 'touchstart', => 
+#       @startLoop()
+
+#   loop: (isStop)->
+#     return if @isStopLoop
+#     console.log 'loop', document.body.scrollTop
+#     requestAnimationFrame @loop
+
+#   startLoop:->
+#     console.log 'loop start'
+#     @isStopLoop = false
+#     @loop()
+#   stopLoop:->
+#     console.log 'loop end'
+#     @isStopLoop = true
+
+
+# new Main
+
+
+
+
 $window = $(window)
 $document = $(document)
 $body = $(document.body)
@@ -28,3 +67,24 @@ $scrollTop.on 'click', (e)->
 
 $expandSidebar.on 'click', (e)->
   $sidebar.toggleClass 'is-expanded'
+
+# setTimeout ->
+#   $window.trigger 'scroll'
+# , 3000
+
+
+# window.scroll1 = (isRunning= true)->
+#   return if !isRunning
+#   requestAnimationFrame window.scroll1
+#   console.log 'frame'
+
+
+
+# $window.on 'touchstart', ->
+#   window.scroll1()
+#   console.log 'touchstart'
+
+# $window.on 'touchend', ->
+#   console.log 'touchend'
+
+
