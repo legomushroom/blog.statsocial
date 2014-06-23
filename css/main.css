@@ -1541,7 +1541,6 @@ clearfix:after {
 @media screen and (max-width:568px) {
   .header {
     height: 60px;
-    outline: 1px solid #f1f1f1;
   }
   .header .header__left {
     width: 70px;
@@ -1935,6 +1934,12 @@ ma
   margin-top: 25px;
   margin-bottom: 25px;
 }
+@media screen and (max-width:520px) {
+  .post blockquote {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+}
 .post blockquote:before {
   content: '';
   position: absolute;
@@ -2254,11 +2259,16 @@ ma
 .footer-share .icon + .icon {
   margin-left: 35px;
 }
+.footer-share .icon:hover {
+  opacity: 0.85;
+  cursor: pointer;
+}
 .mobile-footer {
   background: #7bb9d0;
   text-align: center;
   padding: 25px 0;
   display: none;
+  height: 285px;
 /* the same */
 }
 @media screen and (max-width:568px) {
@@ -2267,7 +2277,7 @@ ma
   }
 }
 .mobile-footer__link {
-  display: block;
+  display: inline-block;
   font-weight: 400;
   color: #fff;
   font-size: 16px;
@@ -2290,6 +2300,56 @@ ma
   font-size: 10px;
   line-height: 15px;
   padding: 0 40px;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.footer {
+  padding: 15px 40px 20px 40px;
+  background: #7bb9d0;
+  height: 250px;
+  width: 100%;
+  color: #fff;
+  font-size: 15px;
+}
+.footer__share {
+  text-align: center;
+}
+.footer__share .icon {
+  width: 32px;
+  height: 32px;
+}
+.footer__share .icon + .icon {
+  margin-left: 15px;
+}
+.footer .footer-share {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+.footer__links-block {
+  float: left;
+  margin-bottom: 50px;
+}
+.footer__links-block + .footer__links-block {
+  margin-left: 40px;
+}
+.footer__links-block__header {
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+.footer__links-block__item {
+  color: #fff;
+  display: inline-block;
+  margin-top: -2px;
+  letter-spacing: 0.5px;
+}
+.footer__copy {
+  display: block;
+  clear: both;
+  text-align: center;
+  font-size: 12px;
 }
 .sidebar-list-item {
   font-size: 16px;
@@ -2700,10 +2760,15 @@ a:hover:after,
 }
 .base-p__core {
   background: #fff;
-  margin-bottom: 300px;
+  margin-bottom: 250px;
   position: relative;
   z-index: 10;
   box-shadow: 0 10px 0 rgba(17,17,17,0.1);
+}
+@media screen and (max-width:568px) {
+  .base-p__core {
+    margin-bottom: 285px;
+  }
 }
 .base-p__core.is-clean-shadow {
   box-shadow: none;
@@ -2768,7 +2833,7 @@ a:hover:after,
   display: inline-block;
 }
 .base-p__footer {
-  height: 300px;
+  height: 250px;
   width: 100%;
   position: fixed;
   bottom: 0;
@@ -2776,12 +2841,40 @@ a:hover:after,
   z-index: 0;
   background: #7bb9d0;
 }
+@media screen and (max-width:568px) {
+  .base-p__footer {
+    height: 285px;
+  }
+}
 .base-p__footer__core {
   max-width: 1400px;
-  background: #5adcff url("http://placekitten.com/100/100") repeat left top;
+  background: #5adcff;
   height: inherit;
   margin-left: auto;
   margin-right: auto;
+}
+@media screen and (max-width:1100px) {
+  .base-p__footer__core {
+    padding-left: 30px;
+  }
+}
+@media screen and (max-width:568px) {
+  .base-p__footer__core {
+    padding-left: 0;
+  }
+}
+.base-p__footer__core .mobile-footer {
+  display: none;
+}
+@media screen and (max-width:568px) {
+  .base-p__footer__core .mobile-footer {
+    display: block;
+  }
+}
+@media screen and (max-width:568px) {
+  .base-p__footer__core .footer {
+    display: none;
+  }
 }
 .base-p .header {
   position: fixed;

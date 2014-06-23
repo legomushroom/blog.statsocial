@@ -33,13 +33,13 @@
     return $core.toggleClass('is-clean-shadow', isBottom);
   });
 
-  $scrollTop.on('click', function(e) {
+  $scrollTop.on('click touchstart', function(e) {
     return $bodyHtml.animate({
       scrollTop: 0
     });
   });
 
-  $expandSidebar.on('click', function(e) {
+  $expandSidebar.on('click touchstart', function(e) {
     return $sidebar.toggleClass('is-expanded');
   });
 

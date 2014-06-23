@@ -62,10 +62,10 @@ $window.on 'scroll', ->
   isBottom = scrollTop + windowHeight >= $document.height()
   $core.toggleClass('is-clean-shadow', isBottom)
 
-$scrollTop.on 'click', (e)->
+$scrollTop.on 'click touchstart', (e)->
   $bodyHtml.animate scrollTop: 0
 
-$expandSidebar.on 'click', (e)->
+$expandSidebar.on 'click touchstart', (e)->
   $sidebar.toggleClass 'is-expanded'
 
 # setTimeout ->

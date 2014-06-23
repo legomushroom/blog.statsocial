@@ -275,7 +275,6 @@ sidebarScrollTopHeight = 11*gs
   /* c23cdad713ba9c41c6ed2c9bf8e5bac7 */
   @media screen and (max-width:568px)
     height 6*gs
-    hl #f1f1f1
     {root()}
       &__left
         width 7*gs
@@ -602,6 +601,9 @@ vertGutter = 2*gs
     margin-left .5*gs
     margin-top 2.5*gs
     margin-bottom 2.5*gs
+    @media screen and (max-width:520px)
+      margin-top 1.5*gs
+      margin-bottom 1.5*gs
     size = (.4*gs)
     &:before
       content ''
@@ -859,6 +861,9 @@ columnWidth = 43*gs
     rect 3.2*gs
     & + {end()}
       margin-left 3.5*gs
+    &:hover
+      opacity .85
+      cursor pointer
 
 /* d3e01bfb115e62608a0e6368805c0fd1 */
 .mobile-footer
@@ -866,11 +871,12 @@ columnWidth = 43*gs
   text-align center
   padding 2.5*gs 0
   display none
+  height 28.5*gs
   /* the same */
   @media screen and (max-width:568px)
     display block
   &__link
-    display block
+    display inline-block
     font-weight 400
     color white
     font-size 1.6*gs
@@ -889,6 +895,52 @@ columnWidth = 43*gs
     font-size gs
     line-height 1.5*gs
     padding 0 4*gs
+    width 30*gs
+    fly()
+
+
+/* b36c411c24ef77dd961d77f8e385155e */
+.footer
+  padding 1.5*gs 4*gs 2*gs 4*gs
+  background c-blue2
+  height 25*gs
+  width 100%
+  color white
+  font-size 1.5*gs
+  &__share
+    text-align center
+    .icon
+      rect 3.2*gs
+      & + {end()}
+        margin-left 1.5*gs
+  .footer-share
+    display inline-block
+    margin-bottom 2*gs
+  &__links-block
+    float left
+    margin-bottom 5*gs
+    & + {end()}
+      margin-left 4*gs
+    &__header
+      text-transform uppercase
+      font-weight 700
+      margin-bottom gs
+      letter-spacing 1px
+    &__item
+      color white
+      display inline-block
+      margin-top -.2*gs
+      letter-spacing .5px
+      // & + {end()}
+      //   margin-top .1*gs
+  &__copy
+    display block
+    clear both
+    text-align center
+    font-size 1.2*gs
+
+
+
 
 
 

@@ -1,0 +1,34 @@
+.footer(class="#{el.class || ''}", id="#{el.id || ''}")
+  .footer__share
+    - el = { class: '', id: ''}
+    include footer-share
+  .footer__blocks-l.cf
+    .footer__links-block
+      .footer__links-block__header Info
+      div
+        a.footer__links-block__item About
+      div
+        a.footer__links-block__item Press
+      div
+        a.footer__links-block__item FAQ
+      div
+        a.footer__links-block__item Support
+
+    .footer__links-block
+      .footer__links-block__header Product Demos
+      div
+        a.footer__links-block__item Sample Reports
+      div
+        a.footer__links-block__item Request Demo
+
+    .footer__links-block
+      .footer__links-block__header Legal
+      div
+        a.footer__links-block__item Provacy Policy
+      div
+        a.footer__links-block__item Terms of Use
+
+    .footer__copy.
+      ©Copyright 2014 StatSocial 
+      (owned by PeekAnalytics, Inc). Patent Pending. 
+      All Rights Reserved.
