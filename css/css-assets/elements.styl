@@ -2,24 +2,25 @@
 @import '../assets/imports.styl'
 
 /* 7d7ed33281e44c7092ef2f908536f698 */
-.sidebar-list-item
-  font-size 16px
-  line-height 26px
-  color c-blue1
-  list-style none
-  position relative
-  padding-left 2*gs
-  font-weight 400
-  > a
-    color inherit 
-  &:before
-    content ''
-    position absolute
-    left .5*gs
-    top gs
-    rect .6*gs
-    background c-blue1
-    border-radius 50%
+.sidebar
+  li
+    font-size 16px
+    line-height 26px
+    color c-blue1
+    list-style none
+    position relative
+    padding-left 2*gs
+    font-weight 400
+    > a
+      color inherit 
+    &:before
+      content ''
+      position absolute
+      left .5*gs
+      top gs
+      rect .6*gs
+      background c-blue1
+      border-radius 50%
 
 /* ec9afeed491f9ee1f433b3ef35b6dd58 */
 .sidebar-header
@@ -77,14 +78,15 @@ a, .link
   // hl green
   &:hover
     cursor pointer
-    &:after
-      content ''
-      width 100%
-      height 0
-      position absolute
-      top 95%
-      left 0
-      border-bottom 1px solid
+    text-decoration underline
+    // &:after
+    //   content ''
+    //   width 100%
+    //   height 0
+    //   position absolute
+    //   top 95%
+    //   left 0
+    //   border-bottom 1px solid
 
 /* 333473649f1a25a7bf3d21b835adaa06 */
 .share-icon

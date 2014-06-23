@@ -87,6 +87,14 @@ if ( !isset( $statsocial_actions_hook_message ) ) {
 
     $statsocial_actions_hook_message = false;
 }
+
+// function filter_ptags_on_images($content){
+//    return preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
+// }
+
+// add_filter('the_content', 'filter_ptags_on_images');
+
+
 /**
  * 
  * Show statsocial status bar at browser bottom
@@ -778,14 +786,24 @@ if ( !defined( 'statsocial_USE_FEATURED_IMAGE_LIGHT_BOX' ) ) {
  */
 if ( !function_exists( 'statsocial_widgets_init' ) ) {
 
+    add_filter('wp_list_categories', 'add_new_class_list_categories');
+    
+    function add_new_class_list_categories($list) {
+
+        $list = str_replace('cat-item ', 'cat-item feat ', $list); 
+
+        return $list;
+    }
+
     function statsocial_widgets_init() {
 
         register_sidebar( array( 'name'          => esc_html__( 'Default Sidebar', 'statsocial' ),
             'id'            => 'sidebar-1',
+            'class'         => 'sidebar-1',
             'before_widget' => '',
             'after_widget'  => '',
-            'before_title'  => '<h2>',
-            'after_title'   => '</h2>',
+            'before_title'  => '<div class="sidebar-header">',
+            'after_title'   => '</div>',
             'widget_id'     => 'default',
             'widget_name'   => 'default',
             'text'          => "1" ) );
@@ -1144,10 +1162,10 @@ if ( !function_exists( 'statsocial_comment' ) ) {
 
                     if ( $tag_list ) {
 
-                        $posted_in = '<span class="this-posted-in">' . esc_html__( 'Posted in', 'statsocial' ) . '</span> %1$s'; //. '<span class="tagged">' . esc_html__( 'and tagged', 'statsocial' ) . '</span> %2$s';
+                        $posted_in = '<span class="this-posted-in">' . esc_html__( '', 'statsocial' ) . '</span> %1$s'; //. '<span class="tagged">' . esc_html__( 'and tagged', 'statsocial' ) . '</span> %2$s';
                     } elseif ( is_object_in_taxonomy( get_post_type(), 'category' ) ) {
 
-                        $posted_in = '<span class="this-posted-in">' . esc_html__( 'Posted in', 'statsocial' ) . '</span> %1$s ';
+                        $posted_in = '<span class="this-posted-in">' . esc_html__( '', 'statsocial' ) . '</span> %1$s ';
                     } else {
 
                         $posted_in = '';
@@ -1246,6 +1264,7 @@ if ( !function_exists( 'statsocial_comment' ) ) {
             }
 
         }
+        
         /**
          * Template function posted_on
          *
@@ -1269,7 +1288,7 @@ if ( !function_exists( 'statsocial_comment' ) ) {
                 if (!$isShort){
                     $result = sprintf( esc_html__( '%1$s %5$s %2$s %6$s %3$s %4$s', 'statsocial' ), '<span class="meta-prep meta-prep-author">', '</span>' . sprintf( '<a href="%1$s" title="%2$s"><%4$s class="entry-date updated" %5$s>%3$s</%4$s></a>', $day_link, esc_attr( 'archives daily ' . get_the_time( $statsocial_date_format ) ), get_the_date( $statsocial_date_format ), statsocial_doctype_elements( 'span', 'time', false ), statsocial_doctype_elements( '', 'datetime="' . esc_attr( get_the_date( 'c' ) ) . '"', false ) ) . '<span class="meta-sep">', '</span>' . sprintf( '<span class="author vcard"><a class="url fn n" href="%1$s" title="%2$s" rel="vcard:url">%3$s</a></span> ', get_author_posts_url( get_the_author_meta( 'ID' ) ), sprintf( esc_attr__( 'View all posts by %s', 'statsocial' ), wp_kses( $author, array() ) ), $author ), apply_filters( 'statsocial_posted_on_comment_link', statsocial_comments_link() ), '<span class="posted-on-string">' . __( 'Posted on', 'statsocial' ) . '</span>', '<span class="posted-by-string">' . __( 'by', 'statsocial' ) . '</span>' );
                 } else {
-                    $result = sprintf( esc_html__( '%1$s %5$s %2$s %6$s %3$s %4$s', 'statsocial' ), '<span class="meta-prep meta-prep-author">', '</span>' . sprintf( '<a href="%1$s" title="%2$s"><%4$s class="entry-date updated" %5$s>%3$s</%4$s></a>', $day_link, esc_attr( 'archives daily ' . get_the_time( $statsocial_date_format ) ), get_the_date( $statsocial_date_format ), statsocial_doctype_elements( 'span', 'time', false ), statsocial_doctype_elements( '', 'datetime="' . esc_attr( get_the_date( 'c' ) ) . '"', false ) ) . '<span class="meta-sep">', '</span>' . sprintf( '<span class="author vcard"><a class="url fn n" href="%1$s" title="%2$s" rel="vcard:url">%3$s</a></span> ', get_author_posts_url( get_the_author_meta( 'ID' ) ), sprintf( esc_attr__( 'View all posts by %s', 'statsocial' ), wp_kses( $author, array() ) ), $author ), apply_filters( 'statsocial_posted_on_comment_link', statsocial_comments_link() ), '<span class="posted-on-string"></span>', '<span class="posted-by-string">' . __( 'by', 'statsocial' ) . '</span>' );
+                    $result = sprintf( esc_html__( '%1$s %2$s %3$s ', 'statsocial' ), '<span class="meta-prep meta-prep-author">', '</span>' . sprintf( '<a href="%1$s" title="%2$s"><%4$s class="entry-date updated" %5$s>%3$s</%4$s></a>', $day_link, esc_attr( 'archives daily ' . get_the_time( $statsocial_date_format ) ), get_the_date( $statsocial_date_format ), statsocial_doctype_elements( 'span', 'time', false ), statsocial_doctype_elements( '', 'datetime="' . esc_attr( get_the_date( 'c' ) ) . '"', false ) ) . '<span class="meta-sep">', '</span>');
                 }
 
                 $format              = get_post_format();
@@ -1287,6 +1306,47 @@ if ( !function_exists( 'statsocial_comment' ) ) {
             }
 
         }
+
+
+        /**
+         * Template function posted_on
+         *
+         *
+         *
+         * loop.php
+         *
+         */
+        if ( !function_exists( 'statsocial_posted_by' ) ) {
+
+            function statsocial_posted_by($isShort) {
+
+                global $post;
+                $statsocial_date_format = get_option( 'date_format' ); //' . ' . get_option( 'time_format' );
+                $author                = statsocial_blank_fallback( get_the_author(), 'Somebody' );
+                $archive_year          = get_the_time( 'Y' );
+                $archive_month         = get_the_time( 'm' );
+                $archive_day           = get_the_time( 'd' );
+                $day_link              = esc_url( get_day_link( $archive_year, $archive_month, $archive_day ) . '#post-' . $post->ID );
+
+          
+                $result = sprintf( esc_html__( '%1$s %2$s', 'statsocial' ), sprintf( '<span class="author vcard"><a class="url fn n" href="%1$s" title="%2$s" rel="vcard:url">%3$s</a></span> ', get_author_posts_url( get_the_author_meta( 'ID' ) ), sprintf( esc_attr__( 'View all posts by %s', 'statsocial' ), wp_kses( $author, array() ) ), $author ), apply_filters( 'statsocial_posted_on_comment_link', statsocial_comments_link() ), '<span class="posted-on-string"></span>', '<span class="posted-by-string">' . __( '', 'statsocial' ) . '</span>' );
+
+                $format              = get_post_format();
+                $content_empty_check = trim( get_the_content() );
+
+                if ( false === $format ) {
+
+                    echo apply_filters( "statsocial_posted_on", $result );
+                } elseif ( empty( $content_empty_check ) ) {
+                    echo statsocial_comments_link();
+                } else {
+
+                    echo apply_filters( "statsocial_posted_on", $result );
+                }
+            }
+
+        }
+
         /**
          * Special custom fields key css, javascript, metatags
          *
@@ -4997,14 +5057,14 @@ if ( !function_exists( 'statsocial_entry_title' ) ) {
 
             $html = '%5$s<div class="post-thumb__text"><' . $statsocial_title_element . ' class="%1$s"><a href="%2$s" rel="bookmark" title="%3$s"><span>%4$s</span></a></' . $statsocial_title_element . '></div>';
 
-            $html = sprintf( $html, 'post--header', get_permalink(), the_title_attribute( array( 'before' => '', 'after' => '', 'echo' => false ) ), the_title( '', '', false ), $thumbnail );
+            $html = sprintf( $html, '', get_permalink(), the_title_attribute( array( 'before' => '', 'after' => '', 'echo' => false ) ), the_title( '', '', false ), $thumbnail );
 
             echo apply_filters( 'statsocial_entry_title', $html );
         } else {
 
             $html = '<' . $statsocial_title_element . ' class="%1$s"><span>%2$s</span></' . $statsocial_title_element . '>';
 
-            $html = sprintf( $html, 'post--header', the_title( '', '', false ) );
+            $html = sprintf( $html, '', the_title( '', '', false ) );
 
             echo apply_filters( 'statsocial_entry_title', $html );
         }
@@ -5095,8 +5155,8 @@ if ( !function_exists( 'statsocial_sidebar_menus' ) ) {
                 $html = get_search_form( false );
             }
 
-            $html .= '<h2>' . esc_html__( 'Archives', 'statsocial' ) . '</h2>';
-            $html .= '<ul class="list-small blog-p--recent-posts">' . wp_get_archives( 'type=monthly&echo=0' ) . '</ul>';
+            $html .= '<div class="sidebar-header m-t-x3-g">' . esc_html__( 'Archives', 'statsocial' ) . '</div>';
+            $html .= '<ul class="sidebar-list">' . wp_get_archives( 'type=monthly&echo=0' ) . '</ul>';
             // $html .= '</li>';
         } else {
 

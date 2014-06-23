@@ -11,51 +11,62 @@ do_action( 'statsocial_pre_part_' . basename( __FILE__, '.php' ) . '_' . basenam
     <meta http-equiv="content-type" content="<?php bloginfo( 'html_type' ); ?>; charset=<?php bloginfo( 'charset' ); ?>" />
     <title><?php wp_title( '|', true, 'right' ); ?></title>
     <?php wp_head(); ?>
-    <link rel="stylesheet" href="http://dev.statsocial.com/css/main.css">
-    <!-- <link rel="stylesheet" href="/website/front-end/css/main.css"> -->
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, maximum-scale=1, user-scalable=no">
   </head>
-  <body <?php body_class(); ?>>
-    <?php include 'icons.svg'; ?>
-    <div class="blog-p cf">
-
-        <div id="js-header" class="main-header is-static is-closed">
-          <a href="http://statsocial.com/" class="sidebar-logo-e is-blue-bg is-hoverable">
-            <div id="js-main-icon" title="" class="icon ">
+  <body class="base-page-p" <?php body_class(); ?>>
+    <?php include 'css/icons.svg'; ?>
+    <div id="js-header" class="header">
+      <div class="header__left">
+        <div id="" class="icon-text">
+          <div id="" title="" class="icon ">
+            <svg viewBox="0 0 32 32">
+              <use xlink:href="#logo-icon"></use>
+            </svg>
+          </div>
+          <div class="icon-text__text">statsocial</div>
+        </div>
+      </div>
+      <div class="header__right">
+        <div id="" class="rounded-btn header__right__request-demo rounded-btn--blue2 rounded-btn--hoverable">Request Demo</div>
+        <div id="" class="header-link-line header__right__actions"><a id="" class="header-link">Log In</a><a id="" class="header-link">Sign Up</a>
+        </div>
+        <div id="" class="input-icon input-icon--header">
+          <input id="input-undefined" placeholder="search.." class="input">
+          <label for="input-undefined" class="input-icon__label">
+            <div id="" title="" class="icon ">
               <svg viewBox="0 0 32 32">
-                <use xlink:href="#header-logo-icon"></use>
+                <use xlink:href="#search-icon"></use>
               </svg>
             </div>
-          </a>
-          
-          <div id="js-menu-btn" class="page-menu-header">
-            <div id="js-menu-launcher" title="" class="icon page-header2--menu-icon">
-              <svg viewBox="0 0 32 32">
-                <use xlink:href="#menu-icon"></use>
-              </svg>
-            </div>
-            <div class="header-btn-e is-hoverable-blue2 is-check f-l-g"><a href="http://statsocial.com/request-demo/" class="is-hoverable is-checkable">Request Demo</a></div>
-            <div id="front-page-header-signup" class="header-btn-e is-hoverable-blue2 f-r-g"><a href="http://statsocial.com/sign-up/" class="is-hoverable is-checkable">Sign Up</a></div>
-            <div id="front-page-header-login" class="header-btn-e is-hoverable-blue2 f-r-g"><a href="http://statsocial.com/account/" class="is-hoverable is-checkable">Log In</a></div>
-            <div class="main-header-menu">
-              <div class="main-header-menu-section-l">
-                <a href="http://statsocial.com/about/" class="main-header-menu-item is-hoverable is-checkable">About</a>
-                <a href="http://statsocial.com/faq/" class="main-header-menu-item is-hoverable is-checkable">FAQ</a>
-                <a href="http://statsocial.com/support/" class="main-header-menu-item is-hoverable is-checkable">Support</a>
-                <a href="http://statsocial.com/api/" class="main-header-menu-item is-hoverable is-checkable">API</a></div>
-              <div class="main-header-menu-section-l">
-                <a href="http://statsocial.com/sample-reports/" class="main-header-menu-item is-hoverable is-checkable">Sample reports</a>
-                <a href="http://statsocial.com/top-investors-twitter/" class="main-header-menu-item is-hoverable is-checkable">Top 1,000 investors</a>
-              </div>
-              <div class="main-header-menu-section-l">
-                <a href="http://blog.statsocial.com/category/press/" class="main-header-menu-item is-hoverable is-checkable">Press</a>
-                <a href="http://blog.statsocial.com/" class="main-header-menu-item is-hoverable is-checkable">Blog</a>
-                <a href="http://statsocial.com/privacy-policy/" class="main-header-menu-item is-hoverable is-checkable">Privacy policy</a>
-                <a href="http://statsocial.com/terms-of-service/" class="main-header-menu-item is-hoverable is-checkable">Terms of service</a>
-              </div>
-            </div>
+          </label>
+        </div>
+        <div id="" title="" class="icon header__right__menu-icon">
+          <svg viewBox="0 0 32 32">
+            <use xlink:href="#menu-icon"></use>
+          </svg>
+        </div>
+        <div id="" class="main-header-menu header__right__menu-icon">
+          <div class="main-header-menu-section-l">
+            <div id="" class="main-header-menu-item is-hoverable is-checkable">About</div>
+            <div id="" class="main-header-menu-item is-hoverable is-checkable">FAQ</div>
+            <div id="" class="main-header-menu-item is-hoverable is-checkable">Support</div>
+            <div id="" class="main-header-menu-item is-hoverable is-checkable">API</div>
+            <div id="" class="main-header-menu-item is-hoverable is-checkable">Sample reports</div>
+          </div>
+          <div class="main-header-menu-section-l">
+            <div id="" class="main-header-menu-item is-hoverable is-checkable">Top 1000 investors</div>
+            <div id="" class="main-header-menu-item is-hoverable is-checkable">Press</div>
+            <div id="" class="main-header-menu-item is-hoverable is-checkable">Blog</div>
+            <div id="" class="main-header-menu-item is-hoverable is-checkable">Privacy policy</div>
+            <div id="" class="main-header-menu-item is-hoverable is-checkable">Terms of service</div>
           </div>
         </div>
-        <div class="blog-p--main">
+      </div>
+    </div>
+
+    <div id="js-core" class="base-p__core">
+      <div class="base-p__core__wrapper">
+
 
 

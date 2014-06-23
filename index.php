@@ -25,17 +25,9 @@ do_action( 'statsocial_pre_' . basename( __FILE__ ) );
 statsocial_debug_navitation( __FILE__ );
 ?>
 
-<?php statsocial_prepend_extra_sidebar(); ?>
 
-<?php statsocial_append_extra_sidebar(); ?>
-<?php //add nest grid here  ?>
-<?php statsocial_prepend_default_sidebar(); ?>
 <?php get_sidebar( 'default' ); ?>
-<?php statsocial_append_default_sidebar(); ?>   
 
-
-
-<?php get_template_part( 'widget', 'sticky' ); ?>
 
 <?php get_template_part( 'loop', $statsocial_document_type ); ?>
 

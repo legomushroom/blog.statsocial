@@ -42,105 +42,65 @@ do_action( 'statsocial_pre_' . basename( __FILE__ ) );
 statsocial_debug_navitation( __FILE__ );
 ?>
 
- <?php
-        /**
-         * Show main column lsidebar start
-         *
-         *
-         *
-         *
-         */
-        if ( '1' !== statsocial_show_one_column() || false == $statsocial_current_column ) {
-            ?>
+<?php
+    statsocial_prepend_default_sidebar();
 
-    <?php
-}
+    get_sidebar( 'default' );
+
+    statsocial_append_default_sidebar();
 ?>
 
-    <?php
-statsocial_prepend_default_sidebar();
+<div class="base-p__core__main">
+  <div class="base-p__core__main__line">
 
-get_sidebar( 'default' );
+      <?php
+      /**
+       * Display navigation to next/previous pages when applicable
+       */
+      if ( have_posts() ) {
+          /**
+           * when Single page
+           */
+          while ( have_posts() ) {
 
-statsocial_append_default_sidebar();
-?>
-          <div class="blog-p--core">
+              the_post();
 
-                <?php
-                /**
-                 * Display navigation to next/previous pages when applicable
-                 */
-                if ( have_posts() ) {
-                    /**
-                     * when Single page
-                     */
-                    while ( have_posts() ) {
+              $format = get_post_format();
 
-                        the_post();
+              $cat = "default";
 
-                        $format = get_post_format();
+              if ( in_category( "blog" ) || has_post_format( "status" ) ) {
 
-                        $cat = "default";
+                  $cat = "blog";
+              } elseif ( in_category( "gallery" ) || has_post_format( "gallery" ) ) {
 
-                        if ( in_category( "blog" ) || has_post_format( "status" ) ) {
+                  $cat = "gallery";
+              } elseif ( $format !== false ) {
 
-                            $cat = "blog";
-                        } elseif ( in_category( "gallery" ) || has_post_format( "gallery" ) ) {
+                  $cat = $format;
+              }
 
-                            $cat = "gallery";
-                        } elseif ( $format !== false ) {
+              if ( true == WP_DEBUG ) {
 
-                            $cat = $format;
-                        }
-
-                        if ( true == WP_DEBUG ) {
-
-                            echo '<!--Single Post Format or 2 Category ' . $cat . ' start-->';
-                        }
-                        ?>
-                        <<?php statsocial_doctype_elements( 'div', 'article' ); ?> id="post-<?php the_ID(); ?>" class="post" <?php statsocial_post_class( array( 'clearfix' ) ); ?>>	
-                        
-                        
+                  echo '<!--Single Post Format or 2 Category ' . $cat . ' start-->';
+              }
+              ?>
+              <<?php statsocial_doctype_elements( 'div', 'article' ); ?> id="post-<?php the_ID(); ?>" class="post" <?php statsocial_post_class( array( 'clearfix' ) ); ?>>  
+              
+              
 
 
-                        <?php
-                        if ( is_sticky() ) {
-                            ?>
-                            <div class="sticky-single-follow-text">
+             
+<?php
+        
+  get_template_part( "part", $cat );
 
-                                <strong><a href="<?php echo $statsocial_home_url; ?>"><?php esc_html_e( 'Sticky Post Shows Only WEB Site Home.', 'statsocial' ); ?></a></strong>
-
-                            </div>
-            <?php
-        }
-
-        /**
-         * Show featured image
-         *
-         *
-         *
-         *
-         */
-        statsocial_featured_image();
-        /**
-         * Show Category base special layout and default single template part
-         *
-         *
-         *
-         *
-         */
-        get_template_part( "part", $cat );
-
-        if ( true == WP_DEBUG ) {
-            echo '<!-- #post-' . get_the_ID() . ' -->';
-        }
-    }       //　endwhile
+  if ( true == WP_DEBUG ) {
+      echo '<!-- #post-' . get_the_ID() . ' -->';
+  }
+}       //　endwhile
     /**
      * Next Previous post link
-     *
-     *
-     *
-     *
      */
     statsocial_next_prev_links( "nav-below" );
 } else {

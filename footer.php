@@ -23,48 +23,95 @@ if ( !defined( 'ABSPATH' ) ) {
 global $statsocial_current_theme_name, $statsocial_current_data_theme_uri, $template, $statsocial_accessibility_link;
 do_action( 'statsocial_pre_part_' . basename( __FILE__, '.php' ) . '_' . basename( $template ) );
 ?>
-</div>
-<div class="footer-l">
-        <div class="social-share-b">
-          <a href="https://twitter.com/statsocial" class="icon is-white is-hoverable" title="" id="">
-            <svg viewBox="0 0 32 32">
-               <use xlink:href="#twitter-icon"/>
-            </svg>
-          </a>
-          <a href="https://www.facebook.com/statsocial" class="icon is-white is-hoverable" title="" id="">
-            <svg viewBox="0 0 32 32">
-              <use xlink:href="#fb-icon"/>
-            </svg>
-          </a>
-          <a href="https://www.linkedin.com/company/3188281?trk=prof-0-ovw-curr_pos" class="icon is-white is-hoverable" title="" id="">
-            <svg viewBox="0 0 32 32">
-              <use xlink:href="#linkedin2-icon"/>
-            </svg>
-          </a>
+    </div>
+  </div>
+
+<!-- FOOTER STARTS -->
+    <div class="base-p__footer">
+      <div class="base-p__footer__core">
+        <div id="" class="footer">
+          <div class="footer__share">
+            <div id="" class="footer-share">
+              <div id="" title="" class="icon ">
+                <svg viewBox="0 0 32 32">
+                  <use xlink:href="#twitter-icon"></use>
+                </svg>
+              </div>
+              <div id="" title="" class="icon ">
+                <svg viewBox="0 0 32 32">
+                  <use xlink:href="#facebook-icon"></use>
+                </svg>
+              </div>
+              <div id="" title="" class="icon ">
+                <svg viewBox="0 0 32 32">
+                  <use xlink:href="#linkedin-icon"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="footer__blocks-l cf">
+            <div class="footer__links-block">
+              <div class="footer__links-block__header">Info</div>
+              <div><a href="#" class="footer__links-block__item">About</a></div>
+              <div><a href="#" class="footer__links-block__item">Press</a></div>
+              <div><a href="#" class="footer__links-block__item">FAQ</a></div>
+              <div><a href="#" class="footer__links-block__item">Support</a></div>
+            </div>
+            <div class="footer__links-block">
+              <div class="footer__links-block__header">Product Demos</div>
+              <div><a href="#" class="footer__links-block__item">Sample Reports</a></div>
+              <div><a href="#" class="footer__links-block__item">Request Demo</a></div>
+            </div>
+            <div class="footer__links-block">
+              <div class="footer__links-block__header">Legal</div>
+              <div><a href="#" class="footer__links-block__item">Provacy Policy</a></div>
+              <div><a href="#" class="footer__links-block__item">Terms of Use</a></div>
+            </div>
+            <div class="footer__copy">
+              ©Copyright 2014 StatSocial 
+              (owned by PeekAnalytics, Inc). Patent Pending. 
+              All Rights Reserved.
+            </div>
+          </div>
         </div>
-        <div class="footer-about-fork-l cf">
-          <div class="footer-about-b">
-            <div class="header-be">INFO</div>
-            <a class="item-be is-hoverable" target="_blank" href="http://statsocial.com/about/">About</a>
-            <a class="item-be is-hoverable" target="_blank" href="http://statsocial.com/press/">Press</a>
-            <a class="item-be is-hoverable" target="_blank" href="http://statsocial.com/faq/">FAQ</a>
-            <a class="item-be is-hoverable" target="_blank" href="http://statsocial.com/support/">Support</a>
+        <div id="" class="mobile-footer">
+          <div><a href="#" class="mobile-footer__link">statsocial.com</a></div>
+          <div><a href="#" class="mobile-footer__link">blog.statsocial.com</a></div>
+          <div id="" class="footer-share">
+            <div id="" title="" class="icon ">
+              <svg viewBox="0 0 32 32">
+                <use xlink:href="#twitter-icon"></use>
+              </svg>
+            </div>
+            <div id="" title="" class="icon ">
+              <svg viewBox="0 0 32 32">
+                <use xlink:href="#facebook-icon"></use>
+              </svg>
+            </div>
+            <div id="" title="" class="icon ">
+              <svg viewBox="0 0 32 32">
+                <use xlink:href="#linkedin-icon"></use>
+              </svg>
+            </div>
           </div>
-          <div class="footer-about-b">
-            <div class="header-be">PRODUCT DEMOS</div>
-            <a class="item-be is-hoverable" target="_blank" href="http://statsocial.com/sample-reports/">Sample Reports</a>
-            <a class="item-be is-hoverable" target="_blank" href="http://statsocial.com/request-demo/">Request Demo</a>
-          </div>
-          <div class="footer-about-b">
-            <div class="header-be">LEGAL</div>
-            <a class="item-be is-hoverable" target="_blank" href="http://statsocial.com/privacy-policy/">Privacy Policy</a>
-            <a class="item-be is-hoverable" target="_blank" href="http://statsocial.com/about/">Terms of Use</a>
+          <div><a href="#" class="mobile-footer__link">contacts</a></div>
+          <div><a href="#" class="mobile-footer__link">terms of service</a></div>
+          <div class="mobile-footer__copy">
+            ©Copyright 2014 StatSocial 
+            (owned by PeekAnalytics, Inc). Patent Pending. 
+            All Rights Reserved.
           </div>
         </div>
-        <div class="footer-copyright-b">&copy; Copyright 2014 StatSocial (owned by PeekAnalytics, Inc). Patent Pending. All Rights Reserved.</div>
       </div>
-    <?php wp_footer(); ?>
-    <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery.js"></script>
-    <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/header.js"></script>
-</body>
+    </div>
+    <!-- FOOTER ENDS -->
+
+    <div id="js-scroll-top" class="scroll-top"></div>
+    <script src="../../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../../bower_components/velocity/jquery.velocity.js"></script>
+    <script src="../../js/raf.js"></script>
+    <script src="../../js/helpers.js"></script>
+    <script src="../../js/main.js"></script>
+  
+  </body>
 </html><?php do_action( 'statsocial_after_part_' . basename( __FILE__, '.php' ) . '_' . basename( $template ) ); ?>
