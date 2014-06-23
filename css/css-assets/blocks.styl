@@ -199,9 +199,12 @@ sidebarScrollTopHeight = 11*gs
   nw 0
   width 100%
   z-index headerLayer
-  // border-bottom-left-radius br
-  // border-bottom-right-radius br
-  // shadow()
+
+  &.is-menu
+    shadow()
+    .main-header-menu
+      display block
+      box-shadow -(.4*gs) (.4*gs) 0 rgba(c-grey1, .1)
 
   // right header side
   &__right
@@ -219,14 +222,15 @@ sidebarScrollTopHeight = 11*gs
       float right
       margin-right 10*gs
       margin-top  2.9*gs
-      @media screen and (max-width:720px)
-        display none
+      display none
+      // @media screen and (max-width:720px)
+      //   display none
 
-      @media screen and (max-width:750px)
-        margin-right 7*gs
-        .header-link
-          & + {end()}
-            margin-left 2*gs
+      // @media screen and (max-width:750px)
+      //   margin-right 7*gs
+      //   .header-link
+      //     & + {end()}
+      //       margin-left 2*gs
 
     .icon
       position absolute
@@ -240,6 +244,12 @@ sidebarScrollTopHeight = 11*gs
         fill c-blue1-hover
     .input-icon--header
       display none // intent for @mobile
+
+    .main-header-menu
+      position absolute
+      right 0
+      top 100%
+      display none
 
   // left side with logo
   &__left
@@ -578,11 +588,13 @@ vertGutter = 2*gs
       margin-left auto II
       margin-right auto II
 
+
   .center-tweet
     text-align center
     margin-bottom 1.5*vertGutter
     @media screen and (max-width:520px)
       padding 0 gs
+      margin-bottom .8*gs
     .twitter-tweet
       float none
       display inline-block II
@@ -939,8 +951,62 @@ columnWidth = 43*gs
     text-align center
     font-size 1.2*gs
 
+/* fba81d5c6fe0b497ba63528a944ab619 */
+.main-header-menu
+  width 240px
+  @media screen and (max-width:1100px)
+    width auto
+    .main-header-menu-section-l
+      display inline-block
+      float left
+      .main-header-menu-item
+        padding-right 3*gs
+  @media screen and (max-width:400px)
+    width 100%
+    text-align center
+    background-color rgba(255,255,255,.95)
+    .main-header-menu-item
+      padding-right 0
+      background-color transparent
+    .main-header-menu-section-l
+      float none
+      padding 2*gs 0
 
 
+/*  */
+.main-header-menu-item
+  font-size 20px
+  height 67px
+  color #416c7c
+  background-color rgba(255,255,255,.95)
+  padding-left 3*gs
+  padding-top 23px
+  text-align left
+  display block
+  @media screen and (max-width:568px)
+    font-size 1.5*gs
+    padding-top gs
+    height 4*gs
+  @media screen and (max-width:400px)
+    font-size 1.2*gs
+    padding-top (gs/2)
+    height 3*gs
+
+  /*  */
+  &.is-hoverable
+    &:hover
+      cursor pointer
+      background-color #7AB9D0
+      color white
+      text-decoration none
+
+  /*  */
+  &.is-checkable
+    &.is-check
+      background-color #7ab9d0
+      color white
+      cursor default
+      box-shadow inset 4px 0 0 white
 
 
 

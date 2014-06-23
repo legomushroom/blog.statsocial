@@ -1,0 +1,24 @@
+.main-header-menu(class="#{el.class || ''}", id="#{el.id || ''}")
+  .main-header-menu-section-l
+    - el = { class: 'is-hoverable is-checkable', text: 'About', id: '' }
+    include main-header-menu-item
+    - el = { class: 'is-hoverable is-checkable', text: 'FAQ', id: '' }
+    include main-header-menu-item
+    - el = { class: 'is-hoverable is-checkable', text: 'Support', id: '' }
+    include main-header-menu-item
+    - el = { class: 'is-hoverable is-checkable', text: 'API', id: '' }
+    include main-header-menu-item
+    - el = { class: 'is-hoverable is-checkable', text: 'Sample reports', id: '' }
+    include main-header-menu-item
+
+  .main-header-menu-section-l
+    - el = { class: 'is-hoverable is-checkable', text: 'Top 1000 investors', id: '' }
+    include main-header-menu-item
+    - el = { class: 'is-hoverable is-checkable', text: 'Press', id: '' }
+    include main-header-menu-item
+    - el = { class: 'is-hoverable is-checkable', text: 'Blog', id: '' }
+    include main-header-menu-item
+    - el = { class: 'is-hoverable is-checkable', text: 'Privacy policy', id: '' }
+    include main-header-menu-item
+    - el = { class: 'is-hoverable is-checkable', text: 'Terms of service', id: '' }
+    include main-header-menu-item

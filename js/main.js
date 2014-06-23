@@ -1,5 +1,5 @@
 (function() {
-  var $body, $bodyHtml, $core, $document, $expandSidebar, $header, $scrollTop, $sidebar, $sidebarPanel, $window;
+  var $body, $bodyHtml, $core, $document, $expandSidebar, $header, $headerIcon, $scrollTop, $sidebar, $sidebarPanel, $window;
 
   $window = $(window);
 
@@ -18,6 +18,8 @@
   $sidebar = $('#js-sidebar');
 
   $sidebarPanel = $('.sidebar-panel');
+
+  $headerIcon = $('.header__right__menu-icon');
 
   $scrollTop = $('#js-scroll-top, #js-scroll-top-sidebar');
 
@@ -41,6 +43,16 @@
 
   $expandSidebar.on('click touchstart', function(e) {
     return $sidebar.toggleClass('is-expanded');
+  });
+
+  $headerIcon.on('click touchstart', function(e) {
+    $header.toggleClass('is-menu');
+    e.preventDefault();
+    return e.stopPropagation();
+  });
+
+  $(document.body).on('click touchstart', function(e) {
+    return $header.removeClass('is-menu');
   });
 
 }).call(this);

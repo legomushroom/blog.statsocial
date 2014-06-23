@@ -48,6 +48,8 @@ $expandSidebar = $('#js-expand-sidebar')
 $sidebar = $('#js-sidebar')
 $sidebarPanel = $('.sidebar-panel')
 
+$headerIcon = $ '.header__right__menu-icon'
+
 $scrollTop = $('#js-scroll-top, #js-scroll-top-sidebar')
 
 $window.on 'scroll', ->
@@ -67,6 +69,15 @@ $scrollTop.on 'click touchstart', (e)->
 
 $expandSidebar.on 'click touchstart', (e)->
   $sidebar.toggleClass 'is-expanded'
+
+
+$headerIcon.on 'click touchstart', (e)->
+  $header.toggleClass 'is-menu'
+  e.preventDefault()
+  e.stopPropagation()
+
+$(document.body).on 'click touchstart', (e)->
+  $header.removeClass 'is-menu'
 
 # setTimeout ->
 #   $window.trigger 'scroll'
