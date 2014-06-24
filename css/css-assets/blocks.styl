@@ -499,6 +499,9 @@ vertGutter = 2*gs
       font-size 1.8*gs
       line-height 2.4*gs
       padding 0 2*gs
+    a
+      font inherit
+      color inherit
 
   h4
     text-transform uppercase
@@ -530,6 +533,7 @@ vertGutter = 2*gs
     font-weight 600
   img
     max-width 100%
+    height auto
     // margin vertGutter 0
     margin-top .6*gs
     & + p
@@ -582,6 +586,8 @@ vertGutter = 2*gs
     margin .5*gs 1.5*vertGutter 0 0 II
     min-width auto II
     max-width 99% II
+    margin-right 0 !important
+    margin-top 2*gs II
     @media screen and (max-width:750px)
       float none
       display block
@@ -1009,6 +1015,14 @@ columnWidth = 43*gs
       cursor default
       box-shadow inset 4px 0 0 white
 
+.post
+  .post-splitter
+    margin 8*gs 0
+    max-width 40*gs
+    fly()
+
+.more-link
+  display none
 
 
 
@@ -1025,21 +1039,71 @@ columnWidth = 43*gs
 
 
 
+// OLD STYLES:
 
+c-lightBlue = #61dcff
 
+.calendar-period
+  margin-bottom 2*gs
 
+.calendar-table
+  width 100%
+  .post
+    padding-bottom 0
+  table
+    width 100%
+  tr
+    width 100%
+    padding 2*gs
+    &:nth-of-type(odd)
+      background #F5FBFD
+  td
+    padding gs
 
+.user-thumb
+  overflow hidden
+  margin-bottom 6*gs
+  text-align left
+  color c-blue1
+  padding-bottom 4*gs
+  border-bottom 2px solid c-grey9
+  &__avatar
+    float left
+  &__text
+    margin-left 8*gs
+    padding-right 6*gs
+    line-height 20px
 
+#archives-title
+  margin-bottom 4*gs
+  color c-blue1
+  display block
+  font-size 24px
+  border-bottom 2px solid #f1f1f1
+  padding-bottom 1.5*gs
+  font-weight 400
+  text-align left
 
+.calendar-table
+  min-width 60*gs
 
+strong
+  font-weight bold
 
+.calendar-period
+  text-align left
 
+// .l-h-x3-g
+//   line-height 3*gs
 
+// .l-h-x2-5-g
+//   line-height 2.5*gs
 
+// .l-h-x2-25-g
+//   line-height 2.25*gs
 
-
-
-
+// .search-input
+//   max-width 76*gs
 
 
 

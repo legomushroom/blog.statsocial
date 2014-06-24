@@ -66,7 +66,7 @@ do_action( 'statsocial_pre_part_' . basename( __FILE__, '.php' ) . '_' . basenam
     </div>
 
     <div id="js-core" class="base-p__core">
-      <div class="base-p__core__wrapper">
+      <div class="base-p__core__wrapper cf">
 
 
 

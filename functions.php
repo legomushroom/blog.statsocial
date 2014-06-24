@@ -1,4 +1,13 @@
 <?php
+
+add_filter('next_posts_link_attributes', 'posts_link_attributes');
+add_filter('previous_posts_link_attributes', 'posts_link_attributes');
+
+function posts_link_attributes() {
+    return 'class="next-post grid-bit grid-bit--1-2"';
+}
+
+
 /**
  * functions and constants for statsocial theme
  *
@@ -2666,7 +2675,7 @@ id=\"post-" . $mytime->ID . "\">$mytime->post_title</a><br />";
                         <span class="author vcard"><a class="is-hoverable url fn n" href="%10$s" title="%11$s" rel="vcard:url">%12$s</a></span> 					</li>';
 
                                 $display_name = get_the_author_meta( 'display_name', $month->post_author );
-                                $links .= sprintf( $html, 'h2 entry-title', esc_url( get_permalink( $month->ID ) ), 'link to content: ' . esc_attr( strip_tags( $month->post_title ) ), $month->post_title, $month->ID, ' ' . statsocial_post_class( array( 'clearfix' ), $month->ID, false ), statsocial_doctype_elements( 'span', 'time', false ), statsocial_doctype_elements( '', 'datetime="' . esc_attr( get_the_date( 'c' ) ) . '"', false ), $month->post_date, get_author_posts_url( get_the_author_meta( 'ID' ) ), sprintf( esc_attr__( 'View all posts by %s', 'statsocial' ), $display_name ), $display_name
+                                $links .= sprintf( $html, 'h2 entry-title', esc_url( get_permalink( $month->ID ) ), 'link to content: ' . esc_attr( strip_tags( $month->post_title ) ), $month->post_title, $month->ID, ' ' . statsocial_post_class( array( 'clearfix' ), $month->ID, false ), statsocial_doctype_elements( 'span', 'time', false ), statsocial_doctype_elements( '', 'datetime="' . esc_attr( get_the_date( 'c' ) ) . '"', false ), date("m/d/Y", strtotime($month->post_date)), get_author_posts_url( get_the_author_meta( 'ID' ) ), sprintf( esc_attr__( 'View all posts by %s', 'statsocial' ), $display_name ), $display_name
                                 );
                                 $c++;
                             }
@@ -5085,15 +5094,13 @@ if ( !function_exists( 'statsocial_entry_content' ) ) {
         $statsocial_excerpt_condition = statsocial_detect_excerpt_condition();
 
         if ( true == $statsocial_excerpt_condition ) {
-
             /* remove shortcodes */
             $excerpt = preg_replace( '!\[[^\]]+\]!', '', get_the_excerpt() );
             $excerpt = apply_filters( 'the_excerpt', $excerpt );
             echo apply_filters( 'statsocial_entry_content', $excerpt );
         } else {
-
             if ( empty( $more_link_text ) ) {
-                $more_link_text = esc_html__( 'Continue&nbsp;reading ', 'statsocial' ) . '<span class="meta-nav">&rarr;</span>'; //.'<span class="more-link-post-unique">' . esc_html__( '&nbsp;Post ID&nbsp;', 'statsocial' ) . get_the_ID() . '</span>';
+                $more_link_text = '<a href="'. get_permalink( get_the_ID() ) .'" class="next-post next-post--read-more">read more →</a>'; //.'<span class="more-link-post-unique">' . esc_html__( '&nbsp;Post ID&nbsp;', 'statsocial' ) . get_the_ID() . '</span>';
             }
             $content = get_the_content( $more_link_text, $stripteaser );
             $content = apply_filters( 'the_content', $content );
@@ -5124,8 +5131,8 @@ if ( !function_exists( 'statsocial_next_prev_links' ) ) {
 
         if ( $wp_query->max_num_pages > 1 ) {
 
-            $html = '<div id="%3$s" class="clearfix"><span class="nav-previous">%1$s</span><span class="nav-next">%2$s</span></div>';
-            $html = sprintf( $html, get_next_posts_link( '<span class="meta-nav">&larr;</span>' . $statsocial_old . esc_html__( ' Older posts', 'statsocial' ) ), get_previous_posts_link( '<span>' . $statsocial_new . esc_html__( 'Newer posts', 'statsocial' ) . '<span class="meta-nav">&rarr;</span></span>' ), $position );
+            $html = '<div id="%3$s" class="clearfix">%1$s %2$s</div>';
+            $html = sprintf( $html, get_next_posts_link( '<span class="meta-nav">&larr;</span>' . $statsocial_old . esc_html__( ' older posts', 'statsocial' ) ), get_previous_posts_link( '<span>' . $statsocial_new . esc_html__( 'newer posts', 'statsocial' ) . '<span class="meta-nav">&rarr;</span></span>' ), $position );
             echo apply_filters( 'statsocial_next_prev_links', $html, $position );
         }
     }

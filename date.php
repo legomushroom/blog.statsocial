@@ -112,12 +112,13 @@ statsocial_debug_navitation( __FILE__ );
     statsocial_append_default_sidebar();
     ?>
 
-<div class="blog-p--core cf">
+<div class="base-p__core__main">
+    <div class="base-p__core__main__line">
 
 
         <div class="<?php echo statsocial_yui_class_modify(); ?>" id="container">
             <!-- content -->
-            <div class="yui-u first<?php statsocial_add_class( 'yui-u first', true ); ?>" <?php statsocial_doctype_elements( '', 'role="main"' ); ?>>
+            <div class="" <?php statsocial_doctype_elements( '', 'role="main"' ); ?>>
     <?php statsocial_prepend_loop(); ?>
 
                 <h2 class="page-title" id="archives-title">
@@ -155,8 +156,8 @@ statsocial_debug_navitation( __FILE__ );
             <br>
             <?php statsocial_monthly_archive_prev_next_navigation(); ?>
 
-</div>
-</div>
 
+</div>
+</div>
 </div>
 <?php get_footer( $statsocial_document_type ); ?>

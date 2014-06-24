@@ -10,14 +10,15 @@ if ( !defined( 'ABSPATH' ) ) {
 }
 ?>
 
-<div class="blog-p--core">
+<div class="base-p__core__main">
+    <div class="base-p__core__main__line">
 <?php
 /**
  * Display navigation to next/previous pages when applicable
  */
-statsocial_prepend_loop();
+// statsocial_prepend_loop();
 
-statsocial_next_prev_links();
+// statsocial_next_prev_links();
 
 if ( have_posts() ) {
 
@@ -74,47 +75,46 @@ if ( have_posts() ) {
             statsocial_entry_title();
             ?>
 
-            <div class="post--footer m-b-x2-g cf">
-            <div class="post--footer--section"> 
-              <div class="post--footer--section--content"><?php echo statsocial_posted_in(); ?></div>
+            <div class="post-credits">  
+                <div class="credits-item"><span class="post-credits__prefix">in </span><?php statsocial_posted_in(true); ?></div>
+                <div class="credits-item"><span class="post-credits__prefix">by </span><?php statsocial_posted_by(); ?></div>
+                <div class="credits-item"><?php statsocial_posted_on(true); ?></div>
             </div>
-            <div class="post--footer--section">
-              <div class="post--footer--section--content"><?php echo statsocial_tagged(); ?></div>
-            </div>
-            <div class="post--footer--section"> 
-              <div class="post--footer--section--content"><?php statsocial_posted_on(true);?></div>
-            </div>
-          </div>
-
 
 
             <div class="entry-content clearfix">
                 <?php
-                statsocial_prepend_entry_content();
-
-                statsocial_entry_content();
+                    statsocial_entry_content();
                 ?>
-                <br class="clear" />
-                <?php
-                statsocial_append_entry_content();
-                ?>
+                <div class="post-splitter m-t-x8-g m-b-x8-g">
+                    <a class="post-splitter__logo">
+                        <div id="" title="" class="icon ">
+                            <svg viewBox="0 0 32 32">
+                                <use xlink:href="#logo-icon"></use>
+                            </svg>
+                        </div>
+                        <div class="post-splitter__logo__glare"></div>
+                    </a>
+                </div>
             </div>
-
-            <!-- edit_post_link( esc_html__( 'Edit', 'statsocial' ) . statsocial_link_unique( 'Post', $post->ID ), '<span class="edit-link">', '</span>' ); -->
-
 
                 <?php
             }
             ?>
-        <br class="clear" />
         </<?php statsocial_doctype_elements( 'div', 'article' ); ?>>
         </li>
         <?php
     } //end while
     ?>
     </ul>
-    <?php
-    statsocial_next_prev_links( "nav-below" );
-}//if have_posts
-statsocial_append_loop();
-?>
+    
+    <div class="posts-nav grid grid--gutter-x2">
+        <?php echo statsocial_next_prev_links() ?>
+    </div>
+
+    <!-- <div class="posts-nav grid grid--gutter-x2">
+        <a class="next-post grid-bit grid-bit--1-2">← older posts</a>
+        <a class="next-post grid-bit grid-bit--1-2">recent posts →</a>
+    </div> -->
+</div>
+    <?php  } ?>

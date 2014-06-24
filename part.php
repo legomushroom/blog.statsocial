@@ -38,18 +38,13 @@ function curPageURL() {
 ?>
 
 <div class="post">
-  <div class="<?php echo $statsocial_entry_meta_class; ?>" style="font-weight: normal;" >  
+  <div class="post-credits">  
     <div class="credits-item"><span class="post-credits__prefix">in </span><?php statsocial_posted_in(true); ?></div>
     <div class="credits-item"><span class="post-credits__prefix">by </span><?php statsocial_posted_by(); ?></div>
     <div class="credits-item"><?php statsocial_posted_on(true); ?></div>
   </div>
 
-  <div class="entry-content clearfix">
-    <?php
-      statsocial_entry_content();
-      //wp_link_pages( 'before=<p class="pagenate clearfix">&after=</p>&next_or_number=number&pagelink=<span>%</span>' );
-      ?>
-  </div>
+  <?php statsocial_entry_content(); ?>
 
   <div id="" class="post-bottom-credits">
     <div class="post-bottom-credits__top cf">
@@ -60,10 +55,10 @@ function curPageURL() {
             </svg>
           </div>
           <div class="post-splitter__logo__glare"></div></a></div>
-      <div id="" class="post-credits is-at-bottom">
-        <div class="credits-item"><span class="post-credits__prefix">in </span><a>Celebrity accounts</a></div>
-        <div class="credits-item"><span class="post-credits__prefix">by </span><a>Audrey Hungerman</a></div>
-        <div class="credits-item"><a>Jan 9, 2014</a></div>
+      <div class="post-credits is-at-bottom">  
+        <div class="credits-item"><span class="post-credits__prefix">in </span><?php statsocial_posted_in(true); ?></div>
+        <div class="credits-item"><span class="post-credits__prefix">by </span><?php statsocial_posted_by(); ?></div>
+        <div class="credits-item"><?php statsocial_posted_on(true); ?></div>
       </div>
     </div>
     <div id="" class="share cf is-at-bottom">
