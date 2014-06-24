@@ -68,17 +68,16 @@ function curPageURL() {
     </div>
     <div id="" class="share cf is-at-bottom">
       <div id="" class="share-icon share-icon--twitter">
+        <a href="https://twitter.com/share" class="twitter-share-button" data-via="statsocial">Tweet</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
         <div id="" title="" class="icon ">
-          <a href="https://twitter.com/share" class="twitter-share-button" data-via="statsocial">Tweet</a>
-          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
           <svg viewBox="0 0 32 32">
             <use xlink:href="#twitter-icon"></use>
           </svg>
         </div>
       </div>
       <div id="" class="share-icon share-icon--facebook">
-        <div id="" title="" class="icon ">
-          <div id="fb-root"></div>
+        <div id="fb-root"></div>
           <script>(function(d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0];
             if (d.getElementById(id)) return;
@@ -87,24 +86,25 @@ function curPageURL() {
             fjs.parentNode.insertBefore(js, fjs);
           }(document, 'script', 'facebook-jssdk'));</script>
           <div class="fb-share-button" data-href="<?php echo curPageURL(); ?>" data-type="icon"></div>
+        <div id="" title="" class="icon ">
           <svg viewBox="0 0 32 32">
             <use xlink:href="#facebook-icon"></use>
           </svg>
         </div>
       </div>
       <div id="" class="share-icon share-icon--linkedin">
+        <script src="//platform.linkedin.com/in.js" type="text/javascript">
+          lang: en_US
+        </script>
+        <script type="IN/Share"></script>
         <div id="" title="" class="icon ">
-          <script src="//platform.linkedin.com/in.js" type="text/javascript">
-            lang: en_US
-          </script>
-          <script type="IN/Share"></script>
           <svg viewBox="0 0 32 32">
             <use xlink:href="#linkedin-icon"></use>
           </svg>
         </div>
       </div>
       <div id="" class="share-icon share-icon--google">
-        <div class="g-plus" data-google-plus data-action="share" data-annotation="none" data-height="15"></div>
+        <div class="g-plus" data-google-plus data-action="share" data-annotation="none" data-height="60"></div>
         <script type="text/javascript">
           (function() {
             var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;

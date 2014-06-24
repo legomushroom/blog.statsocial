@@ -1,3 +1,16 @@
+/*
+Theme Name: Statsocial Blog
+Theme URI: http://blog.statsocial.com/
+Author: Oleg Solomka
+Description: Statsocial Blog
+Version: 0.0.1
+License: GNU General Public License v2 or later
+License URI: license.txt
+Tags: light, white
+
+Statsocial Blog WordPress Theme, copyright 2014 Oleg Solomka @legomushroom legomushroom@gmail.com
+
+*/
 html,
 body,
 div,
@@ -2541,6 +2554,17 @@ a:hover,
   top: 50%;
   left: 50%;
 }
+.share-icon iframe,
+.share-icon .IN-widget {
+  position: absolute !important;
+  z-index: 1 !important;
+  top: 0 !important;
+  left: 0 !important;
+  -webkit-transform: scale(10) !important;
+  -ms-transform: scale(10) !important;
+  transform: scale(10) !important;
+  opacity: 0;
+}
 .share-icon--twitter {
   color: #00acff;
 }
@@ -2561,6 +2585,12 @@ a:hover,
 .share-icon--google .icon {
   margin-top: -10px;
   margin-left: -10px;
+}
+.share-icon--google iframe {
+  -webkit-transform: translate(-65px, 0) !important;
+  -ms-transform: translate(-65px, 0) !important;
+  transform: translate(-65px, 0) !important;
+  position: relative;
 }
 .next-post {
   border: 1px solid #f1f1f1;

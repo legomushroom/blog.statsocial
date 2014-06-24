@@ -108,6 +108,14 @@ a, .link
     rect size
     center(size)
 
+  iframe, .IN-widget
+    position absolute II
+    z-index 1 II
+    top 0  II
+    left 0  II
+    transform scale(10) II
+    opacity 0
+
   /* 333473649f1a25a7bf3d21b835adaa06 */
   &--twitter
     color c-twitter
@@ -129,6 +137,9 @@ a, .link
       // rect 4*gs
       margin-top  -1*gs
       margin-left -1*gs
+    iframe
+      transform translate(-65px, 0) II
+      position relative
 
 /* ddc4137247ad4d4bc5668efb0f33fac4 */
 .next-post
