@@ -105,7 +105,8 @@ do_action( 'statsocial_pre_part_' . basename( __FILE__, '.php' ) . '_' . basenam
       </div>
     </div>
     <!-- FOOTER ENDS -->
-
+    <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+    
     <div id="js-scroll-top" class="scroll-top"></div>
     <script src="../../bower_components/jquery/dist/jquery.js"></script>
     <script src="../../bower_components/velocity/jquery.velocity.js"></script>

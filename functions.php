@@ -2429,15 +2429,14 @@ LINK_COLOR_CSS;
 
                     $filter = false;
                 }
-                //exclude separate 'and'
                 $exclude_category = apply_filters( 'statsocial_next_prev_excluded_categories', '' );
-                $html             = '<div id="%1$s" class="%2$s"><span class="%3$s">';
+                $html             = '<div id="%1$s" class="%2$s"><div class="next-post">';
                 printf( $html, $position, "clearfix", "nav-previous" );
-                previous_post_link( '%link', '<span class="button"><span class="meta-nav">&laquo;</span> %title</span>', $filter, $exclude_category );
-                $html             = '</span><div class="%1$s">';
+                previous_post_link( '%link', '%title', $filter, $exclude_category );
+                $html             = '</div><a class="next-post">';
                 printf( $html, "nav-next" );
-                next_post_link( '%link', '<span class="button"> %title <span class="meta-nav">&raquo;</span></span>', $filter, $exclude_category );
-                $html             = '</div></div>';
+                next_post_link( '%link', '%title', $filter, $exclude_category );
+                $html             = '</a></div>';
                 echo apply_filters( "statsocial_prev_next_post", $html );
             }
 

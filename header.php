@@ -14,7 +14,7 @@ do_action( 'statsocial_pre_part_' . basename( __FILE__, '.php' ) . '_' . basenam
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600,700,800" rel="stylesheet" type="text/css">
     <meta name="viewport" content="width=device-width, maximum-scale=1, user-scalable=no">
   </head>
-  <body class="base-page-p" <?php body_class(); ?>>
+  <body class="base-p" <?php body_class(); ?>>
     <?php include 'css/icons.svg'; ?>
     <div id="js-header" class="header">
       <div class="header__left">
