@@ -16,32 +16,18 @@ do_action( 'statsocial_' . basename( __FILE__ ) );
 get_header( $statsocial_document_type );
 do_action( 'statsocial_pre_' . basename( __FILE__ ) );
 ?>
+<?php get_sidebar( 'default' ); ?>
 
+<div class="base-p__core__main">
+    <div class="base-p__core__main__line">
 
-    <?php
-    statsocial_prepend_default_sidebar();
-
-    get_sidebar( 'default' );
-
-    statsocial_append_default_sidebar();
-    ?>
-  <div class="blog-p--core">
-
-<?php statsocial_debug_navitation( __FILE__ ); ?>
-<?php statsocial_prepend_loop(); ?>
-<?php if ( have_posts() ) { ?>
-
-                    <strong class="f16" id="archives-title">Search Results for "<?php the_search_query(); ?>"</strong>
-                    
-                    <!-- <h1 class="pagetitle h1">Search Results : <?php the_search_query(); ?></h1> -->
-                    <ul class="search-results">
-                        <li>
-                            <?php
-                            statsocial_next_prev_links();
-                            ?>
-                        </li>
-                        <?php
-                        // statsocial_loop_title();
+      <?php statsocial_debug_navitation( __FILE__ ); ?>
+      <?php statsocial_prepend_loop(); ?>
+      <?php if ( have_posts() ) { ?>
+        <strong class="f16" id="archives-title">Search Results for "<?php the_search_query(); ?>"</strong>
+          <!-- <h1 class="pagetitle h1">Search Results : <?php the_search_query(); ?></h1> -->
+          <ul class="search-results">
+              <?php
 
     $statsocial_loop_number = 1;
 
@@ -61,20 +47,12 @@ do_action( 'statsocial_pre_' . basename( __FILE__ ) );
         $format = get_post_format();
         /**
          * In category gallery
-         *
-         *
-         *
-         *
          */
         if ( in_category( "gallery" ) || has_post_format( "gallery" ) ) {
 
             get_template_part( 'part', 'gallery' );
             /**
              * In category blog 
-             *
-             *
-             *
-             *
              */
         } elseif ( in_category( "blog" ) || has_post_format( "status" ) ) {
 
@@ -84,41 +62,32 @@ do_action( 'statsocial_pre_' . basename( __FILE__ ) );
             get_template_part( 'part', $format );
             /**
              * Default loop
-             *
-             *
-             *
-             *
              */
         } else {
             ?>
-            <?php
-            statsocial_entry_title();
-            ?>
+            <?php statsocial_entry_title(); ?>
 
-            <div class="post--footer m-b-x2-g cf">
-            <div class="post--footer--section"> 
-              <div class="post--footer--section--content"><?php echo statsocial_posted_in(); ?></div>
+            <div class="post-credits">  
+              <div class="credits-item"><span class="post-credits__prefix">in </span><?php statsocial_posted_in(true); ?></div>
+              <div class="credits-item"><span class="post-credits__prefix">by </span><?php statsocial_posted_by(); ?></div>
+              <div class="credits-item"><?php statsocial_posted_on(true); ?></div>
             </div>
-            <div class="post--footer--section">
-              <div class="post--footer--section--content"><?php echo statsocial_tagged(); ?></div>
-            </div>
-            <div class="post--footer--section"> 
-              <div class="post--footer--section--content"><?php statsocial_posted_on(true);?></div>
-            </div>
-          </div>
-
 
 
             <div class="entry-content clearfix">
                 <?php
-                statsocial_prepend_entry_content();
-
-                statsocial_entry_content();
+                    statsocial_entry_content();
                 ?>
-                <br class="clear" />
-                <?php
-                statsocial_append_entry_content();
-                ?>
+                <div class="post-splitter m-t-x8-g m-b-x8-g">
+                    <a class="post-splitter__logo">
+                        <div id="" title="" class="icon ">
+                            <svg viewBox="0 0 32 32">
+                                <use xlink:href="#logo-icon"></use>
+                            </svg>
+                        </div>
+                        <div class="post-splitter__logo__glare"></div>
+                    </a>
+                </div>
             </div>
 
             <!-- edit_post_link( esc_html__( 'Edit', 'statsocial' ) . statsocial_link_unique( 'Post', $post->ID ), '<span class="edit-link">', '</span>' ); -->
