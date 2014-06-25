@@ -48,13 +48,16 @@ function curPageURL() {
 
   <div id="" class="post-bottom-credits">
     <div class="post-bottom-credits__top cf">
-      <div id="" class="post-splitter is-at-bottom"><a class="post-splitter__logo">
+      <div id="" class="post-splitter is-at-bottom">
+        <a href="http://statsocial.com" title="StatSocial home" class="post-splitter__logo">
           <div id="" title="" class="icon ">
-            <svg viewBox="0 0 32 32">
-              <use xlink:href="#logo-icon"></use>
-            </svg>
+              <svg viewBox="0 0 32 32">
+                  <use xlink:href="#logo-icon"></use>
+              </svg>
           </div>
-          <div class="post-splitter__logo__glare"></div></a></div>
+          <div class="post-splitter__logo__glare"></div>
+        </a>
+        </div>
       <div class="post-credits is-at-bottom">  
         <div class="credits-item"><span class="post-credits__prefix">in </span><?php statsocial_posted_in(true); ?></div>
         <div class="credits-item"><span class="post-credits__prefix">by </span><?php statsocial_posted_by(); ?></div>

@@ -1292,7 +1292,7 @@ if ( !function_exists( 'statsocial_comment' ) ) {
                 $archive_year          = get_the_time( 'Y' );
                 $archive_month         = get_the_time( 'm' );
                 $archive_day           = get_the_time( 'd' );
-                $day_link              = esc_url( get_day_link( $archive_year, $archive_month, $archive_day ) . '#post-' . $post->ID );
+                $day_link              = esc_url( get_day_link( $archive_year, $archive_month, $archive_day ) );
 
                 if (!$isShort){
                     $result = sprintf( esc_html__( '%1$s %5$s %2$s %6$s %3$s %4$s', 'statsocial' ), '<span class="meta-prep meta-prep-author">', '</span>' . sprintf( '<a href="%1$s" title="%2$s"><%4$s class="entry-date updated" %5$s>%3$s</%4$s></a>', $day_link, esc_attr( 'archives daily ' . get_the_time( $statsocial_date_format ) ), get_the_date( $statsocial_date_format ), statsocial_doctype_elements( 'span', 'time', false ), statsocial_doctype_elements( '', 'datetime="' . esc_attr( get_the_date( 'c' ) ) . '"', false ) ) . '<span class="meta-sep">', '</span>' . sprintf( '<span class="author vcard"><a class="url fn n" href="%1$s" title="%2$s" rel="vcard:url">%3$s</a></span> ', get_author_posts_url( get_the_author_meta( 'ID' ) ), sprintf( esc_attr__( 'View all posts by %s', 'statsocial' ), wp_kses( $author, array() ) ), $author ), apply_filters( 'statsocial_posted_on_comment_link', statsocial_comments_link() ), '<span class="posted-on-string">' . __( 'Posted on', 'statsocial' ) . '</span>', '<span class="posted-by-string">' . __( 'by', 'statsocial' ) . '</span>' );

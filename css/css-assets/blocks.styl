@@ -10,7 +10,9 @@ sidebarScrollTopHeight = 11*gs
 /* 2dd245c639f53c95bb8dda4ae880acc1 */
 .sidebar-n-panel
   position relative
+  transform translateX(- headerLeftSize)
   background rgba(white, .95)
+  transition all .3s ease-in
   .sidebar-panel
     height 100%
     position absolute
@@ -18,7 +20,7 @@ sidebarScrollTopHeight = 11*gs
     display none
   &__sidebar-l
     overflow hidden
-    transition width .2s ease-in
+    width headerLeftSize
     .sidebar
       max-height 100%
       overflow-y auto
@@ -34,19 +36,19 @@ sidebarScrollTopHeight = 11*gs
     position fixed
     {root()}__sidebar-l
       height 100%
-      width 0
+      width headerLeftSize
     .sidebar-panel
       display block
 
   /* 18dc84f92e17a6cffd9a07ebe1b86fff */
   &.is-expanded
     box-shadow .5*gs 0 0 rgba(c-grey3, .1)
+    transform translateX(0)
     .sidebar-expand
       &:before
         transform rotate(180deg) translateX(gs/2)
 
-    {root()}__sidebar-l
-      width headerLeftSize
+    // {root()}__sidebar-l
 
   @media screen and (max-width:568px)
     display none
@@ -343,13 +345,15 @@ sidebarScrollTopHeight = 11*gs
     top 0
     z-index 0
     .sidebar-btn
-      box-shadow 0 1px 0 currentColor
+      box-shadow 0 1px 0 currentColor, inset 0 1px 0 currentColor
       z-index 0
       &:hover
         box-shadow 0 1px 0 currentColor,
           -1px 0 0 currentColor,
           -1px 1px 0 currentColor,
-          inset -1px 0 0 currentColor
+          inset -1px 0 0 currentColor,
+          inset 0 1px 0 currentColor
+          
   &__search
     position absolute
     top 4*gs
@@ -360,6 +364,7 @@ sidebarScrollTopHeight = 11*gs
           -1px 0 0 currentColor,
           -1px 1px 0 currentColor,
           inset -1px 0 0 currentColor
+
     &:hover
       background c-controls-hover
       color sidebarBtnsHoverColor

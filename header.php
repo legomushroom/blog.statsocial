@@ -17,7 +17,7 @@ do_action( 'statsocial_pre_part_' . basename( __FILE__, '.php' ) . '_' . basenam
   <body class="base-p" <?php body_class(); ?>>
     <?php include 'css/icons.svg'; ?>
     <div id="js-header" class="header">
-      <div class="header__left">
+      <a href="http://statsocial.com" title="StatSocial Homepage" class="header__left">
         <div id="" class="icon-text">
           <div id="" title="" class="icon ">
             <svg viewBox="0 0 32 32">
@@ -26,7 +26,7 @@ do_action( 'statsocial_pre_part_' . basename( __FILE__, '.php' ) . '_' . basenam
           </div>
           <div class="icon-text__text">statsocial</div>
         </div>
-      </div>
+      </a>
       <div class="header__right">
         <a href="http://statsocial.com/request-demo/" title="Request Demo" class="rounded-btn header__right__request-demo rounded-btn--blue2 rounded-btn--hoverable">Request Demo</a>
         <div id="" class="header-link-line header__right__actions"><a id="" class="header-link">Log In</a><a id="" class="header-link">Sign Up</a>
