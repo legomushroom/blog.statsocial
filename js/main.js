@@ -52,7 +52,8 @@
   });
 
   $(document.body).on('click touchstart', function(e) {
-    return $header.removeClass('is-menu');
+    $header.removeClass('is-menu');
+    return console.log('aaa');
   });
 
 }).call(this);

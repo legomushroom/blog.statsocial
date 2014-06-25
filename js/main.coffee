@@ -1,42 +1,3 @@
-# class Main
-#   constructor:(@o={})->
-#     @vars()
-#     @listen()
-
-#   vars:->
-#     @$w             = $(window)
-#     @isStopLoop     = false
-#     @prevScrollTop  = 0
-#     @loop           = @loop.bind @
-
-#   listen:->
-#     @$w.on 'scroll', =>
-#       console.wran 'scroll'
-#       @scrollTop = @$w.scrollTop()
-#       @stopLoop()
-
-#     @$w.on 'touchstart', => 
-#       @startLoop()
-
-#   loop: (isStop)->
-#     return if @isStopLoop
-#     console.log 'loop', document.body.scrollTop
-#     requestAnimationFrame @loop
-
-#   startLoop:->
-#     console.log 'loop start'
-#     @isStopLoop = false
-#     @loop()
-#   stopLoop:->
-#     console.log 'loop end'
-#     @isStopLoop = true
-
-
-# new Main
-
-
-
-
 $window = $(window)
 $document = $(document)
 $body = $(document.body)
@@ -78,6 +39,11 @@ $headerIcon.on 'click touchstart', (e)->
 
 $(document.body).on 'click touchstart', (e)->
   $header.removeClass 'is-menu'
+  console.log 'aaa'
+
+# $header.on 'click touchstart', 'a', (e)->
+#   console.log 'a'
+#   e.stopPropagation()
 
 # setTimeout ->
 #   $window.trigger 'scroll'

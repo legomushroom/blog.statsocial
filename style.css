@@ -2045,6 +2045,7 @@ ma
 .post-splitter {
   position: relative;
   color: #f1f1f1;
+  display: block;
 /* 232c9e620aa69d70a8e0d7870bcf3bde */
 }
 @media screen and (max-width:568px) {

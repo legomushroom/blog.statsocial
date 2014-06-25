@@ -43,16 +43,16 @@ do_action( 'statsocial_pre_part_' . basename( __FILE__, '.php' ) . '_' . basenam
         </ul>
         -->
  
-    <div id="" class="sidebar-panel">
+    <div class="sidebar-panel">
       <div class="sidebar-panel__core">
         <div class="sidebar-panel__top-btns">
-          <div id="" class="sidebar-btn">
-            <div id="" title="" class="icon ">
+          <a href="http://statsocial.com" title="StatSocial" class="sidebar-btn">
+            <div class="icon ">
               <svg viewBox="0 0 32 32">
                 <use xlink:href="#home-icon"></use>
               </svg>
             </div>
-          </div>
+          </a>
         </div>
 
         <form class="input-icon sidebar-panel__search" method="get" name="searchform" id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">

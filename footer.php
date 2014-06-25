@@ -32,40 +32,40 @@ do_action( 'statsocial_pre_part_' . basename( __FILE__, '.php' ) . '_' . basenam
         <div id="" class="footer">
           <div class="footer__share">
             <div id="" class="footer-share">
-              <div id="" title="" class="icon ">
+              <a href="https://twitter.com/statsocial" title="StatSocial on Twitter" class="icon ">
                 <svg viewBox="0 0 32 32">
                   <use xlink:href="#twitter-icon"></use>
                 </svg>
-              </div>
-              <div id="" title="" class="icon ">
+              </a>
+              <a href="https://www.facebook.com/statsocial" title="StatSocial on Facebook" class="icon ">
                 <svg viewBox="0 0 32 32">
                   <use xlink:href="#facebook-icon"></use>
                 </svg>
-              </div>
-              <div id="" title="" class="icon ">
+              </a>
+              <a href="https://www.linkedin.com/company/3188281?trk=prof-0-ovw-curr_pos" title="StatSocial on LinkedIn" class="icon ">
                 <svg viewBox="0 0 32 32">
                   <use xlink:href="#linkedin-icon"></use>
                 </svg>
-              </div>
+              </a>
             </div>
           </div>
           <div class="footer__blocks-l cf">
             <div class="footer__links-block">
               <div class="footer__links-block__header">Info</div>
-              <div><a href="#" class="footer__links-block__item">About</a></div>
-              <div><a href="#" class="footer__links-block__item">Press</a></div>
-              <div><a href="#" class="footer__links-block__item">FAQ</a></div>
-              <div><a href="#" class="footer__links-block__item">Support</a></div>
+              <div><a href="http://statsocial.com/about/" title="About" class="footer__links-block__item">About</a></div>
+              <div><a href="http://blog.statsocial.com/category/press/" title="Press" class="footer__links-block__item">Press</a></div>
+              <div><a href="http://statsocial.com/faq/" title="FAQ" class="footer__links-block__item">FAQ</a></div>
+              <div><a href="http://statsocial.com/support/" title="Support" class="footer__links-block__item">Support</a></div>
             </div>
             <div class="footer__links-block">
               <div class="footer__links-block__header">Product Demos</div>
-              <div><a href="#" class="footer__links-block__item">Sample Reports</a></div>
-              <div><a href="#" class="footer__links-block__item">Request Demo</a></div>
+              <div><a href="http://statsocial.com/sample-reports/" title="Sample Reports" class="footer__links-block__item">Sample Reports</a></div>
+              <div><a href="http://www.statsocial.com/request-demo/" title="Request Demo" class="footer__links-block__item">Request Demo</a></div>
             </div>
             <div class="footer__links-block">
               <div class="footer__links-block__header">Legal</div>
-              <div><a href="#" class="footer__links-block__item">Provacy Policy</a></div>
-              <div><a href="#" class="footer__links-block__item">Terms of Use</a></div>
+              <div><a href="http://www.statsocial.com/privacy-policy/" title="Privacy Policy" class="footer__links-block__item">Provacy Policy</a></div>
+              <div><a href="http://statsocial.com/terms-of-service/" title="Terms of Service" class="footer__links-block__item">Terms of Use</a></div>
             </div>
             <div class="footer__copy">
               ©Copyright 2014 StatSocial 

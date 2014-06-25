@@ -87,7 +87,7 @@ if ( have_posts() ) {
                     statsocial_entry_content();
                 ?>
                 <div class="post-splitter m-t-x8-g m-b-x8-g">
-                    <a class="post-splitter__logo">
+                    <a href="http://statsocial.com" title="StatSocial home" class="post-splitter__logo">
                         <div id="" title="" class="icon ">
                             <svg viewBox="0 0 32 32">
                                 <use xlink:href="#logo-icon"></use>
