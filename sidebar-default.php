@@ -28,7 +28,7 @@ do_action( 'statsocial_pre_part_' . basename( __FILE__, '.php' ) . '_' . basenam
         <ul>
           <li class=""><a href="http://statsocial.com">Stat Social</a></li>
           <li class=""><a href="http://statsocial.com/sample-reports/">Stat Social Demo</a></li>
-          <li class=""><a href="#">Stat Social Pricing</a></li>
+          <!-- <li class=""><a href="#">Stat Social Pricing</a></li> -->
           <li class=""><a href="http://statsocialblog.disqus.com/latest.rss">Comments RSS</a></li>
           <li class=""><a href="?feed=rss2">Posts RSS</a></li>
           <li class=""><a href="https://twitter.com/statsocial">Twitter</a></li>

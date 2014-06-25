@@ -53,15 +53,15 @@ do_action( 'statsocial_pre_part_' . basename( __FILE__, '.php' ) . '_' . basenam
             <a href="http://statsocial.com/about/" title="About StatSocial" class="main-header-menu-item is-hoverable is-checkable">About</a>
             <a href="http://statsocial.com/faq/" title="FAQ" id="" class="main-header-menu-item is-hoverable is-checkable">FAQ</a>
             <a href="http://statsocial.com/support/" title="Support" class="main-header-menu-item is-hoverable is-checkable">Support</a>
-            <a href="http://api.statsocial.com/" title="API" class="main-header-menu-item is-hoverable is-checkable">API</a>
+            <a href="http://statsocial.com/api/" title="API" class="main-header-menu-item is-hoverable is-checkable">API</a>
             <a href="http://statsocial.com/sample-reports/" title="Support" class="main-header-menu-item is-hoverable is-checkable">Sample reports</a>
           </div>
           <div class="main-header-menu-section-l">
-            <div href="http://statsocial.com/top-investors-twitter/" title="Top Inverstors" class="main-header-menu-item is-hoverable is-checkable">Top 1000 investors</div>
-            <div href="http://blog.statsocial.com/category/press/" title="Press" class="main-header-menu-item is-hoverable is-checkable">Press</div>
-            <div href="http://blog.statsocial.com/" title="StatSocial Blog" class="main-header-menu-item is-hoverable is-checkable">Blog</div>
-            <div href="http://www.statsocial.com/privacy-policy/" title="Privacy Policy" class="main-header-menu-item is-hoverable is-checkable">Privacy policy</div>
-            <div href="http://statsocial.com/terms-of-service/" title="Terms of Service" class="main-header-menu-item is-hoverable is-checkable">Terms of service</div>
+            <a href="http://statsocial.com/top-investors-twitter/" title="Top Inverstors" class="main-header-menu-item is-hoverable is-checkable">Top 1000 investors</a>
+            <a href="http://blog.statsocial.com/category/press/" title="Press" class="main-header-menu-item is-hoverable is-checkable">Press</a>
+            <a href="http://blog.statsocial.com/" title="StatSocial Blog" class="main-header-menu-item is-hoverable is-checkable">Blog</a>
+            <a href="http://statsocial.com/privacy-policy/" title="Privacy Policy" class="main-header-menu-item is-hoverable is-checkable">Privacy policy</a>
+            <a href="http://statsocial.com/terms-of-service/" title="Terms of Service" class="main-header-menu-item is-hoverable is-checkable">Terms of service</a>
           </div>
         </div>
       </div>

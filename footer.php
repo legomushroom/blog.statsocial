@@ -64,7 +64,7 @@ do_action( 'statsocial_pre_part_' . basename( __FILE__, '.php' ) . '_' . basenam
             </div>
             <div class="footer__links-block">
               <div class="footer__links-block__header">Legal</div>
-              <div><a href="http://www.statsocial.com/privacy-policy/" title="Privacy Policy" class="footer__links-block__item">Provacy Policy</a></div>
+              <div><a href="http://www.statsocial.com/privacy-policy/" title="Privacy Policy" class="footer__links-block__item">Privacy Policy</a></div>
               <div><a href="http://statsocial.com/terms-of-service/" title="Terms of Service" class="footer__links-block__item">Terms of Use</a></div>
             </div>
             <div class="footer__copy">
