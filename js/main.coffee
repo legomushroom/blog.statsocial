@@ -39,29 +39,15 @@ $headerIcon.on 'click touchstart', (e)->
 
 $(document.body).on 'click touchstart', (e)->
   $header.removeClass 'is-menu'
-  console.log 'aaa'
 
-# $header.on 'click touchstart', 'a', (e)->
-#   console.log 'a'
-#   e.stopPropagation()
-
-# setTimeout ->
-#   $window.trigger 'scroll'
-# , 3000
-
-
-# window.scroll1 = (isRunning= true)->
-#   return if !isRunning
-#   requestAnimationFrame window.scroll1
-#   console.log 'frame'
+$window.on 'resize', ->
+  if $window.outerWidth() > 1100
+    $sidebar.removeClass 'is-expanded'
 
 
 
-# $window.on 'touchstart', ->
-#   window.scroll1()
-#   console.log 'touchstart'
 
-# $window.on 'touchend', ->
-#   console.log 'touchend'
+
+
 
 

@@ -52,8 +52,13 @@
   });
 
   $(document.body).on('click touchstart', function(e) {
-    $header.removeClass('is-menu');
-    return console.log('aaa');
+    return $header.removeClass('is-menu');
+  });
+
+  $window.on('resize', function() {
+    if ($window.outerWidth() > 1100) {
+      return $sidebar.removeClass('is-expanded');
+    }
   });
 
 }).call(this);

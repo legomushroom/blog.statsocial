@@ -1227,14 +1227,18 @@ clearfix:after {
 }
 .sidebar-n-panel {
   position: relative;
-  -webkit-transform: translateX(-320px);
-  -ms-transform: translateX(-320px);
-  transform: translateX(-320px);
   background: rgba(255,255,255,0.95);
-  -webkit-transition: all 0.3s ease-in;
-  transition: all 0.3s ease-in;
 /* 18dc84f92e17a6cffd9a07ebe1b86fff */
 /* 18dc84f92e17a6cffd9a07ebe1b86fff */
+}
+@media screen and (max-width:1100px) {
+  .sidebar-n-panel {
+    -webkit-transform: translateX(-320px);
+    -ms-transform: translateX(-320px);
+    transform: translateX(-320px);
+    -webkit-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+  }
 }
 .sidebar-n-panel .sidebar-panel {
   height: 100%;

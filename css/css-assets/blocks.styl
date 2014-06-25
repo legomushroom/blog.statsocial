@@ -10,9 +10,10 @@ sidebarScrollTopHeight = 11*gs
 /* 2dd245c639f53c95bb8dda4ae880acc1 */
 .sidebar-n-panel
   position relative
-  transform translateX(- headerLeftSize)
   background rgba(white, .95)
-  transition all .3s ease-in
+  @media screen and (max-width:1100px)
+    transform translateX(- headerLeftSize)
+    transition all .3s ease-in
   .sidebar-panel
     height 100%
     position absolute
@@ -353,7 +354,7 @@ sidebarScrollTopHeight = 11*gs
           -1px 1px 0 currentColor,
           inset -1px 0 0 currentColor,
           inset 0 1px 0 currentColor
-          
+
   &__search
     position absolute
     top 4*gs
