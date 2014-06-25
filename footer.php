@@ -108,11 +108,11 @@ do_action( 'statsocial_pre_part_' . basename( __FILE__, '.php' ) . '_' . basenam
     <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
     
     <div id="js-scroll-top" class="scroll-top"></div>
-    <script src="../../bower_components/jquery/dist/jquery.js"></script>
-    <script src="../../bower_components/velocity/jquery.velocity.js"></script>
-    <script src="../../js/raf.js"></script>
-    <script src="../../js/helpers.js"></script>
-    <script src="../../js/main.js"></script>
+    <script src="<?php bloginfo('template_url'); ?>/bower_components/jquery/dist/jquery.js"></script>
+    <script src="<?php bloginfo('template_url'); ?>/bower_components/velocity/jquery.velocity.js"></script>
+    <script src="<?php bloginfo('template_url'); ?>/js/raf.js"></script>
+    <script src="<?php bloginfo('template_url'); ?>/js/helpers.js"></script>
+    <script src="<?php bloginfo('template_url'); ?>/js/main.js"></script>
   
   </body>
 </html><?php do_action( 'statsocial_after_part_' . basename( __FILE__, '.php' ) . '_' . basename( $template ) ); ?>

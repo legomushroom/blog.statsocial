@@ -13,10 +13,6 @@ global $template;
 do_action( 'statsocial_pre_part_' . basename( __FILE__, '.php' ) . '_' . basename( $template ) );
 ?>
 
-
-
-
-
 <div class="base-p__core__sidebar">
   <div id="js-sidebar" class="sidebar-n-panel">
     <div class="sidebar-n-panel__sidebar-l">
@@ -58,16 +54,20 @@ do_action( 'statsocial_pre_part_' . basename( __FILE__, '.php' ) . '_' . basenam
             </div>
           </div>
         </div>
-        <div id="" class="input-icon sidebar-panel__search">
-          <input id="input-883c00286c7cedf015ccc175d0a02dec" placeholder="search.." class="input">
+
+        <form class="input-icon sidebar-panel__search" method="get" name="searchform" id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+          <input id="input-883c00286c7cedf015ccc175d0a02dec" name="s" placeholder="search.." class="input" value="<?php the_search_query(); ?>" pattern="^[^(<|>)]+$" title="<?php esc_attr_e( 'must not contain html tags', 'statsocial' ); ?>">
           <label for="input-883c00286c7cedf015ccc175d0a02dec" class="input-icon__label">
+          <input style="width: 0; height: 0; postion: absolute; visibility:hidden; left: -300%" value="<?php esc_attr_e( 'Search', 'statsocial' ); ?>"  type="submit" style="" id="searchsubmit" value="<?php esc_attr_e( 'Search', 'statsocial' ); ?>" />
             <div id="" title="" class="icon ">
               <svg viewBox="0 0 32 32">
                 <use xlink:href="#search-icon"></use>
               </svg>
             </div>
           </label>
-        </div>
+        </form>
+
+
         <div id="js-expand-sidebar" class="sidebar-expand"></div>
         <div id="js-scroll-top-sidebar" class="sidebar-scoll-top"></div>
       </div>

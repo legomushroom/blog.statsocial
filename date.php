@@ -152,9 +152,10 @@ statsocial_debug_navitation( __FILE__ );
                 <?php statsocial_append_loop(); ?>
 
             </div>
-            <br>
-            <br>
-            <?php statsocial_monthly_archive_prev_next_navigation(); ?>
+
+            <div class="posts-nav date-posts-nav grid grid--gutter-x2 m-t-x8-g">
+                <?php statsocial_monthly_archive_prev_next_navigation(); ?>
+            </div>
 
 
 </div>

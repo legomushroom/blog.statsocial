@@ -150,17 +150,14 @@ sidebarScrollTopHeight = 11*gs
   /* bc450f49128e9768ab944e51920e0250 */
   &--header
     .input
-      opacity 0
-      width 0
-      border-width 0
-      padding 0
-      &:focus
-        width 100%
-        padding 0 4*gs 0 gs
-        border-width .2*gs
+      width 100%
+      padding 0 4*gs 0 gs
+      border-width .2*gs
+      // color c-blue1
+      color c-grey9
+      &:focus, &:hover
         color c-blue1
-        opacity 1
-        transition opacity .2s linear
+        box-shadow none
 
 /* 08683ec747ff35de14ad2765f8a9078e */
 .header-link-line
@@ -199,6 +196,7 @@ sidebarScrollTopHeight = 11*gs
   nw 0
   width 100%
   z-index headerLayer
+  transform translateZ(0)
 
   &.is-menu
     shadow()
@@ -781,68 +779,6 @@ vertGutter = 2*gs
       &:hover
         opacity .85
 
-/* 34f28b60c8011d2c96bdf82d3ebfd797 */
-columnWidth = 43*gs
-.post-bottom-credits
-  text-align center
-  max-width 60*gs
-  fly()
-  .post-credits
-    margin-top 2*gs
-  .share
-    margin-top gs
-  .post-splitter
-    width columnWidth
-    margin 0 auto
-  .next-post
-    padding-left  gs
-    padding-right gs
-    // min-width columnWidth
-    margin-top 3*gs
-    min-width 75%
-    & + {end()}
-      margin-top 2*gs
-  &__line
-    border-top .2*gs solid c-grey9
-    max-width columnWidth
-    margin 0 auto
-    margin-top 3*gs
-    opacity 0
-  /* e394a8cc55f307c0e9dc59b924d2d079 */
-  @media screen and (max-width:568px)
-    max-width 40*gs
-    {root()}
-      &__top
-        display table
-        fly()
-        .post-credits
-          float left
-          margin-left 2.5*gs
-          margin-top .8*gs
-          font-weight 100
-          text-align left
-          width auto
-          .credits-item
-            padding-left 0
-      &__line
-        width 200%
-        max-width 200%
-        left -50%
-        position relative
-    .post-splitter
-      float left
-      width 10*gs
-    .share
-      display inline-block
-      margin-top 3.5*gs
-    .next-post
-      max-width 84%
-      min-width 84%
-      margin-top 3.5*gs
-  @media screen and (max-width:520px)
-    .share
-      margin-bottom .5*gs
-
 /* 461123fd16a3c74fad9e12bd2e1d9052 */
 .posts-nav
   display inline-block
@@ -1026,19 +962,6 @@ columnWidth = 43*gs
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 // OLD STYLES:
 
 c-lightBlue = #61dcff
@@ -1083,15 +1006,39 @@ c-lightBlue = #61dcff
   padding-bottom 1.5*gs
   font-weight 400
   text-align left
+  @media screen and (max-width:520px)
+    margin-left  2*gs
+    margin-right 2*gs
 
 .calendar-table
   min-width 60*gs
+  @media screen and (max-width:720px)
+    min-width 40*gs
+  @media screen and (max-width:520px)
+    padding 0 2*gs
 
 strong
   font-weight bold
 
 .calendar-period
   text-align left
+
+#date_title, .calendar-period
+  @media screen and (max-width:520px)
+    padding 0 2*gs
+
+.date-posts-nav
+  @media screen and (max-width:400px)
+    margin-left 2*gs
+    margin-right 2*gs
+    .grid-bit
+      width 100%
+      display block
+      & + {end()}
+        margin-left 0
+        margin-top 2*gs
+
+
 
 // .l-h-x3-g
 //   line-height 3*gs
@@ -1105,7 +1052,71 @@ strong
 // .search-input
 //   max-width 76*gs
 
+/* 34f28b60c8011d2c96bdf82d3ebfd797 */
+columnWidth = 43*gs
+.post-bottom-credits
+  text-align center
+  max-width 60*gs
+  fly()
+  .post-credits
+    margin-top 2*gs
+  .share
+    margin-top gs
+  .post-splitter
+    width columnWidth
+    margin 0 auto
+  .next-post
+    padding-left  gs
+    padding-right gs
+    // min-width columnWidth
+    margin-top 3*gs
+    min-width 75%
+    & + {end()}
+      margin-top 2*gs
+  &__line
+    border-top .2*gs solid c-grey9
+    max-width columnWidth
+    margin 0 auto
+    margin-top 3*gs
+    opacity 0
+  /* e394a8cc55f307c0e9dc59b924d2d079 */
+  @media screen and (max-width:568px)
+    max-width 40*gs
+    {root()}
+      &__top
+        display table
+        fly()
+        .post-credits
+          float left
+          margin-left 2.5*gs
+          margin-top .8*gs
+          font-weight 100
+          text-align left
+          width auto
+          .credits-item
+            padding-left 0
+        .post-splitter
+          margin-top 0
+          margin-bottom 0
 
+      &__line
+        width 200%
+        max-width 200%
+        left -50%
+        position relative
+    .post-splitter
+      float left
+      width 10*gs
+    .share
+      display inline-block
+      margin-top 3.5*gs
+    .next-post
+      max-width 84%
+      min-width 84%
+      margin-top 3.5*gs
+  @media screen and (max-width:520px)
+    .share
+      margin-bottom .5*gs
 
 
 

@@ -31,6 +31,8 @@ do_action( 'statsocial_pre_' . basename( __FILE__ ) );
 
     $statsocial_loop_number = 1;
 
+
+
     while ( have_posts() ) {
 
         the_post();
@@ -102,20 +104,14 @@ do_action( 'statsocial_pre_' . basename( __FILE__ ) );
         <?php
     } //end while
     ?>
-
-                        <li>
-                            <?php
-                            statsocial_next_prev_links( "nav-below" );
-                            ?>
-                        </li>
                     </ul>
+    <div class="posts-nav grid grid--gutter-x2">
+        <?php statsocial_next_prev_links( "nav-below" ); ?>
+    </div>
+
                 <?php } else { ?>
-                    <div class="fail-search cf p-r-x10-g" style="margin-left: 420px">
-                        <h2 class="h2 m-b-x2-g l-h-x2-25-g">
-                            <?php
-                            esc_html_e( "Nothing was found though it was regrettable. Please change the key word if it is good, and retrieve it.", "statsocial" );
-                            ?>
-                        </h2>
+                    <div class="m-l-x8-g m-r-x8-g">
+                        <?php esc_html_e( "Nothing was found though it was regrettable. Please change the key word if it is good, and retrieve it.", "statsocial" ); ?>
                         <?php get_search_form(); ?>
                     </div>
                 <?php } ?>

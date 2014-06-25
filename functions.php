@@ -5676,17 +5676,17 @@ if ( !function_exists( 'statsocial_monthly_archive_prev_next_navigation' ) ) {
 			ORDER BY post_date ASC
 			LIMIT 1" );
 
-            $html = '<a href="%1$s" class="%3$s is-hoverable">%2$s</a>';
+            $html = '<a href="%1$s" class="%3$s next-post grid-bit grid-bit--1-2">%2$s</a>';
 
             if ( $previous ) {
 
-                $calendar_output = sprintf( $html, get_month_link( $previous->year, $previous->month ), sprintf( esc_html__( '<< Prev Month(  %sth  )', 'statsocial' ), $previous->month ), 'alignleft' );
+                $calendar_output = sprintf( $html, get_month_link( $previous->year, $previous->month ), sprintf( esc_html__( '← prev month(  %sth  )', 'statsocial' ), $previous->month ), 'alignleft' );
             }
             $calendar_output .= "\t";
 
             if ( $next ) {
 
-                $calendar_output .= sprintf( $html, get_month_link( $next->year, $next->month ), sprintf( esc_html__( 'Next Month(  %sth  ) >>', 'statsocial' ), $next->month ), 'alignright' );
+                $calendar_output .= sprintf( $html, get_month_link( $next->year, $next->month ), sprintf( esc_html__( 'next month(  %sth  ) →', 'statsocial' ), $next->month ), 'alignright' );
             }
             $html            = '<div class="%1$s">%2$s</div>';
             $calendar_output = sprintf( $html, 'statsocial-monthly-archive-prev-next-avigation', $calendar_output );

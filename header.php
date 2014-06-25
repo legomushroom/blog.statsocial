@@ -31,16 +31,30 @@ do_action( 'statsocial_pre_part_' . basename( __FILE__, '.php' ) . '_' . basenam
         <div id="" class="rounded-btn header__right__request-demo rounded-btn--blue2 rounded-btn--hoverable">Request Demo</div>
         <div id="" class="header-link-line header__right__actions"><a id="" class="header-link">Log In</a><a id="" class="header-link">Sign Up</a>
         </div>
-        <div id="" class="input-icon input-icon--header">
-          <input id="input-undefined" placeholder="search.." class="input">
-          <label for="input-undefined" class="input-icon__label">
+
+<!--         <form class="input-icon sidebar-panel__search" method="get" name="searchform" id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+          <input id="input-883c00286c7cedf015ccc175d0a02dec" name="s" placeholder="search.." class="input" value="<?php the_search_query(); ?>" pattern="^[^(<|>)]+$" title="<?php esc_attr_e( 'must not contain html tags', 'statsocial' ); ?>">
+          <label for="input-883c00286c7cedf015ccc175d0a02dec" class="input-icon__label">
+          <input style="width: 0; height: 0; postion: absolute; visibility:hidden; left: -300%" value="<?php esc_attr_e( 'Search', 'statsocial' ); ?>"  type="submit" style="" id="searchsubmit" value="<?php esc_attr_e( 'Search', 'statsocial' ); ?>" />
             <div id="" title="" class="icon ">
               <svg viewBox="0 0 32 32">
                 <use xlink:href="#search-icon"></use>
               </svg>
             </div>
           </label>
-        </div>
+        </form> -->
+
+        <form class="input-icon input-icon--header" method="get" name="searchform" id="searchform1" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+          <input id="input-00706e56b97028c17d294a1487765068" name="s" placeholder="search.." class="input" value="<?php the_search_query(); ?>" pattern="^[^(<|>)]+$" title="<?php esc_attr_e( 'must not contain html tags', 'statsocial' ); ?>">
+          <label for="input-00706e56b97028c17d294a1487765068" class="input-icon__label">
+          <input style="width: 0; height: 0; postion: absolute; visibility:hidden; left: -300%" value="<?php esc_attr_e( 'Search', 'statsocial' ); ?>"  type="submit" style="" id="searchsubmit" value="<?php esc_attr_e( 'Search', 'statsocial' ); ?>" />
+            <div id="" title="" class="icon ">
+              <svg viewBox="0 0 32 32">
+                <use xlink:href="#search-icon"></use>
+              </svg>
+            </div>
+          </label>
+        </form>
         <div id="" title="" class="icon header__right__menu-icon">
           <svg viewBox="0 0 32 32">
             <use xlink:href="#menu-icon"></use>
