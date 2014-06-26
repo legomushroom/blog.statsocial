@@ -75,24 +75,24 @@ do_action( 'statsocial_pre_part_' . basename( __FILE__, '.php' ) . '_' . basenam
           </div>
         </div>
         <div id="" class="mobile-footer">
-          <div><a href="#" class="mobile-footer__link">statsocial.com</a></div>
-          <div><a href="#" class="mobile-footer__link">blog.statsocial.com</a></div>
+          <div><a href="http://statsocial.com/" class="mobile-footer__link">statsocial.com</a></div>
+          <div><a href="http://blog.statsocial.com/" class="mobile-footer__link">blog.statsocial.com</a></div>
           <div id="" class="footer-share">
-            <div id="" title="" class="icon ">
-              <svg viewBox="0 0 32 32">
-                <use xlink:href="#twitter-icon"></use>
-              </svg>
-            </div>
-            <div id="" title="" class="icon ">
-              <svg viewBox="0 0 32 32">
-                <use xlink:href="#facebook-icon"></use>
-              </svg>
-            </div>
-            <div id="" title="" class="icon ">
+              <a href="https://twitter.com/statsocial" title="StatSocial on Twitter" class="icon ">
+                <svg viewBox="0 0 32 32">
+                  <use xlink:href="#twitter-icon"></use>
+                </svg>
+              </a>
+            <a href="https://www.facebook.com/statsocial" title="StatSocial on Facebook" class="icon ">
+                <svg viewBox="0 0 32 32">
+                  <use xlink:href="#facebook-icon"></use>
+                </svg>
+              </a>
+            <a href="https://www.linkedin.com/company/3188281?trk=prof-0-ovw-curr_pos" title="StatSocial on LinkedIn" class="icon ">
               <svg viewBox="0 0 32 32">
                 <use xlink:href="#linkedin-icon"></use>
               </svg>
-            </div>
+            </a>
           </div>
           <div><a href="#" class="mobile-footer__link">contacts</a></div>
           <div><a href="#" class="mobile-footer__link">terms of service</a></div>
