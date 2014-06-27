@@ -1804,7 +1804,11 @@ ma
 .post h4 + p {
   margin-top: 10px;
 }
-@media screen and (max-width:520px) {
+@media screen and (max-width:568px) {
+  .post h4 {
+    font-size: 18px;
+    line-height: 26px;
+  }
   .post h4 + p {
     margin-top: 5px;
   }
@@ -1908,7 +1912,7 @@ ma
 .post p + .center-tweet,
 .post blockquote + .center-tweet,
 .post li + .center-tweet {
-  margin-top: 10px;
+  margin-top: 20px;
 }
 @media screen and (max-width:520px) {
   .post p + .center-tweet,
@@ -2377,6 +2381,11 @@ ma
   max-width: 400px;
   margin-left: auto;
   margin-right: auto;
+}
+@media screen and (max-width:568px) {
+  .post .post-splitter {
+    margin: 40px 0;
+  }
 }
 .more-link {
   display: none;
@@ -2973,7 +2982,7 @@ a:focus,
   src: url('css/css-assets/font/outage-webfont.eot?#iefix') format('embedded-opentype'),url('css/css-assets/font/outage-webfont.woff') format('woff'),url('css/css-assets/font/outage-webfont.ttf') format('truetype'),url('css/css-assets/font/outage-webfont.svg#outageregular') format('svg');
   font-weight: normal;
   font-style: normal;
-  }
+	}
 .base-p {
   width: 100%;
 }

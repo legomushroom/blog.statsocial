@@ -46,7 +46,7 @@ do_action( 'statsocial_pre_part_' . basename( __FILE__, '.php' ) . '_' . basenam
     <div class="sidebar-panel">
       <div class="sidebar-panel__core">
         <div class="sidebar-panel__top-btns">
-          <a href="http://statsocial.com" title="StatSocial" class="sidebar-btn">
+          <a href="http://blog.statsocial.com" title="StatSocial" class="sidebar-btn">
             <div class="icon ">
               <svg viewBox="0 0 32 32">
                 <use xlink:href="#home-icon"></use>

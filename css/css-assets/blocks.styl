@@ -27,9 +27,6 @@ sidebarScrollTopHeight = 11*gs
       overflow-y auto
       padding-bottom 4*gs
 
-    .sidebar-expand
-      transition all .3s linear
-
   /* 18dc84f92e17a6cffd9a07ebe1b86fff */
   @media screen and (max-width:1100px)
     padding-right sidebarPanelWidth
@@ -516,7 +513,9 @@ vertGutter = 2*gs
     margin-top 3*gs
     & + p
       margin-top 1*gs
-    @media screen and (max-width:520px)
+    @media screen and (max-width:568px)
+      font-size 1.6*gs
+      line-height 2.6*gs
       & + p
         margin-top .5*gs
 
@@ -580,7 +579,7 @@ vertGutter = 2*gs
         margin-top .5*vertGutter
 
     & + .center-tweet
-      margin-top .5*vertGutter
+      margin-top vertGutter
       @media screen and (max-width:520px)
         margin-top .25*vertGutter
 
@@ -626,6 +625,8 @@ vertGutter = 2*gs
     @media screen and (max-width:520px)
       margin-top 1.5*gs
       margin-bottom 1.5*gs
+      margin-left 2*gs
+      padding-left 2*gs
     size = (.4*gs)
     &:before
       content ''
@@ -963,14 +964,14 @@ vertGutter = 2*gs
     margin 8*gs 0
     max-width 40*gs
     fly()
+    @media screen and (max-width:568px)
+      margin 4*gs 0
 
 .more-link
   display none
 
 
-
 // OLD STYLES:
-
 c-lightBlue = #61dcff
 
 .calendar-period
