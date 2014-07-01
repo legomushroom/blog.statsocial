@@ -1648,7 +1648,6 @@ clearfix:after {
   width: 100%;
   height: 10px;
   top: 100%;
-ma
   left: 0;
   background: #fff;
 }
@@ -1759,6 +1758,20 @@ ma
   color: #416c7d;
   max-width: 800px;
   text-align: left;
+}
+.post > p:first-child {
+  padding-top: 20px;
+}
+.post > p:first-child img {
+  margin-top: -20px;
+}
+@media screen and (max-width:568px) {
+  .post > p:first-child {
+    padding-top: 10px;
+  }
+  .post > p:first-child img {
+    margin-top: -10px;
+  }
 }
 .post h2 {
   text-transform: uppercase;
@@ -1941,12 +1954,12 @@ ma
 @media screen and (max-width:520px) {
   .post .center-tweet {
     padding: 0 10px;
-    margin-bottom: 8px;
   }
 }
 .post .center-tweet .twitter-tweet {
   float: none;
   display: inline-block !important;
+  margin-top: 2px !important;
 }
 @media screen and (max-width:520px) {
   .post p {
@@ -2706,8 +2719,25 @@ a:focus,
   -ms-transform: translate(1px, 1px);
   transform: translate(1px, 1px);
 }
+.share-icon--twitter a {
+  -webkit-transform: scale(10);
+  -ms-transform: scale(10);
+  transform: scale(10);
+  position: relative;
+  z-index: 20;
+  opacity: 0;
+}
 .share-icon--facebook {
   color: #3b5998;
+  position: relative;
+}
+.share-icon--facebook a {
+  -webkit-transform: scale(10);
+  -ms-transform: scale(10);
+  transform: scale(10);
+  position: relative;
+  z-index: 20;
+  opacity: 0;
 }
 .share-icon--linkedin {
   color: #007ab8;

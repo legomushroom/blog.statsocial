@@ -66,8 +66,34 @@ function curPageURL() {
     </div>
     <div id="" class="share cf is-at-bottom">
       <div id="" class="share-icon share-icon--twitter">
-        <a href="https://twitter.com/share" class="twitter-share-button" data-via="statsocial">Tweet</a>
-        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+      <?php
+        function encodeURI($uri)
+          {
+              return preg_replace_callback("{[^0-9a-z_.!~*'();,/?:@&=+$#]}i", function ($m) {
+                      return sprintf('%%%02X', ord($m[0]));
+                  }, $uri);
+          }
+      ?>
+
+        <a id="js-twitter-share" href="javascript:twShare()" data-href="http://twitter.com/share?text=<?php echo urlencode(get_the_title()); ?>" class="twitter-share-button1" data-via="statsocial" data-size="large">Tweet</a>
+        <script>
+          function twShare(){
+            var el = document.getElementById('js-twitter-share');
+            var width  = 575,
+                height = 400,
+                left   = 0,
+                top    = 0,
+                url    = el.getAttribute('data-href'),
+                opts   = 'status=1' +
+                         ',width='  + width  +
+                         ',height=' + height +
+                         ',top='    + top    +
+                         ',left='   + left;
+            window.open(url, 'twitter', opts);
+            return false;
+          }
+        </script>
         <div id="" title="" class="icon ">
           <svg viewBox="0 0 32 32">
             <use xlink:href="#twitter-icon"></use>
@@ -75,15 +101,15 @@ function curPageURL() {
         </div>
       </div>
       <div id="" class="share-icon share-icon--facebook">
-        <div id="fb-root"></div>
-          <script>(function(d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s); js.id = id;
-            js.src = "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.0";
-            fjs.parentNode.insertBefore(js, fjs);
-          }(document, 'script', 'facebook-jssdk'));</script>
-          <div class="fb-share-button" data-href="<?php echo curPageURL(); ?>" data-type="icon"></div>
+        <script>
+            function fbShare(url, title, descr, image, winWidth, winHeight) {
+                var winTop = (screen.height / 2) - (winHeight / 2);
+                var winLeft = (screen.width / 2) - (winWidth / 2);
+                window.open('http://www.facebook.com/sharer.php?s=100&p[title]=' + title + '&p[summary]=' + descr + '&p[url]=' + url + '&p[images][0]=' + image, 'sharer', 'top=' + winTop + ',left=' + winLeft + ',toolbar=0,status=0,width=' + winWidth + ',height=' + winHeight);
+            }
+        </script>
+        <a href="javascript:fbShare('<?php echo curPageURL(); ?>', 'Fb Share', 'Facebook share popup', 'http://goo.gl/dS52U', 520, 350)">Share</a>
+
         <div id="" title="" class="icon ">
           <svg viewBox="0 0 32 32">
             <use xlink:href="#facebook-icon"></use>

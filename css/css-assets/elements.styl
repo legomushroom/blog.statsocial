@@ -115,10 +115,21 @@ a, .link
     color c-twitter
     .icon
       transform translate(.1*gs, .1*gs)
+    a
+      transform scale(10)
+      position relative
+      z-index 20
+      opacity 0
 
   /* 3c5c6e87f864179fba9ba330a3d2d01d */
   &--facebook
     color c-facebook
+    position relative
+    a
+     transform scale(10)
+     position relative
+     z-index 20
+     opacity 0
 
   /* 012b156610f7a08ac477c0b51092f409 */
   &--linkedin
@@ -160,6 +171,3 @@ a, .link
     &:active
       background c-grey10
       border-color c-grey10
-
-
-

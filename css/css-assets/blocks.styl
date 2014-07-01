@@ -372,7 +372,6 @@ sidebarScrollTopHeight = 11*gs
       width 100%
       height gs
       top 100%
-      ma
       left 0
       background white
       // hl()
@@ -485,6 +484,16 @@ vertGutter = 2*gs
   color c-blue1
   max-width 80*gs
   text-align left
+  > p
+    &:first-child
+      padding-top 2*gs
+      img
+        margin-top -2*gs
+      @media screen and (max-width:568px)
+        padding-top gs
+        img
+          margin-top - gs
+
   h2
     text-transform uppercase
     font-size 3.2*gs
@@ -597,16 +606,15 @@ vertGutter = 2*gs
       margin-left auto II
       margin-right auto II
 
-
   .center-tweet
     text-align center
     margin-bottom 1.5*vertGutter
     @media screen and (max-width:520px)
       padding 0 gs
-      margin-bottom .8*gs
     .twitter-tweet
       float none
       display inline-block II
+      margin-top .2*gs II
 
   p
     @media screen and (max-width:520px)
@@ -622,6 +630,8 @@ vertGutter = 2*gs
     margin-left .5*gs
     margin-top 2.5*gs
     margin-bottom 2.5*gs
+    // p
+    //   padding-top 0
     @media screen and (max-width:520px)
       margin-top 1.5*gs
       margin-bottom 1.5*gs
