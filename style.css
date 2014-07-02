@@ -2719,11 +2719,13 @@ a:focus,
   -ms-transform: translate(1px, 1px);
   transform: translate(1px, 1px);
 }
-.share-icon--twitter iframe {
-  opacity: 1 !important;
-  -webkit-transform: none !important;
-  -ms-transform: none !important;
-  transform: none !important;
+.share-icon--twitter a {
+  -webkit-transform: scale(10);
+  -ms-transform: scale(10);
+  transform: scale(10);
+  position: relative;
+  z-index: 20;
+  opacity: 0;
 }
 .share-icon--facebook {
   color: #3b5998;

@@ -76,7 +76,7 @@ function curPageURL() {
           }
       ?>
 
-        <a id="js-twitter-share" href="javascript:twShare()" data-href="http://twitter.com/share?text=<?php echo urlencode(get_the_title()); ?>" class="twitter-share-button1" data-via="statsocial" data-size="large">Tweet</a>
+        <a id="js-twitter-share" href="javascript:twShare()" data-href="http://twitter.com/share" class="twitter-share-button1" data-via="statsocial" data-size="large">Tweet</a>
         <script>
           function twShare(){
             var el = document.getElementById('js-twitter-share');
